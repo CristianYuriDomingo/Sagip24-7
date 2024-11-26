@@ -21,20 +21,19 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab2', // Redirect to Tab 2 by default
+        redirectTo: '/tabs/tab1',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab2', // Redirect root to Tab 2
+    redirectTo: '/tabs/tab1',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule] // Add this line if missing
 })
 export class TabsPageRoutingModule {}
