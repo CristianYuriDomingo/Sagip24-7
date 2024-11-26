@@ -1,0 +1,7 @@
+{
+  "name": "Sagip-24-7",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
