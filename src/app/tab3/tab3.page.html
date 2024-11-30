@@ -1,17 +1,653 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <div class="logo-container">
+      <img
+        src="assets/images/logo3.png"
+        alt="Sagip 24/7 Logo"
+        class="logo logo-rotate"
+      />
+      <h4 class="header-appear">Your Sagip 24/7</h4>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <!-- CARD PROFILE -->
+  <div class="profile-card">
+    <ion-card class="custom-card">
+      <!-- Image Section -->
+      <div class="header-section">
+        <img
+          alt="Silhouette of mountains"
+          src="../../assets/images/logo3.png"
+        />
+        <ion-card-header>
+          <ion-card-title>Sagip 24/7</ion-card-title>
+          <ion-card-subtitle>Your aid companion</ion-card-subtitle>
+        </ion-card-header>
+      </div>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+      <!-- Content Section -->
+      <ion-card-content style="text-align: justify" class="cp-conten">
+        This app is designed to empower you during emergencies, even without
+        internet access. It provides step-by-step guides, visuals, and essential
+        checklists for situations like burns, CPR, or choking, all stored
+        offline for easy access. Whether you're at home, outdoors, or in a
+        disaster zone, Sagip 24/7 ensures you’re always prepared to take action
+        when it matters most!
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- ABOUT US -->
+  <div class="dev-profile">
+    <ion-row>
+      <ion-col size="12">
+        <div class="dp-container">
+          <h2>Our Team</h2>
+          <ion-card class="about-card">
+            <img
+              class="ion-padding"
+              alt="Silhouette of mountains"
+              src="../../assets/images/Tab3 img src/group (2).png"
+            />
+            <ion-card-content>
+              Our team is dedicated to creating accessible solutions that save
+              lives.
+            </ion-card-content>
+
+            <!-- IONIC INLINE MODAL -->
+            <ion-button id="open-modal-team">
+              <img
+                src="../../assets/images/Tab3 img src/share (3).png"
+                alt="view"
+              />
+            </ion-button>
+            <ion-modal
+              [keepContentsMounted]="true"
+              trigger="open-modal-team"
+              #modal
+            >
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-buttons slot="start">
+                      <ion-button (click)="modal.dismiss()">Close</ion-button>
+                    </ion-buttons>
+                    <ion-title>Our Team</ion-title>
+                  </ion-toolbar>
+                </ion-header>
+                <!--MODAL CONTENT -->
+                <ion-content>
+                  <!--ABOUT TEAM IMGE-->
+                  <div class="profile-container">
+                    <!-- Cover Photo -->
+                    <ion-img
+                      class="cover-photo"
+                      src="../../assets/images/Tab3 img src/Virus (1).svg"
+                    ></ion-img>
+
+                    <!-- Profile Picture -->
+                    <div class="profile-pic-container">
+                      <ion-img
+                        class="profile-pic"
+                        src="../../assets/images/Tab3 img src/banner.png"
+                      ></ion-img>
+                    </div>
+
+                    <!-- User Info -->
+                    <div class="user-info">
+                      <h2>Sagip Team</h2>
+                      <p>&#64;your_service</p>
+                    </div>
+                  </div>
+
+                  <ion-card>
+                    <ion-card-header>
+                      <ion-card-title>Sagip Tech Team</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                      <!-- List Header -->
+                      <ion-header>
+                        <ion-toolbar>
+                          <ion-title class="tech-team"
+                            >Developer Team</ion-title
+                          >
+                        </ion-toolbar>
+                      </ion-header>
+
+                      <ion-list>
+                        <!-- Item 1 -->
+                        <ion-item>
+                          <ion-thumbnail slot="start">
+                            <img
+                              alt="Item Image"
+                              src="../../assets/images/Tab3 img src/avatar/boy (1).png"
+                            />
+                          </ion-thumbnail>
+                          <ion-label>
+                            <h3>Jim Lloyd Dela Virgen</h3>
+                            <p>Project Manager / Developer / Designer</p>
+                          </ion-label>
+                        </ion-item>
+                        <!-- Item 2 -->
+                        <ion-item>
+                          <ion-thumbnail slot="start">
+                            <img
+                              alt="Item Image"
+                              src="../../assets/images/Tab3 img src/avatar/boy (2).png"
+                            />
+                          </ion-thumbnail>
+                          <ion-label>
+                            <h3>Cristian Yuri Domingo</h3>
+                            <p>Developer / Graphic Designer</p>
+                          </ion-label>
+                        </ion-item>
+                      </ion-list>
+                    </ion-card-content>
+                  </ion-card>
+
+                  <!-- Second List: 6 items with header -->
+                  <ion-card>
+                    <ion-card-header>
+                      <ion-card-title>Research Team</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                      <!-- List Header -->
+                      <ion-header>
+                        <ion-toolbar>
+                          <ion-title class="tech-team">Member</ion-title>
+                        </ion-toolbar>
+                      </ion-header>
+
+                      <ion-list>
+                        <!-- Item 1 -->
+                        <ion-item>
+                          <ion-thumbnail slot="start">
+                            <img
+                              alt="Item Image"
+                              src="../../assets/images/Tab3 img src/avatar/boy.png"
+                            />
+                          </ion-thumbnail>
+                          <ion-label>
+                            <h3>Dexter Tumbaga</h3>
+                            <p>Research Leader / Co-writer</p>
+                          </ion-label>
+                        </ion-item>
+
+                        <!-- Item 2 -->
+                        <ion-item>
+                          <ion-thumbnail slot="start">
+                            <img
+                              alt="Item Image"
+                              src="../../assets/images/Tab3 img src/avatar/employee (2).png"
+                            />
+                          </ion-thumbnail>
+                          <ion-label>
+                            <h3>Julius Matro</h3>
+                            <p>Writter / Research Co-leader</p>
+                          </ion-label>
+                        </ion-item>
+
+                        <!-- Item 3 -->
+                        <ion-item>
+                          <ion-thumbnail slot="start">
+                            <img
+                              alt="Item Image"
+                              src="../../assets/images/Tab3 img src/avatar/man.png"
+                            />
+                          </ion-thumbnail>
+                          <ion-label>
+                            <h3>Jan Ereal Sumcad</h3>
+                            <p>Co-writer</p>
+                          </ion-label>
+                        </ion-item>
+
+                        <!-- Item 4 -->
+                        <ion-item>
+                          <ion-thumbnail slot="start">
+                            <img
+                              alt="Item Image"
+                              src="../../assets/images/Tab3 img src/avatar/office-man.png"
+                            />
+                          </ion-thumbnail>
+                          <ion-label>
+                            <h3>Ronald Francisco</h3>
+                            <p>Co-writer</p>
+                          </ion-label>
+                        </ion-item>
+
+                        <!-- Item 5 -->
+                        <ion-item>
+                          <ion-thumbnail slot="start">
+                            <img
+                              alt="Item Image"
+                              src="../../assets/images/Tab3 img src/avatar/woman.png"
+                            />
+                          </ion-thumbnail>
+                          <ion-label>
+                            <h3>Arlene Tualla</h3>
+                            <p>Co-writer</p>
+                          </ion-label>
+                        </ion-item>
+
+                        <!-- Item 6 -->
+                        <ion-item>
+                          <ion-thumbnail slot="start">
+                            <img
+                              alt="Item Image"
+                              src="../../assets/images/Tab3 img src/avatar/student.png"
+                            />
+                          </ion-thumbnail>
+                          <ion-label>
+                            <h3>Jhim Ivan Padilla</h3>
+                            <p>Co-writer</p>
+                          </ion-label>
+                        </ion-item>
+                      </ion-list>
+                    </ion-card-content>
+                  </ion-card>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </ion-card>
+        </div>
+      </ion-col>
+
+      <ion-col size="12">
+        <div class="dp-container">
+          <h2>Visit Our Site</h2>
+          <ion-card class="about-card">
+            <img
+              class="ion-padding"
+              alt="Silhouette of mountains"
+              src="../../assets/images/Tab3 img src/social-media (1).png"
+            />
+            <ion-card-content>
+              Explore more about us and our mission by visiting our official
+              website.
+            </ion-card-content>
+
+            <!-- IONIC INLINE MODAL -->
+            <!-- VISIT OUR SITE SECTION -->
+            <ion-button id="open-modal-site">
+              <img
+                src="../../assets/images/Tab3 img src/share (3).png"
+                alt="view"
+              />
+            </ion-button>
+
+            <ion-modal
+              [keepContentsMounted]="true"
+              trigger="open-modal-site"
+              #modalSite
+            >
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-buttons slot="start">
+                      <ion-button (click)="modalSite.dismiss()"
+                        >Close</ion-button
+                      >
+                    </ion-buttons>
+                    <ion-title>Visit our Site</ion-title>
+                  </ion-toolbar>
+                </ion-header>
+                <!--VISIT OUR SITE MODAL CONTENT-->
+                <ion-content>
+                  <!-- First Card: Full Width -->
+                  <a
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    class="card-link"
+                  >
+                    <ion-card class="site-header">
+                      <img
+                        src="../../assets/images/Tab3 img src/Help image/logo4.png"
+                        alt="our logo"
+                      />
+                    </ion-card>
+                  </a>
+
+                  <!-- Section Title -->
+                  <div class="section-title">
+                    <ion-title size="large">Our Social</ion-title>
+                  </div>
+
+                  <!-- Grid for Remaining Cards -->
+                  <ion-grid>
+                    <ion-row>
+                      <!-- First Column -->
+                      <ion-col size="6">
+                        <a
+                          href="https://www.facebook.com"
+                          target="_blank"
+                          class="card-link"
+                        >
+                          <ion-card>
+                            <ion-card-header>
+                              <ion-card-title>Card 1</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                              Content for the first card in the grid.
+                            </ion-card-content>
+                          </ion-card>
+                        </a>
+                      </ion-col>
+
+                      <ion-col size="6">
+                        <a
+                          href="https://www.facebook.com"
+                          target="_blank"
+                          class="card-link"
+                        >
+                          <ion-card>
+                            <ion-card-header>
+                              <ion-card-title>Card 2</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                              Content for the second card in the grid.
+                            </ion-card-content>
+                          </ion-card>
+                        </a>
+                      </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                      <ion-col size="6">
+                        <a
+                          href="https://www.facebook.com"
+                          target="_blank"
+                          class="card-link"
+                        >
+                          <ion-card>
+                            <ion-card-header>
+                              <ion-card-title>Card 3</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                              Content for the third card in the grid.
+                            </ion-card-content>
+                          </ion-card>
+                        </a>
+                      </ion-col>
+
+                      <ion-col size="6">
+                        <a
+                          href="https://www.facebook.com"
+                          target="_blank"
+                          class="card-link"
+                        >
+                          <ion-card>
+                            <ion-card-header>
+                              <ion-card-title>Card 4</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                              Content for the fourth card in the grid.
+                            </ion-card-content>
+                          </ion-card>
+                        </a>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <!--   HELP SECTION -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About more...</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Parent Accordion Group -->
+      <ion-accordion-group>
+        <!-- FAQs Section -->
+        <ion-accordion value="faqs">
+          <ion-item slot="header">
+            <img
+              src="../../assets/images/Tab3 img src/Help image/question-mark (1).png"
+              alt="FAQs image"
+              class="sm-img ion-padding"
+            />
+            <ion-label class="acclabel">FAQs</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <p>Find answers to frequently asked questions here.</p>
+
+            <!-- Nested FAQ Accordion Group -->
+            <ion-accordion-group>
+              <ion-accordion value="first-aid-faq">
+                <ion-item slot="header">
+                  <ion-label
+                    >What should I do if I encounter an emergency?</ion-label
+                  >
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                  <p>
+                    If you encounter a medical emergency, follow these steps:
+                  </p>
+                  <ul>
+                    <li>
+                      Ensure the area is safe for both you and the injured
+                      person.
+                    </li>
+                    <li>Call emergency services if necessary.</li>
+                    <li>
+                      Use the app to find relevant first aid steps offline based
+                      on the type of emergency.
+                    </li>
+                  </ul>
+                </div>
+              </ion-accordion>
+
+              <ion-accordion value="first-aid-faq-2">
+                <ion-item slot="header">
+                  <ion-label
+                    >How can I use the app without an internet
+                    connection?</ion-label
+                  >
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                  <p>
+                    The SAGIP 24/7 app works offline. It has a local database of
+                    essential first aid instructions that you can access even
+                    without an internet connection. Just open the app, choose
+                    the emergency type, and follow the steps.
+                  </p>
+                </div>
+              </ion-accordion>
+
+              <ion-accordion value="first-aid-faq-3">
+                <ion-item slot="header">
+                  <ion-label
+                    >Can I trust the medical advice in the app?</ion-label
+                  >
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                  <p>
+                    Yes, the first aid information in the app is based on
+                    trusted medical guidelines and protocols. However, in severe
+                    cases, always contact medical professionals for immediate
+                    help.
+                  </p>
+                </div>
+              </ion-accordion>
+            </ion-accordion-group>
+          </div>
+        </ion-accordion>
+
+        <!-- Report an Issue Section -->
+        <ion-accordion value="report">
+          <ion-item slot="header">
+            <img
+              src="../../assets/images/Tab3 img src/Help image/immigration.png"
+              alt="Report an issue image"
+              class="sm-img ion-padding"
+            />
+            <ion-label class="acclabel">Report An Issue</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <p>
+              If you encounter any problems or bugs in the app, use this section
+              to report the issue to our support team.
+            </p>
+
+            <!-- Email Link with Icon on New Line -->
+            <p>
+              You can also report issues directly by sending an email to our
+              support team:
+            </p>
+            <div>
+              <a href="mailto:support@example.com">
+                <ion-icon name="mail" class="ion-padding-end"></ion-icon>
+                sagipsupportteam247&#64;gmail.com
+              </a>
+            </div>
+          </div>
+        </ion-accordion>
+
+        <!-- Must Have First Aid Kit Section -->
+        <ion-accordion value="country">
+          <ion-item slot="header">
+            <img
+              src="../../assets/images/Tab3 img src/Help image/first-aid-box.png"
+              alt="First aid kit image"
+              class="sm-img ion-padding"
+            />
+            <ion-label class="acclabel">Must Have First Aid Kit</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <p>
+              Ensure you have a well-stocked first aid kit for emergencies.
+              Here's a list of essential items to keep in your kit:
+            </p>
+            <ul>
+              <li>Bandages (various sizes)</li>
+              <li>Antiseptic wipes</li>
+              <li>Adhesive tape</li>
+              <li>Gauze pads</li>
+              <li>Scissors</li>
+              <li>Thermometer</li>
+              <li>Pain relievers</li>
+            </ul>
+          </div>
+        </ion-accordion>
+
+        <!-- Donate Us Section -->
+        <ion-accordion value="language">
+          <ion-item slot="header">
+            <img
+              src="../../assets/images/Tab3 img src/Help image/donate.png"
+              alt="Donate image"
+              class="sm-img ion-padding"
+            />
+            <ion-label class="acclabel">Donate Us</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <p>
+              Support our cause! Your donations help improve the app and fund
+              our community initiatives. Click here to donate securely.
+            </p>
+
+            <!-- GCash Donation Section -->
+            <p>
+              <strong>Donate via GCash:</strong>
+            </p>
+            <div>
+              <a href="https://gcash.com/donate" target="_blank">
+                <img
+                  class="ion-padding-end"
+                  src="../../assets/images/Tab3 img src/Help image/google-apps-device-policy.png"
+                  alt="gcash"
+                />
+                GCash: 0917 123 4567
+              </a>
+            </div>
+
+            <!-- PayPal Donation Section -->
+            <p>
+              <strong>Donate via PayPal:</strong>
+            </p>
+            <div>
+              <a
+                href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID"
+                target="_blank"
+              >
+                <ion-icon name="logo-paypal" class="ion-padding-end"></ion-icon>
+                PayPal: sagip247&#64;gmail.com
+              </a>
+            </div>
+          </div>
+        </ion-accordion>
+
+        <!-- Rate the App Section -->
+        <ion-accordion value="notifications">
+          <ion-item slot="header">
+            <img
+              src="../../assets/images/Tab3 img src/Help image/rating.png"
+              alt="Rate the app image"
+              class="sm-img ion-padding"
+            />
+            <ion-label class="acclabel">Rate the App</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <p>
+              We value your feedback! Let us know your thoughts by rating the
+              app. Your review helps us improve and reach more users.
+            </p>
+
+            <!-- 5-Star Rating Icon -->
+            <div>
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+            </div>
+
+            <!-- Play Store Link with Logo -->
+            <p>
+              <strong>Rate us on the Play Store:</strong>
+            </p>
+            <div>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.example.app"
+                target="_blank"
+              >
+                <img
+                  src="../../assets/images/Tab3 img src/Help image/playstore.png"
+                  alt=""
+                />
+                Rate our app on Google Play
+              </a>
+            </div>
+          </div>
+        </ion-accordion>
+
+        <!-- Privacy Policy Section -->
+        <ion-accordion value="privacy">
+          <ion-item slot="header">
+            <img
+              src="../../assets/images/Tab3 img src/Help image/privacy-policy.png"
+              alt="Privacy policy image"
+              class="sm-img ion-padding"
+            />
+            <ion-label class="acclabel">Privacy Policy</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <p>
+              Read our privacy policy to understand how your personal
+              information is collected, stored, and used in accordance with our
+              guidelines.
+            </p>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
