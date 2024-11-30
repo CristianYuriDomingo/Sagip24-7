@@ -1,13 +1,101 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>cardiac-neurological</ion-title>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <div class="logo-container">
+      <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">cardiac-neurological</ion-title>
+      <ion-title size="large">Cardiac and Neurological</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Custom Div Container -->
+  <div class="custom-container">
+    <!-- Image Background -->
+    <div class="image-section">
+      <img src="assets/images/Cardiac/neurology1.png" alt="Background Image" />
+    </div>
+
+    <!-- Icon Overlay as Image -->
+    <div class="overlay-icon">
+      <img src="assets/images/Cardiac/cardiac-logo.png" alt="Icon Image" />
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-section">
+      <h2>Cardiac and Neurological</h2>
+    </div>
+  </div>
+
+  <!-- New Label Section -->
+  <div class="label-section">
+    <h2>Key Takeaways</h2>
+  </div>
+
+  <!-- New Card Section -->
+  <ion-card class="about-card">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/reading-book.png" alt="Respiratory Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Understanding the Basics</h2>
+        <p> Cardiac and neurological emergencies, including fainting and the need for CPR, require immediate attention. Knowing the vital steps in administering CPR and managing fainting can make a life-saving difference in critical situations.</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <!-- Existing Label Section -->
+  <div class="label-section">
+    <h2>First Aid Techniques</h2>
+  </div>
+
+  <!-- Existing Card Section -->
+  <ion-card class="custom-card">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/Cardiac/cpr.png" alt="Card Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>CPR</h2>
+      </ion-label>
+
+      <!-- Next Icon -->
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="custom-card">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/Cardiac/fainting.png" alt="Card Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Fainting</h2>
+      </ion-label>
+
+      <!-- Next Icon -->
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+
+  
 </ion-content>
+
