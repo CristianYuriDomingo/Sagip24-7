@@ -13,7 +13,7 @@
   height: 40px;
 }
 .logo-rotate {
-  animation: rotating 3s ease-in 0s 1;
+  animation: rotating 3s ease-out 0s 1;
 }
 .header-appear {
   animation: appearing 3.7s ease 0s 1;
@@ -72,12 +72,16 @@
 }
 .cp-content {
   font-size: 0.8rem;
+  line-height: 1.5rem;
 }
 
 .custom-card .header-section {
-  background-color: #f3f3f3; /* Light gray for contrast */
+  background: url("../../assets/images/Tab3 img src/Light.svg"); /* Light gray for contrast */
   padding: 16px; /* Add padding around the section */
   border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .custom-card img {
@@ -92,11 +96,11 @@
 
 @keyframes rotate {
   from {
-    transform: translateY(0) scale(1.1);
+    transform: scale(1);
     opacity: 1;
   }
   to {
-    transform: translateY(0px) scale(1);
+    transform: scale(1.1);
     opacity: 1;
   }
 }
@@ -142,6 +146,10 @@ ion-card {
   color: black;
   opacity: 1;
   font-size: 0.8rem;
+}
+
+.aboutus-card {
+  border-radius: 0px;
 }
 
 /*MODAL BUTTON*/
@@ -210,7 +218,10 @@ ion-item {
   color: #888;
 }
 .tech-team {
-  background-color: #888;
+  --background: #d32f2f; /* Applies to the whole header */
+  --ion-text-color: white; /* Optional: Changes text color */
+  width: 100%;
+  padding: 0;
 }
 
 /*VISIT SITE SECTION*/
@@ -234,7 +245,120 @@ ion-item {
 }
 
 .site-header {
-  background-color: rgba(35, 34, 34, 0.631);
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+
+/* SIDE WAYS CARD*/
+.sliding-cards-container {
+  display: flex;
+  overflow-x: scroll; /* Allow horizontal scrolling */
+  padding: 10px 0;
+  gap: 10px; /* Adjust the gap between cards */
+  scroll-snap-type: x mandatory; /* Ensures that only one card is visible at a time */
+}
+
+.sliding-card {
+  flex-shrink: 0;
+  width: 60%; /* Adjust to the size of a single card */
+  scroll-snap-align: center; /* Align the card at the center when scrolling */
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.sliding-card ion-card-title {
+  color: white;
+}
+
+.sliding-card ion-card-content {
+  color: white;
+}
+.card-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px; /* Adjust size as needed */
+  height: 24px;
+  border: 2px solid white;
+  padding: 2px;
+}
+
+.sliding-card.facebook {
+  background: linear-gradient(
+    to bottom,
+    #0652eb,
+    #5479c3
+  ); /* Facebook theme colors */
+}
+
+.sliding-card.instagram {
+  background: linear-gradient(
+    to bottom,
+    #f58529,
+    #dd2a7b,
+    #8134af
+  ); /* Instagram theme colors */
+}
+
+.sliding-card.twitter {
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    #333333
+  ); /* X (formerly Twitter) theme colors */
+}
+
+.sliding-card.reddit {
+  background: linear-gradient(
+    to bottom,
+    #ff4500,
+    #c23400
+  ); /* Reddit theme colors */
+}
+
+.ion-card-header {
+  position: relative;
+  z-index: 2; /* Ensure the content appears above the gradient */
+}
+
+ion-card-content {
+  z-index: 2; /* Ensure content stays on top of the gradient */
+}
+
+.sliding-cards-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.sliding-cards-container::-webkit-scrollbar-thumb {
+  background: #d32f2f;
+  border-radius: 10px;
+}
+
+.sliding-cards-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Overview Section */
+
+/* Overview Header */
+.overview-header {
+  background-color: #f2f2f2; /* Light grey background */
+}
+
+/* Overview Title */
+.overview-header h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: #333; /* Dark color for the text */
+  padding: 20px;
+}
+
+.social-p {
+  padding: 5px 20px;
+}
+.social-p p {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.5rem;
 }
 
 @keyframes appear {
@@ -256,4 +380,8 @@ ion-item {
 
 .sm-img.ion-padding {
   padding: 0px 20px 0px 0px;
+}
+
+.nestedacc-header ion-label {
+  font-size: 0.9rem;
 }
