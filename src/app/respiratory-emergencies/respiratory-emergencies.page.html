@@ -50,7 +50,8 @@
       <!-- Title -->
       <ion-label>
         <h2>Understanding the Basics</h2>
-        <p>Respiratory emergencies, like asthma attacks or choking, require prompt action. Learn the essential steps to handle these situations and save lives.</p>
+        <p>Respiratory emergencies, like asthma attacks or choking, require prompt action. Learn the essential steps to
+          handle these situations and save lives.</p>
       </ion-label>
     </ion-item>
   </ion-card>
@@ -61,7 +62,7 @@
   </div>
 
   <!-- Existing Card Section -->
-  <ion-card class="custom-card">
+  <ion-card class="custom-card" (click)="openChokingForAdultModal()">
     <ion-item lines="none">
       <!-- Left Icon -->
       <ion-avatar slot="start">
@@ -70,7 +71,7 @@
 
       <!-- Title -->
       <ion-label>
-        <h2>Choking</h2>
+        <h2>Choking for Adults</h2>
       </ion-label>
 
       <!-- Next Icon -->
@@ -78,7 +79,24 @@
     </ion-item>
   </ion-card>
 
-  <ion-card class="custom-card">
+  <ion-card class="custom-card" (click)="openChokingForBabiesModal()">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/Respiratory/choking.png" alt="Card Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Choking For Babies</h2>
+      </ion-label>
+
+      <!-- Next Icon -->
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="custom-card" (click)="openMildAsthmaModal()">
     <ion-item lines="none">
       <!-- Left Icon -->
       <ion-avatar slot="start">
@@ -95,7 +113,7 @@
     </ion-item>
   </ion-card>
 
-  <ion-card class="custom-card">
+  <ion-card class="custom-card" (click)="openHyperventilationModal()">
     <ion-item lines="none">
       <!-- Left Icon -->
       <ion-avatar slot="start">
@@ -111,6 +129,433 @@
       <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
     </ion-item>
   </ion-card>
-  
-</ion-content>
 
+</ion-content>
+<ion-modal [isOpen]="isChokingForAdultModalOpen" (didDismiss)="closeChokingForAdultModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Choking For Adults</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeChokingForAdultModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>Choking first aid for Adults</h3>
+        <p>
+          Follow these simple and effective steps to respond to choking in adults, ensuring safety and timely action. By applying this techniques, you can increase the chance of successfully relieving the abstraction and preventing further complications.
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1: Check if the Person Can Cough, Speak, or Breathe</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>If the person cannot cough, speak, or breathe, proceed with the Heimlich maneuver. If they can do any of these, encourage them to cough to clear the airway. </li>
+             
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Stand Behind the Person and Wrap Your Arms Around Their Waist</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Stand behind the choking person and wrap your arms around their waist for support.</li>
+            
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3:	Make a Fist and Position it Just Above the Belly Button</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Make a fist with one hand and place it just above the person’s belly button, at the center of their abdomen.</li>
+      
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 4 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 4:	Grasp the Fist with the Other Hand and Perform Quick, Upward Thrusts</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step4.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>Grasp your fist with the other hand and deliver quick, upward thrusts. The motion should be sharp and forceful to expel the object blocking the airway.</li>
+            
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 5 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 5:	Alternate with 5 Firm Back Blows If the Heimlich Maneuver Fails</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step5.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>If the Heimlich maneuver is unsuccessful, alternate with 5 firm back blows between the person’s shoulder blades using the heel of your hand.</li>
+             
+            </p>
+          </ion-card-content>
+        </ion-card>
+          <!-- Card 5 -->
+          <ion-card class="sliding-card">
+            <ion-card-header>
+              <ion-card-title>Step 6: Repeat Until the Object is Expelled or the Person Becomes Unresponsive</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <img src="assets/images/Traumatic/step5.png" alt="Monitor for Infection" class="card-image" />
+              <p>
+                <li>Continue alternating between abdominal thrusts and back blows until the object is expelled or the person loses consciousness.</li>
+               
+              </p>
+            </ion-card-content>
+          </ion-card>
+
+            <!-- Card 5 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 7:	If Unresponsive, Begin CPR and Call Emergency Services </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step5.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>if the person becomes unresponsive, immediately begin CPR and call emergency services.</li>
+             
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal [isOpen]="isChokingForBabiesModalOpen" (didDismiss)="closeChokingForBabiesModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Choking</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeChokingForBabiesModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>Choking first aid for Babies</h3>
+        <p>
+          Follow these simple and effecticce steps to respond to choking in babies, ensuring their safety and well-being. By using gentle and appropriate techniques, you can help clear the abstraction and restore normal breathing.
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1:	Check if the Baby Can Cough, Cry, or Breathe	</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>If the baby cannot make a sound or breathe, proceed immediately with first aid steps.</li>
+            
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2:	Position the Baby Face Down on Your Forearm</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Place the baby face down along your forearm, with the head lower than the chest, supporting their head and neck.</li>
+            
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3:	Deliver 5 Back Blows</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Using the heel of your hand, deliver 5 firm back blows between the baby’s shoulder blades.</li>
+            
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 4 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 4:	If Unsuccessful, Turn the Baby Face Up</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step4.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>If the back blows don’t expel the object, turn the baby face up, supporting their head and neck.</li>
+              
+            
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 5 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 5:	Perform 5 Chest Thrusts</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step5.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+        
+              <li>Place two fingers in the center of the baby’s chest (just below the nipple line) and perform 5 quick chest thrusts.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 6: 	Repeat Until the Object is Expelled or the Baby Becomes Unresponsive</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step5.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              
+              <li>Alternate between back blows and chest thrusts until the object is expelled or the baby becomes unresponsive.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 7: 	If Unresponsive, Begin Infant CPR and Call Emergency Services</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step5.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+             
+              <li>If the baby becomes unresponsive, begin infant CPR and call emergency services immediately.
+
+              </li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-content>
+  </ng-template>
+
+  
+
+  
+</ion-modal>
+<ion-modal [isOpen]="isMildAsthmaModalOpen" (didDismiss)="closeMildAsthmaModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Mild Asthma Attack</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeMildAsthmaModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>Mild Asthma Attack: First Aid Steps</h3>
+        <p>
+          Follow these steps to help manage a mild asthma attack, ease breathing difficulties, and prevent further
+          complications. Immediate action can improve comfort and prevent worsening symptoms.
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1: Help the Person Sit in a Comfortable Position</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Have the person sit upright in a position that allows for easier breathing.</li>
+              <li>Encourage them to remain calm, as stress or panic can worsen the attack.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Assist with the Rescue Inhaler</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>If the person has a rescue inhaler, help them use it correctly. Usually, they need 2 puffs for relief.
+              </li>
+              <li>Make sure they breathe in slowly and deeply after each puff to ensure the medication reaches the
+                lungs.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Encourage Slow, Deep Breaths</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Guide the person to take slow, deep breaths to help open the airways and calm their breathing.</li>
+              <li>This can reduce feelings of breathlessness and prevent rapid breathing from intensifying the attack.
+              </li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 4 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 4: Monitor for Improvement</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step4.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>After using the inhaler, monitor the person’s condition. If their breathing improves and they feel
+                better, continue to observe them.</li>
+              <li>If there’s no relief after 5 minutes, or if symptoms worsen, call emergency services immediately for
+                further assistance.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<ion-modal [isOpen]="isHyperventilationModalOpen" (didDismiss)="closeHyperventilationModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Hyperventilation</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeHyperventilationModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>Hyperventilation: First Aid Steps</h3>
+        <p>
+          Follow these steps to help manage hyperventilation, reduce anxiety, and restore normal breathing patterns.
+          Quick action can help the person regain control and prevent complications.
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1: Encourage the Person to Sit Down and Relax</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Have the person sit in a comfortable position to avoid fainting or worsening symptoms. </li>
+              <li>Encourage them to relax and focus on their breathing.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Guide Them to Breathe Slowly and Calmly</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Instruct the person to breathe slowly through their nose and exhale gently through pursed lips, like
+                blowing through a straw.</li>
+              <li>This technique helps slow down rapid breathing and restore normal oxygen levels.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Reassure and Stay Calm</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Offer reassurance and stay calm to help reduce anxiety.</li>
+              <li>Anxiety can worsen hyperventilation, so maintaining a calm environment is crucial.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 4 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 4: Seek Medical Advice if Symptoms Persist</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step4.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>If the person continues to hyperventilate or exhibits signs of distress (e.g., dizziness, confusion),
+                seek professional medical help.</li>
+              <li>Persistent hyperventilation may require further evaluation and treatment.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>

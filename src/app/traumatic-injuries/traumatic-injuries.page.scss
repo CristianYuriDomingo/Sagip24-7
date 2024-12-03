@@ -148,4 +148,104 @@
       border-radius: 50%; /* Keeps the circular avatar shape */
     }
 
-  
+    .section-divider {
+      border: 0;
+      border-top: 2px solid #000000; /* Black color divider line */
+      width: 50%; /* Half the width of the screen */
+      margin-left: 20px; /* Add some left margin */
+    }
+/* Sliding Cards Container */
+.sliding-cards-container {
+  display: flex;
+  overflow-x: scroll;
+  padding: 15px 0;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  margin-top: 20px; /* Added space after the description section */
+}
+
+.sliding-card {
+  flex-shrink: 0;
+  width: 80%; /* Increased width to 80% of the screen */
+  height: 50vh; /* Proportional height */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  scroll-snap-align: center;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sliding-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-image {
+  width: 100%;
+  height: 40%; /* Image occupies 40% of the card height */
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+ion-card-header {
+  padding: 10px 16px;
+  background-color: #f9f9f9;
+}
+
+ion-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+ion-card-content {
+  padding: 15px;
+  font-size: 1em;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ion-card-content p {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Scrollbar Customization */
+.sliding-cards-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.sliding-cards-container::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 10px;
+}
+
+.sliding-cards-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Description Section */
+/* Description Section */
+.description-section {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.description-section h3 {
+  font-size: 1.5em;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.description-section p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+

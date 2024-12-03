@@ -5,11 +5,37 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './allergic-insect-bites.page.html',
   styleUrls: ['./allergic-insect-bites.page.scss'],
 })
-export class AllergicInsectBitesPage implements OnInit {
+export class AllergicInsectBitesPage{
+
+  isSnakeBitesModalOpen = false;
+  isAllergicReactionModalOpen = false;
+  isInsectStingsModalOpen = false;
 
   constructor() { }
 
-  ngOnInit() {
+  openSnakeBitesModal() {
+    this.isSnakeBitesModalOpen = true;
   }
 
+  openAllergicReactionModal() {
+    this.isAllergicReactionModalOpen = true;
+  }
+
+  openInsectStingsModal() {
+    this.isInsectStingsModalOpen = true;
+  }
+
+  closeSnakeBitesModal() {
+    this.isSnakeBitesModalOpen = false;
+  }
+  closeAllergicReactionModal() {
+    this.isAllergicReactionModalOpen = false;
+  }
+  closeInsectStingsModal() {
+    this.isInsectStingsModalOpen = false;
+  }
+
+  
+
+ 
 }
