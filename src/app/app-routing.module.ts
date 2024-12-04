@@ -29,8 +29,33 @@ const routes: Routes = [
   {
     path: 'other-general-emergencies',
     loadChildren: () => import('./other-general-emergencies/other-general-emergencies.module').then( m => m.OtherGeneralEmergenciesPageModule)
+  },
+  {
+    path: 'emergency-response',
+    loadChildren: () => import('./emergency-response/emergency-response.module').then( m => m.EmergencyResponsePageModule)
+  },
+  {
+    path: 'visual-aids',
+    loadChildren: () => import('./visual-aids/visual-aids.module').then( m => m.VisualAidsPageModule)
+  },
+  {
+    path: 'symptom-checker',
+    loadChildren: () => import('./symptom-checker/symptom-checker.module').then( m => m.SymptomCheckerPageModule)
+  },
+  {
+    path: 'myths',
+    loadChildren: () => import('./myths/myths.module').then( m => m.MythsPageModule)
+  },
+  {
+    path: 'best-practices',
+    loadChildren: () => import('./best-practices/best-practices.module').then( m => m.BestPracticesPageModule)
+  },
+  {
+    path: 'help-us',
+    loadChildren: () => import('./help-us/help-us.module').then( m => m.HelpUsPageModule)
   }
 ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

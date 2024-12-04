@@ -9,9 +9,9 @@
 <ion-content [fullscreen]="true" class="content">
   <!-- Image Section -->
   <ion-card class="image-container-card">
-    <img src="assets/images/Dashboard.png" alt="Background Image" class="background-image">
+    <img src="assets/images/Dashboard1.png" alt="Background Image" class="background-image">
     <div class="overlay">
-      <h2>We provide care, not judgment</h2>
+      <h2>We provide care, not judgement</h2>
       <p>With neutrality, independence, and compassion, we deliver life-saving first aid and support to those in need.</p>
     </div>
   </ion-card>
@@ -21,19 +21,19 @@
     <ion-grid>
       <ion-row>
         <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card">
-            <img src="assets/images/icon1.png" alt="Procedure Icon" class="icon-image">
-            <h3 class="icon-title">Procedure</h3>
+          <ion-card class="icon-container-card" [routerLink]="['/emergency-response']">
+            <img src="assets/images/icon4.png" alt="Procedure Icon" class="icon-image">
+            <h3 class="icon-title">Emergency Response</h3>
           </ion-card>
         </ion-col>
         <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card">
+          <ion-card class="icon-container-card" [routerLink]="['/visual-aids']">
             <img src="assets/images/icon2.png" alt="Visual Aids Icon" class="icon-image">
             <h3 class="icon-title">Visual Aids</h3>
           </ion-card>
         </ion-col>
         <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card">
+          <ion-card class="icon-container-card" [routerLink]="['/symptom-checker']">
             <img src="assets/images/icon3.png" alt="Symptom Checker Icon" class="icon-image">
             <h3 class="icon-title">Symptom Checker</h3>
           </ion-card>
@@ -43,30 +43,29 @@
         <ion-col size="4" class="icon-col">
           <ion-card class="icon-container-card">
             <img src="assets/images/icon4.png" alt="Emergency Response Icon" class="icon-image">
-            <h3 class="icon-title">Emergency Response</h3>
+            <h3 class="icon-title"></h3>
           </ion-card>
         </ion-col>
         <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card">
+          <ion-card class="icon-container-card" [routerLink]="['/best-practices']">
             <img src="assets/images/icon5.png" alt="Best Practices Icon" class="icon-image">
             <h3 class="icon-title">Best Practices</h3>
           </ion-card>
         </ion-col>
         <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card">
+          <ion-card class="icon-container-card" [routerLink]="['/help-us']">
             <img src="assets/images/icon6.png" alt="Help Us Icon" class="icon-image">
             <h3 class="icon-title">Help Us</h3>
           </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
-
   </div>
+
   <div class="emergency-label">
     <h2>Types of Emergencies</h2>
   </div>
-   
-      
+
   <div class="card-container">
     <!-- Card 1: Respiratory Emergencies -->
     <div [routerLink]="['/respiratory-emergencies']" class="custom-card-wrapper">
@@ -79,7 +78,7 @@
         <img src="assets/images/icon7.png" class="card-icon" alt="Respiratory Icon">
       </ion-card>
     </div>
-  
+
     <!-- Card 2: Traumatic Injuries -->
     <div [routerLink]="['/traumatic-injuries']" class="custom-card-wrapper">
       <ion-card class="custom-card">
@@ -91,7 +90,7 @@
         <img src="assets/images/icon7.png" class="card-icon" alt="Traumatic Icon">
       </ion-card>
     </div>
-  
+
     <!-- Card 3: Environmental Emergencies -->
     <div [routerLink]="['/environmental-emergencies']" class="custom-card-wrapper">
       <ion-card class="custom-card">
@@ -103,7 +102,7 @@
         <img src="assets/images/icon7.png" class="card-icon" alt="Environmental Icon">
       </ion-card>
     </div>
-  
+
     <!-- Card 4: Allergic and Insect Bites -->
     <div [routerLink]="['/allergic-insect-bites']" class="custom-card-wrapper">
       <ion-card class="custom-card">
@@ -115,7 +114,7 @@
         <img src="assets/images/icon7.png" class="card-icon" alt="Allergic Icon">
       </ion-card>
     </div>
-  
+
     <!-- Card 5: Cardiac and Neurological -->
     <div [routerLink]="['/cardiac-neurological']" class="custom-card-wrapper">
       <ion-card class="custom-card">
@@ -127,7 +126,7 @@
         <img src="assets/images/icon7.png" class="card-icon" alt="Cardiac Icon">
       </ion-card>
     </div>
-  
+
     <!-- Card 6: Other General Emergencies -->
     <div [routerLink]="['/other-general-emergencies']" class="custom-card-wrapper">
       <ion-card class="custom-card">
@@ -140,10 +139,4 @@
       </ion-card>
     </div>
   </div>
-  
-      
-      
-      
-    
-  
 </ion-content>
