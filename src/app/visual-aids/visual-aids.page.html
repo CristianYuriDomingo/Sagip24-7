@@ -23,50 +23,51 @@
     <ion-card class="card" (click)="openResModal()">
       <div class="image-container">
         <img src="assets/images/VisualAids/vid1.png" alt="Respiratory Emergency" class="card-image">
-        <div class="card-title">Respiratory Emergency</div>
       </div>
+      <div class="card-title">Respiratory Emergency</div>
     </ion-card>
-
+  
     <!-- Card 2 -->
     <ion-card class="card" (click)="openTraumModal()">
       <div class="image-container">
-        <img src="assets/images/VisualAids/vid2.png " alt="Profile Icon" class="card-image">
-        <div class="card-title">Traumatic Injuries</div>
+        <img src="assets/images/VisualAids/vid2.png" alt="Traumatic Injuries" class="card-image">
       </div>
+      <div class="card-title">Traumatic Injuries</div>
     </ion-card>
-
+  
     <!-- Card 3 -->
     <ion-card class="card" (click)="openEnvModal()">
       <div class="image-container">
-        <img src="assets/images/VisualAids/vid3.png" alt="Settings Icon" class="card-image">
-        <div class="card-title">Environmental and Physical Emergencies</div>
+        <img src="assets/images/VisualAids/vid3.png" alt="Environmental and Physical Emergencies" class="card-image">
       </div>
+      <div class="card-title">Environmental and Physical Emergencies</div>
     </ion-card>
-
+  
     <!-- Card 4 -->
     <ion-card class="card" (click)="openAllModal()">
       <div class="image-container">
-        <img src="assets/images/VisualAids/vid4.png" alt="Messages Icon" class="card-image">
-        <div class="card-title">Allergic Reactions and Insect Bites</div>
+        <img src="assets/images/VisualAids/vid4.png" alt="Allergic Reactions and Insect Bites" class="card-image">
       </div>
+      <div class="card-title">Allergic Reactions and Insect Bites</div>
     </ion-card>
-
+  
     <!-- Card 5 -->
     <ion-card class="card" (click)="openCardModal()">
       <div class="image-container">
-        <img src="assets/images/VisualAids/vid5.png" alt="Notifications Icon" class="card-image">
-        <div class="card-title">Cardiac and Neurological</div>
+        <img src="assets/images/VisualAids/vid5.png" alt="Cardiac and Neurological" class="card-image">
       </div>
+      <div class="card-title">Cardiac and Neurological</div>
     </ion-card>
-
+  
     <!-- Card 6 -->
     <ion-card class="card" (click)="openOtherModal()">
       <div class="image-container">
-        <img src="assets/images/VisualAids/vid6.png" alt="Help Icon" class="card-image">
-        <div class="card-title">Other General Emergencies</div>
+        <img src="assets/images/VisualAids/vid6.png" alt="Other General Emergencies" class="card-image">
       </div>
+      <div class="card-title">Other General Emergencies</div>
     </ion-card>
   </div>
+  
 
   <ion-modal [isOpen]="isResModalOpen" (didDismiss)="closeResModal()">
     <ng-template>
@@ -268,7 +269,7 @@
         <section class="modal-header">
           <h2>Learn Emergency Responses</h2>
           <p>
-            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with traumatic injuries.
+            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with Environmenatal and Physical Emergencies.
           </p>
         </section>
 
@@ -281,9 +282,9 @@
               <ion-card-title>Heat Exhaustion</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on how to deal with choking emergencies for adults.
+              Video on how to deal with Heat Exhaustion.
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/MkTZlRyXQiY" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/R6VdoV8dZRc" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
@@ -294,12 +295,12 @@
 
           <ion-card class="sliding-card">
             <ion-card-header>
-              <ion-card-title>Choking (Babies)</ion-card-title>
+              <ion-card-title>Mild Hypotermia</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on how to deal with choking emergencies for babies.
+              Video on how to deal with Mild Hypotermia.
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/4j329wUsl3s" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Sf85qfJUNfc" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                   ></iframe>
@@ -310,27 +311,12 @@
           <!-- Mild Asthma Attack Video -->
           <ion-card class="sliding-card">
             <ion-card-header>
-              <ion-card-title>Mild Asthma Attack</ion-card-title>
+              <ion-card-title>Dehydration</ion-card-title>
             </ion-card-header>
             <ion-card-content>
               Video on managing mild asthma attacks.
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/hdVKpUR513M" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </ion-card-content>
-          </ion-card>
-
-          <ion-card class="sliding-card">
-            <ion-card-header>
-              <ion-card-title>Hyperventilation</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Video on managing Hyperventilation.
-              <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/rXlttZOEpLo" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/DXo5hmiFQmQ" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
@@ -359,7 +345,7 @@
         <section class="modal-header">
           <h2>Learn Emergency Responses</h2>
           <p>
-            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with environmental emergencies.
+            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with Allergic Reaction and Insect Bites.
           </p>
         </section>
 
@@ -369,10 +355,10 @@
           <!-- Choking Video -->
           <ion-card class="sliding-card">
             <ion-card-header>
-              <ion-card-title>Choking (Adult)</ion-card-title>
+              <ion-card-title> Snake Bites</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on how to deal with choking emergencies for adults.
+              Video on how to deal with Snake Bites .
               <div class="video-container">
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/MkTZlRyXQiY" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -385,10 +371,10 @@
 
           <ion-card class="sliding-card">
             <ion-card-header>
-              <ion-card-title>Choking (Babies)</ion-card-title>
+              <ion-card-title>Allergic Reaction</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on how to deal with choking emergencies for babies.
+              Video on how to deal with Allergic Reaction.
               <div class="video-container">
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/4j329wUsl3s" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -401,27 +387,12 @@
           <!-- Mild Asthma Attack Video -->
           <ion-card class="sliding-card">
             <ion-card-header>
-              <ion-card-title>Mild Asthma Attack</ion-card-title>
+              <ion-card-title>Insect Stings</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on managing mild asthma attacks.
+              Video on managing Insect Stings.
               <div class="video-container">
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/hdVKpUR513M" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </ion-card-content>
-          </ion-card>
-
-          <ion-card class="sliding-card">
-            <ion-card-header>
-              <ion-card-title>Hyperventilation</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Video on managing Hyperventilation.
-              <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/rXlttZOEpLo" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
@@ -460,12 +431,12 @@
           <!-- Choking Video -->
           <ion-card class="sliding-card">
             <ion-card-header>
-              <ion-card-title>Choking (Adult)</ion-card-title>
+              <ion-card-title>Fainting</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on how to deal with choking emergencies for adults.
+              Video on how to deal with Fainting.
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/MkTZlRyXQiY" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/ddHKwkMwNyI" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
@@ -476,46 +447,15 @@
 
           <ion-card class="sliding-card">
             <ion-card-header>
-              <ion-card-title>Choking (Babies)</ion-card-title>
+              <ion-card-title>CPR</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on how to deal with choking emergencies for babies.
+              Video on how to do CPR.
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/4j329wUsl3s" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/ozzZVQQTvo4" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                   ></iframe>
-              </div>
-            </ion-card-content>
-          </ion-card>
-
-          <!-- Mild Asthma Attack Video -->
-          <ion-card class="sliding-card">
-            <ion-card-header>
-              <ion-card-title>Mild Asthma Attack</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Video on managing mild asthma attacks.
-              <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/hdVKpUR513M" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </ion-card-content>
-          </ion-card>
-
-          <ion-card class="sliding-card">
-            <ion-card-header>
-              <ion-card-title>Hyperventilation</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Video on managing Hyperventilation.
-              <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/rXlttZOEpLo" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
               </div>
             </ion-card-content>
           </ion-card>
@@ -552,10 +492,10 @@
           <!-- Choking Video -->
           <ion-card class="sliding-card">
             <ion-card-header>
-              <ion-card-title>Choking (Adult)</ion-card-title>
+              <ion-card-title>Nosebleeds</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on how to deal with choking emergencies for adults.
+              Video on how to deal with Nosebleeds.
               <div class="video-container">
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/MkTZlRyXQiY" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -571,9 +511,10 @@
               <ion-card-title>Choking (Babies)</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on how to deal with choking emergencies for babies.
+              Video on how to deal with Eye Injury.
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/4j329wUsl3s" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/V34aB5uheBg
+                " frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                   ></iframe>
@@ -584,12 +525,12 @@
           <!-- Mild Asthma Attack Video -->
           <ion-card class="sliding-card">
             <ion-card-header>
-              <ion-card-title>Mild Asthma Attack</ion-card-title>
+              <ion-card-title>Small Foreign Object</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              Video on managing mild asthma attacks.
+              Video on safely removing small foreign objects
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/hdVKpUR513M" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/AP4_rmZ6tOo" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
@@ -604,7 +545,7 @@
             <ion-card-content>
               Video on managing Hyperventilation.
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/rXlttZOEpLo" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/PHaeTd4N9fM" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
@@ -616,129 +557,4 @@
       </ion-content>
     </ng-template>
   </ion-modal>
-
-
-  
-
-  <style>
-    /* Parent container for the single column */
-    .parent-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 10px;
-      height: 100vh;
-      padding: 10px;
-      box-sizing: border-box;
-      overflow-y: auto;
-    }
-
-    .intro-section {
-      padding: 10px 20px;
-      background-color: #dc1212;
-      color: white;
-      text-align: center;
-    }
-
-    .card {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      border-radius: 15px;
-      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .image-container {
-      position: relative;
-      width: 100%;
-      height: 80%;
-    }
-
-    .card-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 15px 15px 0 0;
-    }
-
-    .card-title {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      right: 10px;
-      font-size: 14px;
-      font-weight: bold;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 5px;
-      border-radius: 5px;
-    }
-
-    .modal-header {
-      padding: 10px;
-      /* Reduced padding for minimizing the section size */
-      background-color: #dc1212;
-      color: white;
-      /* Makes text white */
-      text-align: center;
-    }
-
-    .modal-header h2 {
-      color: white;
-      /* Ensures the <h2> text is white */
-      font-size: 1.2rem;
-      /* Adjust font size for minimization */
-      margin: 5px 0;
-      /* Adds some spacing but keeps it minimal */
-    }
-
-    .modal-header p {
-      color: white;
-      /* Ensures the <p> text is white */
-      font-size: 0.9rem;
-      /* Adjust font size for minimization */
-      margin: 0;
-      /* Removes extra margin for compact look */
-    }
-
-
-
-
-    .modal-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 20px;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .sliding-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 90%;
-      max-width: 420px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-      background-color: white;
-    }
-
-    .video-container {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%;
-      /* Aspect ratio 16:9 */
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
 </ion-content>

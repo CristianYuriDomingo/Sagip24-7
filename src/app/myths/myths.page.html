@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>myths</ion-title>
+    <ion-title>Myths and Facts</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">myths</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <!-- Dashboard Section -->
+  <section class="dashboard">
+    <h2>Dashboard</h2>
+    <p>Welcome! Explore myths and facts below. Click on a myth to reveal the fact behind it.</p>
+  </section>
+
+  <!-- Myths List -->
+  <ion-list>
+    <!-- Loop through each myth in the myths array -->
+    <ion-card *ngFor="let myth of myths">
+      <!-- Myth item that is clickable to toggle visibility of the fact -->
+      <ion-item button (click)="toggleFact(myth.id)">
+        <ion-label>{{ myth.title }}</ion-label>
+        <ion-icon slot="end" name="chevron-down-outline" class="down-icon"></ion-icon>
+      </ion-item>
+
+      <!-- Fact content that shows up when toggled -->
+      <ion-card-content *ngIf="isFactVisible(myth.id)">
+        <p>{{ myth.fact }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>
