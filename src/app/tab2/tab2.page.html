@@ -16,51 +16,36 @@
     </div>
   </ion-card>
 
-  <!-- Icon Section -->
-  <div class="icon-container">
-    <ion-grid>
-      <ion-row>
-        <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card" [routerLink]="['/emergency-response']">
-            <img src="assets/images/icon4.png" alt="Procedure Icon" class="icon-image">
-            <h3 class="icon-title">Emergency Response</h3>
-          </ion-card>
-        </ion-col>
-        <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card" [routerLink]="['/visual-aids']">
-            <img src="assets/images/icon2.png" alt="Visual Aids Icon" class="icon-image">
-            <h3 class="icon-title">Visual Aids</h3>
-          </ion-card>
-        </ion-col>
-        <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card" [routerLink]="['/symptom-checker']">
-            <img src="assets/images/icon3.png" alt="Symptom Checker Icon" class="icon-image">
-            <h3 class="icon-title">Symptom Checker</h3>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card" [routerLink]="['/myths']">
-            <img src="assets/images/icon4.png" alt="Emergency Response Icon" class="icon-image">
-            <h3 class="icon-title"></h3>
-          </ion-card>
-        </ion-col>
-        <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card" [routerLink]="['/best-practices']">
-            <img src="assets/images/icon5.png" alt="Best Practices Icon" class="icon-image">
-            <h3 class="icon-title">Best Practices</h3>
-          </ion-card>
-        </ion-col>
-        <ion-col size="4" class="icon-col">
-          <ion-card class="icon-container-card" [routerLink]="['/help-us']">
-            <img src="assets/images/icon6.png" alt="Help Us Icon" class="icon-image">
-            <h3 class="icon-title">Help Us</h3>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
+  <ion-row>
+    <ion-col size="3" class="icon-col">
+      <ion-card class="icon-container-card" [routerLink]="['/visual-aids']">
+        <img src="assets/images/icon2.png" alt="Visual Aids Icon" class="icon-image">
+      </ion-card>
+      <!-- Title outside of the card -->
+      <h3 class="icon-title">Visual Aids</h3>
+    </ion-col>
+    <ion-col size="3" class="icon-col">
+      <ion-card class="icon-container-card" [routerLink]="['/myths']">
+        <img src="assets/images/icon4.png" alt="Emergency Response Icon" class="icon-image">
+      </ion-card>
+      <h3 class="icon-title">Myths and Facts</h3>
+    </ion-col>
+    <ion-col size="3" class="icon-col">
+      <ion-card class="icon-container-card" [routerLink]="['/best-practices']">
+        <img src="assets/images/icon5.png" alt="Best Practices Icon" class="icon-image">
+      </ion-card>
+      <h3 class="icon-title">Best Practices</h3>
+    </ion-col>
+    <ion-col size="3" class="icon-col">
+      <ion-card class="icon-container-card" [routerLink]="['/help-us']">
+        <img src="assets/images/icon6.png" alt="Help Us Icon" class="icon-image">
+      </ion-card>
+      <h3 class="icon-title">Help Us</h3>
+    </ion-col>
+  </ion-row>
+  
+  
+  
 
   <div class="emergency-label">
     <h2>Types of Emergencies</h2>
