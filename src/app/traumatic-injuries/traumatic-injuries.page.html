@@ -1,0 +1,452 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <div class="logo-container">
+      <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Traumatic Injuries First Aid</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Custom Div Container -->
+  <div class="custom-container">
+    <div class="image-section">
+      <img src="assets/images/Traumatic/bruises1.png" alt="Background Image" />
+    </div>
+
+    <div class="overlay-icon">
+      <img src="assets/images/Traumatic/traumatic-logo.png" alt="Icon Image" />
+    </div>
+
+    <div class="text-section">
+      <h2>Traumatic Injuries</h2>
+    </div>
+  </div>
+
+  <div class="label-section">
+    <h2>Key Takeaways</h2>
+  </div>
+
+  <ion-card class="about-card">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="assets/images/reading-book.png" alt="Respiratory Icon" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Understanding the Basics</h2>
+        <p>Traumatic injuries, such as minor bleeding, sprains, mild burns, and bruises, require timely and proper care.
+          Learn the essential steps to manage these injuries effectively and prevent further harm.</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <div class="label-section">
+    <h2>First Aid Techniques</h2>
+  </div>
+
+  <!-- Minor Bleeding Card -->
+  <ion-card class="custom-card" (click)="openMinorBleedingModal()">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="assets/images/Traumatic/bleeding.png" alt="Minor Bleeding Icon" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Minor Bleeding or Cuts</h2>
+      </ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <!-- Sprains and Minor Fractures Card -->
+  <ion-card class="custom-card" (click)="openSprainsModal()">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="assets/images/Traumatic/injury.png" alt="Sprains Icon" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Sprains and Minor Fractures</h2>
+      </ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <!-- Burns Card -->
+  <ion-card class="custom-card" (click)="openBurnsModal()">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="assets/images/Traumatic/burns.png" alt="Burns Icon" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Mild Burns</h2>
+      </ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <!-- Bruises Card -->
+  <ion-card class="custom-card" (click)="openBruiseModal()">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="assets/images/Traumatic/bruises.png" alt="Bruises Icon" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Bruises</h2>
+      </ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
+
+<!-- Minor Bleeding Modal -->
+<ion-modal [isOpen]="isMinorBleedingModalOpen" (didDismiss)="closeMinorBleedingModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Minor Bleeding or Cuts</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeMinorBleedingModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>First Aid for Minor Cuts and Wounds</h3>
+        <p>
+          Follow these simple and effective steps to properly care for minor cuts or wounds, ensuring cleanliness,
+          safety, and faster healing. By taking these precautions, you can minimize the risk of infection, promote
+          proper recovery, and protect the injured area for optimal healing outcomes.
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1: Prepare Yourself</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Wash your hands thoroughly with soap and water. </li>
+              <li>If available, wear disposable gloves to prevent contamination.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Stop the Bleeding</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Gently apply firm pressure to the wound using a clean cloth or gauze.</li>
+              <li>Hold the pressure until the bleeding stops (usually within a few minutes).</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Clean the Wound</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Rinse the wound gently under clean, running water to remove dirt or debris.</li>
+              <li>o Avoid using hydrogen peroxide or alcohol directly on the wound, as these can delay healing.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 4 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 4: Apply Antiseptic and Cover</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step4.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>Dab the wound dry with a clean cloth.</li>
+              <li>Apply an antiseptic or antibiotic ointment.</li>
+              <li>Cover the wound with a sterile bandage or dressing to keep it protected.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 5 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 5: Monitor for Infection.</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step5.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>Watch the wound over the next few days for signs of infection, such as redness, swelling, pus, or
+                increased pain.</li>
+              <li>If symptoms worsen, seek medical advice promptly.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<!-- Sprains and Minor Fractures Modal -->
+<ion-modal [isOpen]="isSprainsModalOpen" (didDismiss)="closeSprainsModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Sprains and Minor Fractures</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeSprainsModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <section class="description-section">
+        <h3>Sprains and Minor Fractures: First Aid Steps</h3>
+        <p>
+          Follow these steps to safely manage sprains and minor fractures while minimizing pain, reducing swelling, and
+          preventing further injury. These measures will help stabilize the affected area and provide initial relief
+          until professional medical care is available if needed.
+        </p>
+      </section>
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1: Immobilize the Area</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/sprain-step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Keep the injured part as still as possible.</li>
+              <li>Use a splint or any sturdy support to stabilize the affected area.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Apply Cold Therapy</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/sprain-step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Place an ice pack wrapped in a cloth or towel on the injury.</li>
+              <li>Apply for 15 to 20 minutes at a time to reduce pain and swelling.</li>
+              <li>Avoid placing ice directly on the skin to prevent frostbite.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Elevate the Limb</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/sprain-step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>If feasible, raise the injured limb above heart level.</li>
+              <li>This helps decrease swelling and promotes blood flow.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 4 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 4: Avoid Strain and Seek Professional Help</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/sprain-step4.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>Do not put any weight or pressure on the injured area.</li>
+              <li>If severe pain, deformity, or inability to move the limb persists, seek immediate medical attention.
+              </li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<!-- Burns Modal -->
+<ion-modal [isOpen]="isBurnsModalOpen" (didDismiss)="closeBurnsModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Mild Burns</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeBurnsModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <section class="description-section">
+        <h3>Mild Burns: First Aid Steps</h3>
+        <p>
+          Follow these steps to safely treat mild burns, ensuring immediate pain relief, protecting the affected area,
+          and promoting faster healing. Acting promptly can prevent further skin damage and reduce the risk of
+          infection.
+        </p>
+      </section>
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1: Cool the Burn</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/burns-step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Place the affected area under cool, running water for 10–15 minutes.</li>
+              <li>Avoid using icy water, as it can cause further tissue damage.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Protect the Skin</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/burns-step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>o Do not break any blisters, as they act as a natural barrier against infection.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Cover the Burn</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/burns-step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Use a non-stick sterile bandage or clean cloth to lightly cover the burn.</li>
+              <li>Use a non-stick sterile bandage or clean cloth to lightly cover the burn.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 4 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 4: Seek Medical Attention If Necessary</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step5.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>If the burn is larger than the size of a palm, or if it occurs in a sensitive area like the face,
+                hands, or joints, consult a healthcare professional promptly.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<!-- Bruises Modal -->
+<ion-modal [isOpen]="isBruiseModalOpen" (didDismiss)="closeBruiseModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Bruises</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeBruiseModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <section class="description-section">
+        <h3>Bruises: First Aid Steps</h3>
+        <p>
+          Follow these simple steps to help reduce swelling, ease discomfort, and promote healing for bruises. Timely
+          care can minimize the severity of the bruise, promote faster recovery, and prevent complications such as
+          prolonged pain or increased swelling.
+        </p>
+      </section>
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1: Apply Cold Compress</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/bruises-step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Place a cold compress or ice pack wrapped in a cloth on the bruised area to reduce swelling.</li>
+              <li>Apply for 15–20 minutes at a time, taking breaks to prevent skin damage.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Elevate the Area</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/bruises-step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>o If possible, raise the bruised area above heart level to minimize swelling and encourage proper
+                blood flow.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Rest and Monitor</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step5.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Avoid putting pressure or strain on the injured area.</li>
+              <li>Rest and keep an eye on the bruise for any changes, such as increased pain or discoloration.</li>
+              <li>If symptoms worsen, seek medical advice.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>

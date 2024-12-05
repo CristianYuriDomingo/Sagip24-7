@@ -1,0 +1,340 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <div class="logo-container">
+      <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Allergic Reactions and Insect Bites</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Custom Div Container -->
+  <div class="custom-container">
+    <!-- Image Background -->
+    <div class="image-section">
+      <img src="assets/images/allergy/allergy1.png" alt="Background Image" />
+    </div>
+
+    <!-- Icon Overlay as Image -->
+    <div class="overlay-icon">
+      <img src="assets/images/allergy/allergy-logo.png" alt="Icon Image" />
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-section">
+      <h2>Allergic Reactions and Insect Bites</h2>
+    </div>
+  </div>
+
+  <!-- New Label Section -->
+  <div class="label-section">
+    <h2>Key Takeaways</h2>
+  </div>
+
+  <!-- New Card Section -->
+  <ion-card class="about-card">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/reading-book.png" alt="Respiratory Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Understanding the Basics</h2>
+        <p>Allergic reactions and insect bites, including snake bites, mild allergic responses, and insect stings,
+          require swift action to prevent severe complications. Learn how to identify symptoms and provide immediate
+          care for these potentially life-threatening situations.</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <!-- Existing Label Section -->
+  <div class="label-section">
+    <h2>First Aid Techniques</h2>
+  </div>
+
+  <!-- Existing Card Section -->
+  <ion-card class="custom-card" (click)="openSnakeBitesModal()">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/allergy/snake.png" alt="Card Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Snake bites </h2>
+      </ion-label>
+
+      <!-- Next Icon -->
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="custom-card" (click)="openAllergicReactionModal()">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/allergy/allergy.png" alt="Card Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Mild allergic reactions </h2>
+      </ion-label>
+
+      <!-- Next Icon -->
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="custom-card" (click)="openInsectStingsModal()">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/allergy/insect.png" alt="Card Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Insect stings </h2>
+      </ion-label>
+
+      <!-- Next Icon -->
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
+<ion-modal [isOpen]="isSnakeBitesModalOpen" (didDismiss)="closeSnakeBitesModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Snake Bites</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeSnakeBitesModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>Snake Bites: First Aid Steps</h3>
+        <p>
+          Follow these steps to manage snake bites safely, slow the spread of venom, and ensure prompt medical treatment. Acting quickly and calmly can make a critical difference in the outcome.
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1: Keep the Person Calm and Still</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Reassure the individual and encourage minimal movement to reduce the spread of venom through the bloodstream.</li>
+              <li>Panic and excessive movement can increase heart rate, speeding up venom circulation.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Immobilize the Limb and Keep It Below Heart Level</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Gently immobilize the affected limb using a splint or by keeping it as still as possible.</li>
+              <li>Keeping the limb below heart level reduces the speed at which venom travels to vital organs.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Do Not Apply Ice or Suck Out Venom</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Avoid using ice or cutting the wound, as these methods can worsen tissue damage.</li>
+              <li>Attempting to suck out venom is ineffective and can introduce infections.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 4 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 4: Call Emergency Services Immediately</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step4.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              <li>Contact professional medical help as quickly as possible for antivenom and advanced care.</li>
+              <li>Provide information about the snake’s appearance if known, as this can assist medical staff in selecting the appropriate treatment.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<ion-modal [isOpen]="isAllergicReactionModalOpen" (didDismiss)="closeAllergicReactionModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Mild Allergic Reactions</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeAllergicReactionModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>Mild Allergic Reactions: First Aid Steps</h3>
+        <p>
+          Follow these steps to address mild allergic reactions promptly, alleviate symptoms, and prevent the reaction from escalating. Quick action can help ensure the person’s comfort and safety.
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1:	Identify and Remove the Allergen</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Determine the source of the allergy (e.g., food, pollen, or insect sting) and eliminate further exposure if possible. </li>
+              <li>Removing the allergen helps stop the reaction from worsening or continuing.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Administer an Antihistamine</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Provide an over-the-counter antihistamine if available and the person has no known contraindications.</li>
+              <li>Antihistamines reduce itching, swelling, and other mild symptoms by blocking the allergic response.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Monitor for Worsening Symptoms</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Observe the person closely for any signs of the reaction becoming severe, such as difficulty breathing, swelling of the throat, or hives spreading rapidly.</li>
+              <li>If symptoms escalate, be prepared to call emergency services immediately.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<ion-modal [isOpen]="isInsectStingsModalOpen" (didDismiss)="closeInsectStingsModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Insect Stings</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeInsectStingsModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>Insect Stings: First Aid Steps</h3>
+        <p>
+          Follow these steps to safely treat insect stings, minimize discomfort, and prevent complications like infections or severe allergic reactions. Prompt care can help reduce pain and swelling effectively.
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1:	Remove the Stinger Safely</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Gently scrape the stinger out using a card or your fingernail, avoiding squeezing the venom sac. </li>
+              <li>Proper removal prevents injecting more venom into the skin, reducing the severity of the reaction.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2: Clean the Area Thoroughly</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Wash the sting site with soap and water to remove dirt and bacteria.</li>
+              <li>Cleaning minimizes the risk of infection, especially if the skin is broken.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Apply a Cold Compress</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Place a cold compress or ice pack (wrapped in cloth) on the sting area to ease pain and reduce swelling.</li>
+              <li>Cooling the site helps numb the area and slow down the inflammatory response.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+      
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>

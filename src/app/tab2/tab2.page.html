@@ -1,0 +1,233 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="logo-container">
+      <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo" />
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content">
+  <!-- Image Section -->
+  <ion-card class="image-container-card">
+    <img
+      src="assets/images/Dashboard1.png"
+      alt="Background Image"
+      class="background-image"
+    />
+    <div class="overlay">
+      <h2>We provide care, not judgement</h2>
+      <p>
+        With neutrality, independence, and compassion, we deliver life-saving
+        first aid and support to those in need.
+      </p>
+    </div>
+  </ion-card>
+
+  <!-- Icon Section -->
+  <div class="icon-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4" class="icon-col">
+          <ion-card
+            class="icon-container-card"
+            [routerLink]="['/emergency-response']"
+          >
+            <img
+              src="assets/images/icon4.png"
+              alt="Procedure Icon"
+              class="icon-image"
+            />
+            <h3 class="icon-title">Emergency Response</h3>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4" class="icon-col">
+          <ion-card class="icon-container-card" [routerLink]="['/visual-aids']">
+            <img
+              src="assets/images/icon2.png"
+              alt="Visual Aids Icon"
+              class="icon-image"
+            />
+            <h3 class="icon-title">Visual Aids</h3>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4" class="icon-col">
+          <ion-card
+            class="icon-container-card"
+            [routerLink]="['/symptom-checker']"
+          >
+            <img
+              src="assets/images/icon3.png"
+              alt="Symptom Checker Icon"
+              class="icon-image"
+            />
+            <h3 class="icon-title">Symptom Checker</h3>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4" class="icon-col">
+          <ion-card class="icon-container-card">
+            <img
+              src="assets/images/icon4.png"
+              alt="Emergency Response Icon"
+              class="icon-image"
+            />
+            <h3 class="icon-title"></h3>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4" class="icon-col">
+          <ion-card
+            class="icon-container-card"
+            [routerLink]="['/best-practices']"
+          >
+            <img
+              src="assets/images/icon5.png"
+              alt="Best Practices Icon"
+              class="icon-image"
+            />
+            <h3 class="icon-title">Best Practices</h3>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4" class="icon-col">
+          <ion-card class="icon-container-card" [routerLink]="['/help-us']">
+            <img
+              src="assets/images/icon6.png"
+              alt="Help Us Icon"
+              class="icon-image"
+            />
+            <h3 class="icon-title">Help Us</h3>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="emergency-label">
+    <h2>Types of Emergencies</h2>
+  </div>
+
+  <div class="card-container">
+    <!-- Card 1: Respiratory Emergencies -->
+    <div
+      [routerLink]="['/respiratory-emergencies']"
+      class="custom-card-wrapper"
+    >
+      <ion-card class="custom-card">
+        <div
+          class="card-background"
+          style="background-image: url('assets/images/Respiratory.png')"
+        >
+          <div class="card-content">
+            <h3 class="card-title">Respiratory Emergencies</h3>
+          </div>
+        </div>
+        <img
+          src="assets/images/icon7.png"
+          class="card-icon"
+          alt="Respiratory Icon"
+        />
+      </ion-card>
+    </div>
+
+    <!-- Card 2: Traumatic Injuries -->
+    <div [routerLink]="['/traumatic-injuries']" class="custom-card-wrapper">
+      <ion-card class="custom-card">
+        <div
+          class="card-background"
+          style="background-image: url('assets/images/bruises.png')"
+        >
+          <div class="card-content">
+            <h3 class="card-title">Traumatic Injuries</h3>
+          </div>
+        </div>
+        <img
+          src="assets/images/icon7.png"
+          class="card-icon"
+          alt="Traumatic Icon"
+        />
+      </ion-card>
+    </div>
+
+    <!-- Card 3: Environmental Emergencies -->
+    <div
+      [routerLink]="['/environmental-emergencies']"
+      class="custom-card-wrapper"
+    >
+      <ion-card class="custom-card">
+        <div
+          class="card-background"
+          style="background-image: url('assets/images/dehydration.png')"
+        >
+          <div class="card-content">
+            <h3 class="card-title">Environmental Emergencies</h3>
+          </div>
+        </div>
+        <img
+          src="assets/images/icon7.png"
+          class="card-icon"
+          alt="Environmental Icon"
+        />
+      </ion-card>
+    </div>
+
+    <!-- Card 4: Allergic and Insect Bites -->
+    <div [routerLink]="['/allergic-insect-bites']" class="custom-card-wrapper">
+      <ion-card class="custom-card">
+        <div
+          class="card-background"
+          style="background-image: url('assets/images/allergy.png')"
+        >
+          <div class="card-content">
+            <h3 class="card-title">Allergic and Insect Bites</h3>
+          </div>
+        </div>
+        <img
+          src="assets/images/icon7.png"
+          class="card-icon"
+          alt="Allergic Icon"
+        />
+      </ion-card>
+    </div>
+
+    <!-- Card 5: Cardiac and Neurological -->
+    <div [routerLink]="['/cardiac-neurological']" class="custom-card-wrapper">
+      <ion-card class="custom-card">
+        <div
+          class="card-background"
+          style="background-image: url('assets/images/neurology.png')"
+        >
+          <div class="card-content">
+            <h3 class="card-title">Cardiac and Neurological</h3>
+          </div>
+        </div>
+        <img
+          src="assets/images/icon7.png"
+          class="card-icon"
+          alt="Cardiac Icon"
+        />
+      </ion-card>
+    </div>
+
+    <!-- Card 6: Other General Emergencies -->
+    <div
+      [routerLink]="['/other-general-emergencies']"
+      class="custom-card-wrapper"
+    >
+      <ion-card class="custom-card">
+        <div
+          class="card-background"
+          style="background-image: url('assets/images/Other.png')"
+        >
+          <div class="card-content">
+            <h3 class="card-title">Other General Emergencies</h3>
+          </div>
+        </div>
+        <img
+          src="assets/images/icon7.png"
+          class="card-icon"
+          alt="General Icon"
+        />
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,83 @@
+/* Force transparent background and no shadow for ion-header */
+ion-header.custom-header {
+  --background: linear-gradient(to left, white, grey) !important;
+  --box-shadow: none !important;
+  --border-width: 0 !important; /* Optional: removes bottom border */
+  box-shadow: none !important; /* Removes any box-shadow */
+  border: none !important; /* Removes border if present */
+}
+
+ion-toolbar {
+  box-shadow: none !important; /* Removes toolbar shadow */
+  border: none !important; /* Removes border if present */
+  --background: linear-gradient(to left, white, grey) !important;
+}
+
+/* To ensure the translucent effect is fully overridden */
+ion-header[translucent] {
+  --background: linear-gradient(to left, white, grey) !important;
+  --box-shadow: none !important;
+  --border-width: 0 !important;
+}
+
+ion-back-button {
+  box-shadow: none !important; /* Remove any shadow from the back button */
+}
+
+/* HEADER SECTION */
+
+.header-section {
+  width: 100vw;
+  height: 210px;
+  background: url("../../assets/images/best-practices/profile-4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bestpractices-section {
+  border-radius: 20px 20px 0 0;
+  margin-top: -35px;
+}
+.bestpractice-title {
+  background-color: #c8040c;
+}
+.bestpractice-title h4 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1, 4rem;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* BEST PRACTICES CARDS */
+.bestpractice-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Removes the gap between cards */
+  margin: 0; /* Removes extra margins */
+  padding: 0;
+}
+.bestpractice-cards .card {
+  margin: 0; /* Removes any default margin around the cards */
+  padding: 5px; /* Removes any default padding inside the cards */
+  --ion-card-margin: 5px; /* Ensures Ionic's default card margin is overridden */
+}
+
+.accordion-content {
+  padding: 10px;
+}
+/* ACCORDION STYLE */
+
+.card ion-item {
+  background-color: #dc1212;
+  color: white;
+}
+
+.card ion-label {
+  text-transform: capitalize;
+}
+
+.card .ion-padding {
+  font-size: 0.9rem;
+}

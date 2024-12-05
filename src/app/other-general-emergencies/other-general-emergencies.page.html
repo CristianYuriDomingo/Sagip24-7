@@ -1,0 +1,347 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <div class="logo-container">
+      <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Other General Emergencies</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Custom Div Container -->
+  <div class="custom-container">
+    <!-- Image Background -->
+    <div class="image-section">
+      <img src="assets/images/Other-Emergency/Other1.png" alt="Background Image" />
+    </div>
+
+    <!-- Icon Overlay as Image -->
+    <div class="overlay-icon">
+      <img src="assets/images/Other-Emergency/other.png" alt="Icon Image" />
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-section">
+      <h2>Other General Emergencies</h2>
+    </div>
+  </div>
+
+  <!-- New Label Section -->
+  <div class="label-section">
+    <h2>Key Takeaways</h2>
+  </div>
+
+  <!-- New Card Section -->
+  <ion-card class="about-card">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/reading-book.png" alt="Respiratory Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Understanding the Basics</h2>
+        <p> General emergencies such as nosebleeds and eye injuries can occur unexpectedly. Immediate action is
+          essential to prevent further harm and ensure proper care. Learn how to manage these common yet urgent
+          situations effectively.</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <!-- Existing Label Section -->
+  <div class="label-section">
+    <h2>First Aid Techniques</h2>
+  </div>
+
+  <!-- Existing Card Section -->
+  <ion-card class="custom-card" (click)="openNoseBleedModal()">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/Other-Emergency/nosebleed.png" alt="Card Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Nosebleeds</h2>
+      </ion-label>
+
+      <!-- Next Icon -->
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="custom-card" (click)="openEyeInjuryModal()">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/Other-Emergency/injuries.png" alt="Card Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Eye Injury</h2>
+      </ion-label>
+
+      <!-- Next Icon -->
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="custom-card" (click)="openForeignObjectModal()">
+    <ion-item lines="none">
+      <!-- Left Icon -->
+      <ion-avatar slot="start">
+        <img src="assets/images/Other-Emergency/cube.png" alt="Card Icon" />
+      </ion-avatar>
+
+      <!-- Title -->
+      <ion-label>
+        <h2>Small Foreign Object</h2>
+      </ion-label>
+
+      <!-- Next Icon -->
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-modal [isOpen]="isNoseBleedModalOpen" (didDismiss)="closeNoseBleedModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Nosebleeds: First Aid Steps</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeNoseBleedModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>Nosebleeds: First Aid Steps</h3>
+        <p>
+        Follow these steps to safely manage a nosebleed, minimize discomfort, and prevent complications. Prompt and proper care can help control the bleeding effectively."
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1: Pinch the Nose Below the Bridge</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Other-Emergency/Nosebleed-step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Use your thumb and index finger to pinch the soft part of the nose just below the bridge.</li>
+              <li>Firm pressure helps compress the blood vessels, slowing and stopping the bleeding.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2:	Lean Forward, Not Backward</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Other-Emergency/Nosebleed-step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Have the person sit up straight and lean slightly forward to prevent swallowing blood, which can cause nausea or vomiting.</li>
+              <li>Avoid tilting the head back, as this directs blood into the throat and stomach.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3:	Maintain Pressure for 5–10 Minutes</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Other-Emergency/Nosebleed-step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>Keep a firm grip on the nose for at least 5–10 minutes without releasing to check.</li>
+              <li>Consistent pressure is essential for clot formation and stopping the bleeding.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 4 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 4: Seek Medical Attention If Necessary</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/doctor.png" alt="Monitor for Infection" class="card-image" />
+            <p>
+              
+              <li>If bleeding continues after 15 minutes or is heavy, seek professional help.</li>
+              <li>Recurrent or severe nosebleeds may indicate an underlying health condition that requires medical evaluation.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+       
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<ion-modal [isOpen]="isEyeInjuryModalOpen" (didDismiss)="closeEyeInjuryModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Eye Injuries</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeEyeInjuryModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>First Aid for Eye Injuries</h3>
+        <p>
+          Follow these steps to address eye injuries safely and protect vision. Quick, gentle care can help prevent further damage while ensuring prompt medical attention when needed.
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1:	Flush the Eye Gently with Clean Water</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Other-Emergency/EyeInjury-step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>Use lukewarm water to rinse the eye continuously for 15–20 minutes.</li>
+              <li>This helps remove small debris, irritants, or chemicals that may have entered the eye.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2:	Avoid Rubbing or Applying Pressure</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Other-Emergency/EyeInjury-step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>Do not rub or press on the injured eye, as this can worsen the injury or push debris further into the eye.</li>
+              <li>Keeping the eye untouched helps minimize irritation and additional harm.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3:	Cover the Eye and Seek Medical Assistance</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/doctor.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>If the object remains or the injury seems severe, cover the eye lightly with a clean cloth or sterile gauze.</li>
+              <li>Seek immediate medical attention to ensure proper removal of foreign objects and to prevent complications.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+       
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<ion-modal [isOpen]="isForeignObjectModalOpen" (didDismiss)="closeForeignObjectModal()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Small Foreign Objects</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeForeignObjectModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Moved Description Section Above Sliding Cards -->
+      <section class="description-section">
+        <h3>First Aid for Small Foreign Objects</h3>
+        <p>
+          Follow these steps to safely remove small foreign objects, reduce the risk of infection, and promote healing. Immediate and careful action can help prevent further injury.
+        </p>
+      </section>
+
+      <hr class="section-divider">
+
+      <div class="sliding-cards-container">
+        <!-- Card 1 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 1:Carefully Remove the Object with Clean Tweezers</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step1.png" alt="Stop the Bleeding" class="card-image" />
+            <p>
+              <li>If the foreign object is visible and easily reachable, use clean, sterilized tweezers to gently grasp and remove it.</li>
+              <li>Be cautious not to push the object further into the skin or tissue.</li>
+
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 2:	Avoid Poking or Pushing the Object Deeper</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step2.png" alt="Clean the Wound" class="card-image" />
+            <p>
+              <li>If the object is deeply embedded or hard to reach, do not attempt to remove it with tweezers, as this can cause additional injury.</li>
+              <li>Instead, seek professional medical help to safely remove it.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 3 -->
+        <ion-card class="sliding-card">
+          <ion-card-header>
+            <ion-card-title>Step 3: Clean the Area and Apply a Bandage if Necessary</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/images/Traumatic/step3.png" alt="Apply a Bandage" class="card-image" />
+            <p>
+              <li>After removing the foreign object, clean the area with soap and water to prevent infection.</li>
+              <li>Apply a sterile bandage if needed to protect the wound and help it heal.</li>
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+        
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>

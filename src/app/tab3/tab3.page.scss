@@ -247,6 +247,13 @@ ion-item {
 .site-header {
   background-color: #f2f2f2;
   padding: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.site-header img {
+  width: 70%;
 }
 
 /* SIDE WAYS CARD*/
