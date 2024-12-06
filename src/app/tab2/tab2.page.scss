@@ -1,0 +1,308 @@
+/* Updated Styles */
+
+/* Header Logo */
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Image Container Card */
+.image-container-card {
+  position: relative;
+  overflow: hidden;
+  --ion-card-padding:0;
+  margin:0;
+  
+  border:none;
+  box-shadow: none;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 10%; /* Start aligning to the left */
+  transform: translateY(-50%); /* Keep the vertical centering */
+  background: rgba(0, 0, 0, 0.4); /* Darker overlay for readability */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align the text to the left */
+  text-align: left; /* Align text to the left */
+  padding: 10px; /* Adjust padding for better spacing */
+  border-radius: 10px; /* Optional rounded corners */
+  max-width: 85%; /* Ensure it doesn't stretch too wide */
+  box-sizing: border-box; /* Ensure padding is within width */
+}
+
+.overlay h2 {
+  font-size: 1.6rem; /* Set font size for the title */
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
+  text-transform: uppercase;
+  margin: 0 0 10px 0; /* Add spacing below the title */
+  line-height: 1.4; /* Adjust line-height for clarity */
+  max-width: 90%; /* Limit title width to prevent overflow */
+}
+
+.overlay p {
+  font-size: 0.9rem; /* Set a smaller font size for the paragraph */
+  line-height: 1.5; /* Line-height for readability */
+  margin: 0; /* No extra margin around the paragraph */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Matching text shadow */
+}
+
+/* Media Query for small screens like iPhone SE */
+@media (max-width: 480px) {
+  .overlay h2 {
+    font-size: 1.4rem; /* Smaller font size for very small screens */
+  }
+
+  .overlay p {
+    font-size: 0.8rem; /* Adjusted font size for paragraphs on small screens */
+  }
+
+  .overlay {
+    padding: 8px; /* Smaller padding for compact devices */
+    max-width: 80%; /* Ensure overlay stays within bounds */
+  }
+}
+
+
+/* Icon Container */
+/* Main Container */
+.icon-container {
+  margin-left: 2px;
+  margin-right: 2px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .icon-container {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.icon-col {
+  display: flex;
+  flex-direction: column; /* Stack items vertically (icon and title) */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center the title text */
+}
+.icon-container-card {
+  display: flex;
+  justify-content: center; /* Centers icon horizontally inside the card */
+  align-items: center;     /* Centers icon vertically inside the card */
+  width: 100%;             /* Ensures it takes the full width of the column */
+  height: 100%;            /* Ensures it takes the full height */
+  border-radius: 5px;      /* Makes the card circular */
+  background-color: #f9f9f9; /* Optional background color */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  padding: 10px;           /* Optional padding for the card */
+}
+
+.icon-container-card:hover {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background-color: #e0e0e0; /* Darken background on hover */
+}
+
+.icon-image {
+  margin: 0;
+  padding: 0;
+  width: 50px; /* Set the icon size */
+  height: 50px;
+  object-fit: contain; /* Ensures the image fits properly */
+}
+.icon-title {
+  margin-top: 100px; /* Reduced the margin to decrease the space between the icon and title */
+  font-size: 14px;  /* Adjust the font size as needed */
+  color: #333;      /* Customize the color if needed */
+  position: absolute;
+  padding: 20px;
+}
+
+/* Show title on hover */
+.icon-container-card:hover .icon-title {
+  display: block; /* Show title when hovered */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .icon-container-card {
+    width: 70px;
+    height: 70px;
+  }
+  .icon-image {
+    width: 35px;
+    height: 35px;
+  }
+  .icon-title {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-container-card {
+    width: 60px;
+    height: 60px;
+  }
+  .icon-image {
+    width: 30px;
+    height: 30px;
+  }
+  .icon-title {
+    font-size: 0.7rem;
+  }
+}
+
+
+
+
+
+.emergency-label h2 {
+  font-size: 1.2rem; /* Font size for readability */
+  font-weight: bold; /* Bold text for emphasis */
+  color: #000000; /* Text color set to red */
+  text-align: left; /* Left-align the text */
+  margin-bottom: 10px; /* Space below the heading */
+  padding-bottom: 5px; /* Padding below the text */
+  margin-top: 45px;
+
+  text-transform: uppercase; /* Uppercase text */
+  
+  margin-left: 15px; /* Add space on the left side */
+  margin-right: 15px; /* Add space on the right side */
+  
+}
+
+
+
+
+
+.card-container {
+  margin: 15px; /* Reduced margin */
+  display: flex;
+  flex-direction: row; /* Keep them in a row for landscape orientation */
+  flex-wrap: wrap;
+  gap: 8px; /* Reduced gap between the cards */
+  justify-content: center; /* Center the cards */
+  
+}
+
+/* Custom Card */
+.custom-card {
+  overflow: hidden;
+  width: 350px; /* Adjusted width for a more compact card */
+  height: 200px; /* Adjusted height to keep the landscape feel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adding a subtle shadow */
+  
+  min-width: 300px; /* Minimum width */
+  max-width: 380px; /* Maximum width */
+  min-height: 180px; /* Minimum height */
+  max-height: 220px; /* Maximum height */
+  margin-top: -5px;
+}
+
+/* Card Background */
+.card-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card Content */
+.card-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start; /* Align to the left */
+  padding: 8px; /* Reduced padding */
+  background: rgba(0, 0, 0, 0.3); /* Slightly transparent background */
+  color: white;
+  text-align: left; /* Align text to the left */
+}
+
+/* Title Styling */
+.card-title {
+  font-size: 1.8rem !important; /* Adjusted font size */
+  font-weight: bold;
+  margin-bottom: 5px; /* Reduced bottom margin */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 15px; /* Positioned at the bottom of the card */
+  left: 10px;  /* Positioned at the left */
+}
+
+/* Card Icon (Image) */
+.card-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 32px;  /* Adjust the size of the image icon */
+  height: 32px;
+  object-fit: contain;  /* Ensure the image scales correctly */
+  /* Removed border-radius and box-shadow */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .custom-card {
+    width: 250px; /* Smaller card width on smaller screens */
+    height: 140px; /* Adjusted height for smaller screens */
+  }
+
+  .card-title {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+
+  .card-icon {
+    width: 24px; /* Smaller icon size */
+    height: 24px;
+  }
+}
+
+
+
+/* Styling for routerLink (Custom Card with Routing) */
+.custom-card-link {
+  display: block;  /* Make the entire card clickable */
+  text-decoration: none;  /* Remove default text decoration */
+  width: 100%;  /* Ensure the link takes full width */
+  height: 100%;  /* Ensure the link takes full height */
+}
+
+
