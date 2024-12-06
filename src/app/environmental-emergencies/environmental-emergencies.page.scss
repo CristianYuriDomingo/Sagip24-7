@@ -148,38 +148,83 @@ ion-buttons {
     border-radius: 50%; /* Keeps the circular avatar shape */
   }
 
+  /* Description Section */
+.description-section h3 {
+  position: relative;
+  color: #000; /* Optional: Define a text color */
+  margin-bottom: 10px; /* Space between heading and underline */
+}
+
+/* Underline */
+.description-section h3::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 3px; /* Thickness of the underline */
+  background-color: #dc1212; /* Underline color */
+  margin-top: 5px; /* Space between text and underline */
+}
+
+
   .section-divider {
     border: 0;
-    border-top: 2px solid #000000; /* Black color divider line */
-    width: 50%; /* Half the width of the screen */
+    border-top: .4px solid #000000; /* Black color divider line */
+    width: 90%; /* Half the width of the screen */
     margin-left: 20px; /* Add some left margin */
   }
 /* Sliding Cards Container */
 .sliding-cards-container {
-display: flex;
-overflow-x: scroll;
-padding: 15px 0;
-gap: 20px;
-scroll-snap-type: x mandatory;
-margin-top: 20px; /* Added space after the description section */
+  display: flex;
+  overflow-x: auto;
+  padding: 15px 0;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  margin-top: 20px; /* Added space after the description section */
 }
 
+/* Sliding Card */
 .sliding-card {
-flex-shrink: 0;
-width: 80%; /* Increased width to 80% of the screen */
-height: 50vh; /* Proportional height */
-border-radius: 15px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-scroll-snap-align: center;
-overflow: hidden;
-background-color: #fff;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  width: 80%; /* Increased width to 80% of the screen */
+  min-height: 50vh; /* Use min-height for dynamic content */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  scroll-snap-align: center;
+  overflow: auto; /* Ensure all content is scrollable */
+  background-color: #fff;
+  padding: 20px; /* Add padding inside cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sliding-card:hover {
-transform: scale(1.03);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
+/* UL/LI Styling */
+.sliding-card ul {
+  margin: 0;
+  padding-left: 20px; /* Space for bullet points */
+}
+
+.sliding-card li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+/* Scrollbar Styling */
+.sliding-cards-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.sliding-cards-container::-webkit-scrollbar-thumb {
+  background: #dc1212;
+  border-radius: 10px;
+}
+
+.sliding-cards-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
 
 .card-image {
 width: 100%;
@@ -214,19 +259,7 @@ margin-top: 10px;
 line-height: 1.5;
 }
 
-/* Scrollbar Customization */
-.sliding-cards-container::-webkit-scrollbar {
-height: 8px;
-}
 
-.sliding-cards-container::-webkit-scrollbar-thumb {
-background: #007bff;
-border-radius: 10px;
-}
-
-.sliding-cards-container::-webkit-scrollbar-track {
-background: #f1f1f1;
-}
 
 /* Description Section */
 /* Description Section */

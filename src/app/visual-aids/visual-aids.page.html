@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Visual Aids</ion-title>
+    <ion-buttons slot="start">
+      <!-- Back Button -->
+      <ion-back-button defaultHref="/home" color="danger">Back</ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,10 +16,12 @@
 
   <!-- Minimal Explanation Section -->
   <section class="intro-section">
+    <h1 class="section-title">Visual Aids</h1>
     <p class="intro-text">
       Explore essential emergency response categories. Tap on a card to learn more.
     </p>
   </section>
+
 
   <div class="parent-container">
     <!-- Card 1 -->
@@ -26,7 +31,7 @@
       </div>
       <div class="card-title">Respiratory Emergency</div>
     </ion-card>
-  
+
     <!-- Card 2 -->
     <ion-card class="card" (click)="openTraumModal()">
       <div class="image-container">
@@ -34,7 +39,7 @@
       </div>
       <div class="card-title">Traumatic Injuries</div>
     </ion-card>
-  
+
     <!-- Card 3 -->
     <ion-card class="card" (click)="openEnvModal()">
       <div class="image-container">
@@ -42,7 +47,7 @@
       </div>
       <div class="card-title">Environmental and Physical Emergencies</div>
     </ion-card>
-  
+
     <!-- Card 4 -->
     <ion-card class="card" (click)="openAllModal()">
       <div class="image-container">
@@ -50,7 +55,7 @@
       </div>
       <div class="card-title">Allergic Reactions and Insect Bites</div>
     </ion-card>
-  
+
     <!-- Card 5 -->
     <ion-card class="card" (click)="openCardModal()">
       <div class="image-container">
@@ -58,7 +63,7 @@
       </div>
       <div class="card-title">Cardiac and Neurological</div>
     </ion-card>
-  
+
     <!-- Card 6 -->
     <ion-card class="card" (click)="openOtherModal()">
       <div class="image-container">
@@ -67,15 +72,18 @@
       <div class="card-title">Other General Emergencies</div>
     </ion-card>
   </div>
-  
+
 
   <ion-modal [isOpen]="isResModalOpen" (didDismiss)="closeResModal()">
     <ng-template>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Fainting</ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="closeResModal()">Close</ion-button>
+          <ion-title></ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="closeResModal()" style=" --color: #dc1212;">
+              Close
+            </ion-button>
+
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
@@ -166,9 +174,12 @@
     <ng-template>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Fainting</ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="closeTraumModal()">Close</ion-button>
+          <ion-title></ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="closeTraumModal()" style=" --color: #dc1212;">
+              Close
+            </ion-button>
+
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
@@ -178,7 +189,8 @@
         <section class="modal-header">
           <h2>Learn Emergency Responses</h2>
           <p>
-            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with Traumatic Injuries
+            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with Traumatic
+            Injuries
           </p>
         </section>
 
@@ -257,9 +269,12 @@
     <ng-template>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Fainting</ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="closeEnvModal()">Close</ion-button>
+          <ion-title></ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="closeEnvModal()" style=" --color: #dc1212;">
+              Close
+            </ion-button>
+
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
@@ -269,7 +284,8 @@
         <section class="modal-header">
           <h2>Learn Emergency Responses</h2>
           <p>
-            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with Environmenatal and Physical Emergencies.
+            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with Environmenatal
+            and Physical Emergencies.
           </p>
         </section>
 
@@ -333,9 +349,11 @@
     <ng-template>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Fainting</ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="closeAllModal()">Close</ion-button>
+          <ion-title></ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="closeAllModal()" style=" --color: #dc1212;">
+              Close
+            </ion-button>
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
@@ -345,7 +363,8 @@
         <section class="modal-header">
           <h2>Learn Emergency Responses</h2>
           <p>
-            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with Allergic Reaction and Insect Bites.
+            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with Allergic
+            Reaction and Insect Bites.
           </p>
         </section>
 
@@ -360,7 +379,7 @@
             <ion-card-content>
               Video on how to deal with Snake Bites .
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/MkTZlRyXQiY" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/lLkw4BXa7pQ" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
@@ -376,7 +395,7 @@
             <ion-card-content>
               Video on how to deal with Allergic Reaction.
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/4j329wUsl3s" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/yqaLKuhMCPw" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                   ></iframe>
@@ -409,9 +428,12 @@
     <ng-template>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Fainting</ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="closeCardModal()">Close</ion-button>
+          <ion-title></ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="closeCardModal()" style=" --color: #dc1212;">
+              Close
+            </ion-button>
+
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
@@ -421,7 +443,8 @@
         <section class="modal-header">
           <h2>Learn Emergency Responses</h2>
           <p>
-            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with cardiac and neurological emergency.
+            Gain crucial knowledge and watch videos that demonstrate effective methods for dealing with cardiac and
+            neurological emergency.
           </p>
         </section>
 
@@ -469,9 +492,12 @@
     <ng-template>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Fainting</ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="closeOtherModal()">Close</ion-button>
+          <ion-title></ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="closeOtherModal()" style=" --color: #dc1212;">
+              Close
+            </ion-button>
+
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
@@ -497,7 +523,7 @@
             <ion-card-content>
               Video on how to deal with Nosebleeds.
               <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/MkTZlRyXQiY" frameborder="0"
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/V34aB5uheBg" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
@@ -506,21 +532,6 @@
           </ion-card>
 
 
-          <ion-card class="sliding-card">
-            <ion-card-header>
-              <ion-card-title>Choking (Babies)</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Video on how to deal with Eye Injury.
-              <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/V34aB5uheBg
-                " frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                  ></iframe>
-              </div>
-            </ion-card-content>
-          </ion-card>
 
           <!-- Mild Asthma Attack Video -->
           <ion-card class="sliding-card">

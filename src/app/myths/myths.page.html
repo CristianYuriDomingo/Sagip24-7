@@ -1,16 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Myths and Facts</ion-title>
+    <ion-buttons slot="start">
+      <!-- Back Button -->
+      <ion-back-button defaultHref="/home" color="danger">Back</ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <!-- Dashboard Section -->
   <section class="dashboard">
-    <h2>Dashboard</h2>
-    <p>Welcome! Explore myths and facts below. Click on a myth to reveal the fact behind it.</p>
+    <h2 class="section-title">First Aid Myths</h2>
+    <p class="intro-text">
+      Welcome! Explore myths and facts below. Click on a myth to reveal the fact behind it.
+    </p>
   </section>
-
   <!-- Myths List -->
   <ion-list>
     <!-- Loop through each myth in the myths array -->

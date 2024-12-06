@@ -11,12 +11,72 @@
       overflow-y: auto;
     }
 
-    .intro-section {
-      padding: 10px 20px;
-      background-color: #e8e8e8;
-      color: rgb(0, 0, 0);
-      text-align: center;
-    }
+    
+
+  /* Section styling */
+.intro-section {
+  position: relative;
+  width: 100%; /* Full width */
+  height: 180px; /* Compact height */
+  color: rgb(0, 0, 0); /* White text for contrast */
+  overflow: hidden; /* Prevent content overflow */
+  padding: 20px 30px; /* Add padding to create space around content */
+  display: flex;
+  flex-direction: column; /* Stack title and intro text */
+  justify-content: center; /* Vertically align content */
+}
+
+/* Title styling */
+.section-title {
+  font-size: 2rem; /* Large title font size */
+  font-weight: bold; /* Bold for emphasis */
+  margin: 0; /* Remove default margin */
+  margin-bottom: 10px; /* Space below the title */
+  text-align: left; /* Align to the left */
+  position: relative; /* Required for the underline pseudo-element */
+}
+
+/* Red underline (3/4 of the title width) */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 75%; /* 3/4 the width of the title */
+  height: 3px; /* Thickness of the underline */
+  background-color: red; /* Red color for the underline */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Position it just below the title text */
+}
+
+/* Intro text styling */
+.intro-text {
+  font-size: 1.0rem; /* Slightly smaller than the title */
+  font-weight: normal; /* Regular weight */
+  line-height: 1.5; /* Improve readability */
+  max-width: 90%; /* Restrict text width for better appearance */
+  text-align: left; /* Align to the left */
+  margin: 0; /* Remove default margin */
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .intro-section {
+    height: 150px; /* Compact height for smaller screens */
+    padding: 15px 20px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-title::after {
+    width: 30%; /* Shorter underline for smaller screens */
+  }
+  .intro-text {
+    font-size: 1rem;
+  }
+}
+
+
 
     
     .parent-container {
@@ -32,7 +92,7 @@
         flex-direction: column;
         justify-content: space-between; /* Ensure title sticks to the bottom */
         border-radius: 15px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
         overflow: hidden;
         background-color: white;
       }
@@ -54,8 +114,8 @@
         font-size: 14px;
         font-weight: bold;
         text-align: center;
-        background-color: #dc1212;
-        color: #ffffff;
+        background-color: #dbd9d9;
+        color: #000000;
         width: 100%;
         box-sizing: border-box;
       }
@@ -102,41 +162,46 @@
     }
 
 
+    ion-content {
+      --padding: 0; /* Remove extra padding */
+    }
+  
+    .modal-header {
+      text-align: center;
+      padding: 20px;
+    }
+  
     .modal-cards {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .sliding-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        max-width: 420px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        background-color: white;
-        overflow: hidden;
-      }
-      
-      .video-container {
-        position: relative;
-        width: 100%; /* Ensures container takes up the full width of the card */
-        height: 200px; /* Fixed height for consistent size */
-        overflow: hidden; /* Prevents video overflow */
-      }
-      
-      .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important; /* Force the iframe to take full width */
-        height: 100% !important; /* Force the iframe to take full height */
-        border: none; /* Remove iframe border */
-        object-fit: fill; /* Ensures the video fills the container */
-      }
-      
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .sliding-card {
+      width: calc(100% - 40px);
+      max-width: 420px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* Aspect ratio 16:9 */
+      overflow: hidden;
+    }
+  
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }

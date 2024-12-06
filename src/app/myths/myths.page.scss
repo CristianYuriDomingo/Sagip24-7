@@ -1,29 +1,74 @@
 /* Style for the entire content */
 ion-content {
-    --background: #f9f9f9; /* Light gray background for contrast */
+    --background: #ffffff; /* Light gray background for contrast */
     padding: 15px;
   }
   
   /* Dashboard Section */
+  /* Section styling */
   .dashboard {
-    background-color: #dc1212; /* Theme color for the dashboard background */
-    color: white; /* White text for contrast */
-    padding: 20px 15px; /* Add padding for content spacing */
-    text-align: center; /* Center align the text */
-    margin: 0; /* No margin to ensure it spans full width */
-    border-bottom: 4px solid #b00d0d; /* Subtle accent border */
+    position: relative;
+    padding: 10px 20px; /* Reduce padding to minimize internal spacing */
+    height: 200px; /* Adjust this value to make the section smaller */
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: left;
   }
   
-  .dashboard h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
+
+/* Title styling */
+.section-title {
+  font-size: 1.0rem;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* Red underline effect (3/4 length) */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 75%; /* 3/4 the title width */
+  height: 3px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+/* Intro text styling */
+.intro-text {
+  font-size: 1.0rem;
+  max-width: 90%;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard {
+    height: 200px;
+    padding: 15px;
   }
   
-  .dashboard p {
-    margin: 10px 0 0; /* Add spacing between header and description */
-    font-size: 14px;
+  .section-title {
+    font-size: 1.5rem;
   }
+
+  .section-title::after {
+    width: 60%;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+}
+
   
   /* Style for each myth card */
   ion-card {
