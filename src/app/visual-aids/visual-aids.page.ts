@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-visual-aids',
   templateUrl: './visual-aids.page.html',
   styleUrls: ['./visual-aids.page.scss'],
 })
-export class VisualAidsPage{
+export class VisualAidsPage {
 
   isResModalOpen = false;
   isTraumModalOpen = false;
@@ -13,9 +15,17 @@ export class VisualAidsPage{
   isAllModalOpen = false;
   isCardModalOpen = false;
   isOtherModalOpen = false;
- 
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController, private router: Router) {}
+
+  // Method to close modals first
+  async goBack() {
+    if (await this.modalCtrl.getTop()) {
+      await this.modalCtrl.dismiss();  // Close the top modal if open
+    } else {
+      this.router.navigate(['/home']);  // If no modals exist, navigate back
+    }
+  }
 
   openResModal() {
     this.isResModalOpen = true;
@@ -35,9 +45,6 @@ export class VisualAidsPage{
   openOtherModal() {
     this.isOtherModalOpen = true;
   }
-  
-
-
 
   closeResModal() {
     this.isResModalOpen = false;
@@ -57,7 +64,4 @@ export class VisualAidsPage{
   closeOtherModal() {
     this.isOtherModalOpen = false;
   }
-
- 
-
 }

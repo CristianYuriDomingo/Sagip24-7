@@ -1,3 +1,143 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+  .header ion-title {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .icon {
+    color: white;
+    font-size: 22px;
+  }
+
+  /* Dashboard Header Section */
+  .dashboard-header {
+    display: flex;
+    flex-direction: column;
+    background-color: #dc1212;
+    color: white;
+    padding: 20px;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  h3 {
+    color: #333;
+  }
+
+  .header-icon-left {
+    color: white;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  /* Paragraph Section Below h2 */
+  .description {
+    padding-left: 40px;
+    /* Align the paragraphs with h2 */
+  }
+
+  .description p {
+    font-size: 16px;
+    color: white;
+    margin: 5px 0;
+  }
+
+  /* Info Section */
+  .info-section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+  }
+
+  .info-section h3 {
+    color: #dc1212;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .info-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .info-section ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  /* Modal Header */
+  .modal-header {
+    padding: 10px;
+    /* Reduced padding for minimizing the section size */
+    background-color: #dc1212;
+    color: white;
+    /* Makes text white */
+    text-align: center;
+  }
+
+
+
+  .modal-header p {
+    color: white;
+    /* Ensures the <p> text is white */
+    font-size: 0.9rem;
+    /* Adjust font size for minimization */
+    margin: 0;
+    /* Removes extra margin for compact look */
+  }
+
+
+  /* Button Styling */
+  ion-button {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  /* Item Styling */
+  ion-item {
+    margin-bottom: 12px;
+  }
+
+  ion-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  ion-label h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  ion-label p {
+    font-size: 16px;
+  }
+
+
+
+
 ion-modal {
     --height: 50%;
     --border-radius: 16px;

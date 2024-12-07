@@ -1,239 +1,120 @@
 <ion-header>
   <ion-toolbar class="header">
-    <ion-title>
-      <ion-icon name="call-outline" slot="start" class="icon"></ion-icon> 
-      Emergency App
-    </ion-title>
+    <div class="logo-container">
+      <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+    </div>
   </ion-toolbar>
 </ion-header>
-
-<ion-content class="ion-padding">
-  <!-- Dashboard Title and Description Section -->
-  <div class="dashboard-header">
-    <!-- Icon and Text on the Same Line inside h2 -->
-    <h2>
-      <ion-icon name="call-outline" class="header-icon-left"></ion-icon>
-      Emergency Contact
-    </h2>
-    <!-- Paragraph aligned left, under h2 -->
-    <div class="description">
-      <p class="phone-number">Philippines</p>
-      <p class="location">#911</p>
+<ion-content [fullscreen]="true" class="content">
+  <div class="ion-padding">
+    <!-- Dashboard Title and Description Section -->
+    <div class="dashboard-header">
+      <!-- Icon and Text on the Same Line inside h2 -->
+      <h2>
+        <ion-icon name="call-outline" class="header-icon-left"></ion-icon>
+        Emergency Contact
+      </h2>
+      <!-- Paragraph aligned left, under h2 -->
+      <div class="description">
+        <p class="phone-number">Philippines</p>
+        <p class="location">#911</p>
+      </div>
     </div>
+
+    <!-- More Informational Content Section -->
+    <div class="info-section">
+      <h3>What to Do While Waiting for Emergency Help</h3>
+      <p>In case of a medical emergency, it's crucial to act quickly and provide the necessary first aid while awaiting
+        professional help. </p>
+      <ul>
+        <li><strong>Stay Calm:</strong> Remain composed to think clearly and manage the situation.</li>
+        <li><strong>Assess the Situation:</strong> Check for injuries and signs of distress.</li>
+        <li><strong>Perform First Aid:</strong> Administer basic first aid like CPR or stopping bleeding.</li>
+        <li><strong>Keep the Person Comfortable:</strong> Help them stay calm and comfortable.</li>
+        <li><strong>Communicate with Emergency Services:</strong> Provide clear information to responders.</li>
+      </ul>
+    </div>
+
+    <!-- Button to Open Modal -->
+    <ion-button id="open-modal" expand="block" color="danger">
+      Additional Emergency Services
+    </ion-button>
+
+    <!-- Modal Trigger -->
+    <ion-modal #modal trigger="open-modal">
+      <ng-template>
+        <ion-content>
+          <ion-toolbar class="modal-header">
+            <ion-title class="modal-title">Emergency Hotlines</ion-title>
+            <ion-buttons slot="end">
+              <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+
+          <ion-list>
+            <!-- PNP Emergency Hotline with Logo -->
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="assets/images/EmergencyResponse/redcross.png"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h3>Philippine Red Cross</h3>
+                <p>143 or (02) 8527 - 8385 to 95</p>
+              </ion-label>
+            </ion-item>
+
+            <!-- BFP Emergency Hotline with Logo -->
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="assets/images/EmergencyResponse/pcg.png"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h3>Philippine Coast Guard</h3>
+                <p>(02) 8527 - 3877</p>
+              </ion-label>
+            </ion-item>
+
+            <!-- Philippine Coast Guard Emergency Hotline with Logo -->
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="assets/images/EmergencyResponse/bfp.png"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h3>Bureau of Fire Protection</h3>
+                <p>(02) 8426 - 0219</p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="assets/images/EmergencyResponse/dpwh.png"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h3>DPWH</h3>
+                <p>(02) 8931 - 8101 to 07</p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="assets/images/EmergencyResponse/pnp.png"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h3>Philippine National Police</h3>
+                <p>117 or (02) 8722 - 0650</p>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-img src="assets/images/EmergencyResponse/ndrrmc.png"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h3>NDRRMC</h3>
+                <p>(02) 8911 - 5061 to 65</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
   </div>
-
-  <!-- More Informational Content Section -->
-  <div class="info-section">
-    <h3>What to Do While Waiting for Emergency Help</h3>
-    <p>In case of a medical emergency, it's crucial to act quickly and provide the necessary first aid while awaiting professional help. </p>
-    <ul>
-      <li><strong>Stay Calm:</strong> Remain composed to think clearly and manage the situation.</li>
-      <li><strong>Assess the Situation:</strong> Check for injuries and signs of distress.</li>
-      <li><strong>Perform First Aid:</strong> Administer basic first aid like CPR or stopping bleeding.</li>
-      <li><strong>Keep the Person Comfortable:</strong> Help them stay calm and comfortable.</li>
-      <li><strong>Communicate with Emergency Services:</strong> Provide clear information to responders.</li>
-    </ul>
-  </div>
-
-  <!-- Button to Open Modal -->
-  <ion-button id="open-modal" expand="block" color="danger">
-    Additional Emergency Services
-  </ion-button>
-
-  <!-- Modal Trigger -->
-  <ion-modal #modal trigger="open-modal">
-    <ng-template>
-      <ion-content>
-      <ion-toolbar class="modal-header">
-  <ion-title class="modal-title">Emergency Hotlines</ion-title>
-  <ion-buttons slot="end">
-    <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
-  </ion-buttons>
-</ion-toolbar>
-
-        <ion-list>
-          <!-- PNP Emergency Hotline with Logo -->
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="assets/images/EmergencyResponse/redcross.png"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h3>Philippine Red Cross</h3>
-              <p>143 or (02) 8527 - 8385 to 95</p>
-            </ion-label>
-          </ion-item>
-
-          <!-- BFP Emergency Hotline with Logo -->
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="assets/images/EmergencyResponse/pcg.png"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h3>Philippine Coast Guard</h3>
-              <p>(02) 8527 - 3877</p>
-            </ion-label>
-          </ion-item>
-
-          <!-- Philippine Coast Guard Emergency Hotline with Logo -->
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="assets/images/EmergencyResponse/bfp.png"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h3>Bureau of Fire Protection</h3>
-              <p>(02) 8426 - 0219</p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="assets/images/EmergencyResponse/dpwh.png"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h3>DPWH</h3>
-              <p>(02) 8931 - 8101 to 07</p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="assets/images/EmergencyResponse/pnp.png"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h3>Philippine National Police</h3>
-              <p>117 or (02) 8722 - 0650</p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-avatar slot="start">
-              <ion-img src="assets/images/EmergencyResponse/ndrrmc.png"></ion-img>
-            </ion-avatar>
-            <ion-label>
-              <h3>NDRRMC</h3>
-              <p>(02) 8911 - 5061 to 65</p>
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ng-template>
-  </ion-modal>
 </ion-content>
 
-<!-- Internal CSS -->
-<style>
-  /* Header Styling */
-  .header {
-    background-color: #dc1212;
-    padding: 10px 20px;
-  }
-  .header ion-title {
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .icon {
-    color: white;
-    font-size: 22px;
-  }
-
-  /* Dashboard Header Section */
-  .dashboard-header {
-    display: flex;
-    flex-direction: column;
-    background-color: #dc1212;
-    color: white;
-    padding: 20px;
-    text-align: left;
-  }
-  
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-  h3{
-    color:#333;
-  }
-  
-  .header-icon-left {
-    color: white;
-    font-size: 30px;
-    margin-right: 10px;
-  }
-
-  /* Paragraph Section Below h2 */
-  .description {
-    padding-left: 40px; /* Align the paragraphs with h2 */
-  }
-
-  .description p {
-    font-size: 16px;
-    color: white;
-    margin: 5px 0;
-  }
-
-  /* Info Section */
-  .info-section {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 12px;
-    margin-top: 15px;
-  }
-  .info-section h3 {
-    color: #dc1212;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
-  .info-section p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-  }
-  .info-section ul li {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 12px;
-  }
-
-  /* Modal Header */
-  .modal-header {
-  padding: 10px; /* Reduced padding for minimizing the section size */
-  background-color: #dc1212;
-  color: white; /* Makes text white */
-  text-align: center;
-}
-
-
-
-.modal-header p {
-  color: white; /* Ensures the <p> text is white */
-  font-size: 0.9rem; /* Adjust font size for minimization */
-  margin: 0; /* Removes extra margin for compact look */
-}
-
-
-  /* Button Styling */
-  ion-button {
-    font-size: 16px;
-    padding: 12px;
-    border-radius: 8px;
-  }
-
-  /* Item Styling */
-  ion-item {
-    margin-bottom: 12px;
-  }
-  ion-avatar {
-    width: 40px;
-    height: 40px;
-  }
-  ion-label h2 {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  ion-label p {
-    font-size: 16px;
-  }
-</style>

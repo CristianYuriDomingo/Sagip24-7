@@ -109,61 +109,66 @@
 
 .icon-col {
   display: flex;
-  flex-direction: column; /* Stack items vertically (icon and title) */
+  flex-direction: column; /* Stack items vertically */
   justify-content: center;
   align-items: center;
   text-align: center; /* Center the title text */
+  position: relative; /* For proper positioning of titles */
 }
+
 .icon-container-card {
   display: flex;
-  justify-content: center; /* Centers icon horizontally inside the card */
-  align-items: center;     /* Centers icon vertically inside the card */
-  width: 100%;             /* Ensures it takes the full width of the column */
-  height: 100%;            /* Ensures it takes the full height */
-  border-radius: 5px;      /* Makes the card circular */
+  justify-content: center; /* Center icon horizontally */
+  align-items: center; /* Center icon vertically */
+  width: 80px; /* Adjust size */
+  height: 80px; /* Adjust size */
+  border-radius: 10px; /* Rounded corners */
   background-color: #f9f9f9; /* Optional background color */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  padding: 10px;           /* Optional padding for the card */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 10px;
+  opacity: 0; /* Hidden by default */
+  animation: fadeInUp 0.8s ease-in-out forwards; /* Add entrance animation */
 }
 
 .icon-container-card:hover {
-  transform: translateY(-5px); /* Lift on hover */
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-  background-color: #e0e0e0; /* Darken background on hover */
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Slide up from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at default position */
+  }
 }
 
 .icon-image {
-  margin: 0;
-  padding: 0;
-  width: 50px; /* Set the icon size */
+  width: 50px; /* Adjust icon size */
   height: 50px;
-  object-fit: contain; /* Ensures the image fits properly */
+  object-fit: contain; /* Prevent distortion */
 }
+
 .icon-title {
-  margin-top: 100px; /* Reduced the margin to decrease the space between the icon and title */
-  font-size: 14px;  /* Adjust the font size as needed */
-  color: #333;      /* Customize the color if needed */
-  position: absolute;
-  padding: 20px;
+  margin-top: 10px;
+  font-size: 14px; /* Font size for title */
+  color: #333; /* Title color */
 }
 
-/* Show title on hover */
-.icon-container-card:hover .icon-title {
-  display: block; /* Show title when hovered */
-}
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .icon-container-card {
     width: 70px;
     height: 70px;
   }
   .icon-image {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
   .icon-title {
-    font-size: 0.8rem;
+    font-size: 12px;
   }
 }
 
@@ -177,10 +182,9 @@
     height: 30px;
   }
   .icon-title {
-    font-size: 0.7rem;
+    font-size: 10px;
   }
 }
-
 
 
 
