@@ -1,49 +1,13 @@
-/* Logo Container */
 .logo-container {
   display: flex;
   align-items: center;
-  margin-left: 20px;
-}
-
-.logo-container ion-title {
-  text-align: start;
+  justify-content: center;
 }
 
 .logo {
   height: 40px;
 }
-.logo-rotate {
-  animation: rotating 3s ease-out 0s 1;
-}
-.header-appear {
-  animation: appearing 3.7s ease 0s 1;
-}
-@keyframes rotating {
-  from {
-    transform: translateX(400px) rotate(1000deg);
-  }
-  to {
-    transform: translateX(0px) rotate(0deg);
-  }
-}
-@keyframes appearing {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* Image Container */
+
 .image-container {
   position: relative;
   margin: 20px;
@@ -73,10 +37,11 @@
 .cp-content {
   font-size: 0.8rem;
   line-height: 1.5rem;
+  text-indent: 20px;
 }
 
 .custom-card .header-section {
-  background: url("../../assets/images/Tab3 img src/Light.svg"); /* Light gray for contrast */
+  background: url("../../assets/images/Tab3 img src/Shiny1.svg"); /* Light gray for contrast */
   padding: 16px; /* Add padding around the section */
   border-radius: 8px 8px 0 0; /* Rounded corners at the top */
   object-fit: cover;
@@ -154,10 +119,10 @@ ion-card {
 
 /*MODAL BUTTON*/
 #open-modal-team {
-  --background: rgba(211, 146, 146, 0.396);
+  --background: #dc1212;
 }
 #open-modal-site {
-  --background: rgba(211, 146, 146, 0.396);
+  --background:#dc1212;
 }
 .about-card img.ion-padding {
   padding: 10px 0px;
@@ -222,6 +187,7 @@ ion-item {
   --ion-text-color: white; /* Optional: Changes text color */
   width: 100%;
   padding: 0;
+  
 }
 
 /*VISIT SITE SECTION*/
@@ -346,21 +312,35 @@ ion-card-content {
 }
 /* Overview Section */
 
-/* Overview Header */
-.overview-header {
-  background-color: #f2f2f2; /* Light grey background */
+
+
+.overview-header h2 {
+  position: relative;
 }
+
+.overview-header h2::after {
+  content: '';
+  display: block;
+  height: 2px; /* Thickness of the underline */
+  background-color: #dc1212;
+  width: 30vw; /* 30% of the viewport width */
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
 
 /* Overview Title */
 .overview-header h2 {
   margin: 0; /* Remove default margin */
   font-size: 1.5rem; /* Adjust size as needed */
-  color: #333; /* Dark color for the text */
+  color: #000000; /* Dark color for the text */
   padding: 20px;
 }
 
 .social-p {
   padding: 5px 20px;
+  text-indent: 20px;
+  text-align: justify;
 }
 .social-p p {
   font-size: 0.8rem;
