@@ -47,7 +47,17 @@ export class MythsPage implements OnInit {
     { id: 'myth37', title: 'Gum disease is not a serious health concern', fact: 'Fact: Gum disease can contribute to systemic health issues, including heart disease.' },
     { id: 'myth38', title: 'Performing first aid has no long-term impact', fact: 'Fact: Proper first aid can significantly improve outcomes and survival chances.' },
     { id: 'myth39', title: 'You should not give water to someone with a head injury', fact: 'Fact: Hydration should be maintained but carefully monitored in head injuries.' },
-    { id: 'myth40', title: 'If someone experiences a stroke, lay them flat', fact: 'Fact: Position the person with their head slightly elevated to aid blood flow.' }
+    { id: 'myth40', title: 'If someone experiences a stroke, lay them flat', fact: 'Fact: Position the person with their head slightly elevated to aid blood flow.' },
+    { id: 'myth41', title: 'Herbal teas can replace hydration needs', fact: 'Fact: Water remains the most reliable source of hydration.' },
+    { id: 'myth42', title: 'Antibiotics cure viral infections', fact: 'Fact: Antibiotics only work on bacterial infections, not viruses.' },
+    { id: 'myth43', title: 'Sunburn is only harmful for aesthetics', fact: 'Fact: Prolonged sunburn increases the risk of skin cancer.' },
+    { id: 'myth44', title: 'A cold shower helps cure a fever', fact: 'Fact: Lukewarm showers are more effective in managing fever symptoms.' },
+    { id: 'myth45', title: 'Vitamins can fully substitute a balanced diet', fact: 'Fact: Nutrients from food sources are more effective than supplements.' },
+    { id: 'myth46', title: 'Exercise only improves physical health', fact: 'Fact: Exercise also boosts mental and emotional well-being.' },
+    { id: 'myth47', title: 'Eating spicy food boosts metabolism significantly', fact: 'Fact: The effect of spicy food on metabolism is minimal but real.' },
+    { id: 'myth48', title: 'Carbohydrates are bad for weight loss', fact: 'Fact: Whole carbohydrates provide essential nutrients and energy.' },
+    { id: 'myth49', title: 'Juices replace the need for water intake', fact: 'Fact: Juices contain sugars and do not fully replace hydration needs.' },
+    { id: 'myth50', title: 'Only older individuals experience sleep issues', fact: 'Fact: Sleep issues can affect people of all ages due to various factors.' }
   ];
 
   // Object to store visibility of facts for each myth

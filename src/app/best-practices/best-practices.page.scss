@@ -74,45 +74,32 @@
   --ion-card-margin: 0;
   margin-top: 5px; /* Minimize top margin */
   margin-bottom: 20px; /* Minimize bottom margin */
+  
 }
 
 /* Hover Effect */
 .bestpractice-cards .card:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  
 }
 /* Reduce padding and font size for content inside the accordion */
 .best-practices-section .ion-padding {
   padding: 5px !important; /* Further reduce padding */
   font-size: 0.8rem !important; /* Make the font size smaller */
   line-height: 1.2 !important; /* Adjust line height for compactness */
+ 
 }
 
 /* Ensure list items inside the accordion content are smaller */
 .best-practices-section .ion-padding ul li {
   padding: 2px 0 !important; /* Minimize padding for list items */
   font-size: 0.75rem !important; /* Reduce list item font size */
-}
-
-.modern-header {
-  background-color: #dc1212;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 0.9rem;
-  padding: 5px 10px; /* Minimized Button Size */
-  border-radius: 20px; /* More compact semi-round shape */
-  transition: 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  
 }
 
 
-/* Hover Effect */
-.modern-header:hover {
-  background-color: #b00a0a;
-}
+
 
 /* Accordion Button Text */
 .card ion-label {
@@ -135,11 +122,13 @@
   font-size: 0.85rem;
   transition: background-color 0.3s ease-in-out;
   margin-top: 5px;
+  
 }
 
 .card ion-item:hover {
   background-color: #ebeaea;
   transition: all 0.3s;
+  border-radius: 10px;
 }
 
 
