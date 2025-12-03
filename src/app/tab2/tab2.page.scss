@@ -2,8 +2,6 @@
 
 /* Header Logo */
 
-
-
 .logo-container {
   display: flex;
   align-items: center;
@@ -82,6 +80,46 @@
   }
 }
 
+/* Search Bar Container */
+.search-bar-container {
+  margin: 30px 15px 30px 15px; /* Large top and bottom margin for spacing */
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-searchbar {
+  --background: #f5f5f5;
+  --border-radius: 25px;
+  --box-shadow: none;
+  --placeholder-color: #999;
+  --icon-color: #999;
+  max-width: 600px;
+  width: 100%;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .search-bar-container {
+    margin: 25px 10px 25px 10px;
+  }
+  
+  .custom-searchbar {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar-container {
+    margin: 20px 8px 20px 8px;
+    padding: 0 5px;
+  }
+  
+  .custom-searchbar {
+    font-size: 12px;
+  }
+}
 
 /* Icon Container */
 /* Main Container */
@@ -122,9 +160,10 @@
   align-items: center; /* Center icon vertically */
   width: 80px; /* Adjust size */
   height: 80px; /* Adjust size */
-  border-radius: 10px; /* Rounded corners */
-  background-color: #f9f9f9; /* Optional background color */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 12px; /* Slightly rounded corners */
+  background-color: #ffffff; /* Clean white background */
+  box-shadow: none; /* Remove shadow */
+  border: 1.5px solid #f0f0f0; /* Subtle border instead */
   padding: 10px;
   opacity: 0; /* Hidden by default */
   animation: fadeInUp 0.8s ease-in-out forwards; /* Add entrance animation */
@@ -186,9 +225,6 @@
   }
 }
 
-
-
-
 .emergency-label h2 {
   font-size: 1.2rem; /* Font size for readability */
   font-weight: bold; /* Bold text for emphasis */
@@ -204,10 +240,6 @@
   margin-right: 15px; /* Add space on the right side */
   
 }
-
-
-
-
 
 .card-container {
   margin: 15px; /* Reduced margin */
@@ -227,7 +259,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adding a subtle shadow */
+  box-shadow: none; /* Remove shadow for modern look */
+  border: 1.5px solid #e8e8e8; /* Clean border */
+  border-radius: 12px; /* Slightly rounded */
   
   min-width: 300px; /* Minimum width */
   max-width: 380px; /* Maximum width */
@@ -299,8 +333,6 @@
   }
 }
 
-
-
 /* Styling for routerLink (Custom Card with Routing) */
 .custom-card-link {
   display: block;  /* Make the entire card clickable */
@@ -308,5 +340,3 @@
   width: 100%;  /* Ensure the link takes full width */
   height: 100%;  /* Ensure the link takes full height */
 }
-
-

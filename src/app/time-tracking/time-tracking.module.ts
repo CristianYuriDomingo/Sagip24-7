@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HelpUsPageRoutingModule } from './help-us-routing.module';
+import { TimeTrackingPageRoutingModule } from './time-tracking-routing.module';
 
-import { HelpUsPage } from './help-us.page';
+import { TimeTrackingPage } from './time-tracking.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HelpUsPageRoutingModule
+    TimeTrackingPageRoutingModule
   ],
-  declarations: [HelpUsPage]
+  declarations: [TimeTrackingPage]
 })
-export class HelpUsPageModule {}
+export class TimeTrackingPageModule {}

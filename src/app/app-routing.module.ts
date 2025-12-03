@@ -51,8 +51,8 @@ const routes: Routes = [
     loadChildren: () => import('./best-practices/best-practices.module').then( m => m.BestPracticesPageModule)
   },
   {
-    path: 'help-us',
-    loadChildren: () => import('./help-us/help-us.module').then( m => m.HelpUsPageModule)
+    path: 'time-tracking',
+    loadChildren: () => import('./time-tracking/time-tracking.module').then( m => m.TimeTrackingPageModule)
   }
 ];
 

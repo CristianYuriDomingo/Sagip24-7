@@ -16,6 +16,15 @@
     </div>
   </ion-card>
 
+  <!-- Search Bar Section -->
+  <div class="search-bar-container">
+    <ion-searchbar 
+      placeholder="Search for emergencies..." 
+      mode="ios"
+      class="custom-searchbar">
+    </ion-searchbar>
+  </div>
+
   <ion-row>
     <ion-col size="3" class="icon-col">
       <ion-card class="icon-container-card" [routerLink]="['/visual-aids']">
@@ -36,17 +45,14 @@
       </ion-card>
       <h3 class="icon-title">Best Practices</h3>
     </ion-col>
-    <ion-col size="3" class="icon-col">
-      <ion-card class="icon-container-card" [routerLink]="['/help-us']">
-        <img src="assets/images/icon6.png" alt="Help Us Icon" class="icon-image">
-      </ion-card>
-      <h3 class="icon-title">Help Us</h3>
-    </ion-col>
+   <ion-col size="3" class="icon-col">
+  <ion-card class="icon-container-card" [routerLink]="['/time-tracking']">
+    <img src="assets/images/icon6.png" alt="Time Tracking Icon" class="icon-image">
+  </ion-card>
+  <h3 class="icon-title">Time Tracking</h3>
+</ion-col>
   </ion-row>
   
-  
-  
-
   <div class="emergency-label">
     <h2>Types of Emergencies</h2>
   </div>
