@@ -1,3 +1,4 @@
+<!-- src/app/tab2/tab2.page.html -->
 <ion-header [translucent]="true">
   <ion-toolbar>
     <div class="logo-container">
@@ -23,10 +24,47 @@
     </div>
   </ion-card>
 
-  <!-- Search Bar Section -->
-  <div class="search-bar-container">
-    <ion-searchbar placeholder="Search for emergencies..." mode="ios" class="custom-searchbar">
-    </ion-searchbar>
+  <!-- Search Bar Section with Overlay Results -->
+  <div class="search-wrapper">
+    <div class="search-bar-container">
+      <ion-searchbar 
+        placeholder="Search for emergencies..." 
+        mode="ios" 
+        class="custom-searchbar"
+        [(ngModel)]="searchQuery"
+        (ionInput)="onSearchChange($event)"
+        (ionFocus)="onSearchFocus()"
+        (ionBlur)="onSearchBlur()">
+      </ion-searchbar>
+    </div>
+
+    <!-- Overlay Backdrop (appears when searching) -->
+    <div class="search-overlay-backdrop" 
+         *ngIf="searchQuery.trim().length > 0 && isSearchFocused"
+         (click)="clearSearch()">
+    </div>
+
+    <!-- Search Results Dropdown (overlays content) -->
+    <div class="search-results-dropdown" 
+         *ngIf="searchQuery.trim().length > 0 && isSearchFocused">
+      <div class="search-results-wrapper">
+        <!-- Show matching results as clickable chips -->
+        <ion-chip 
+          *ngFor="let emergency of searchSuggestions"
+          class="search-result-chip"
+          (click)="selectSuggestion(emergency)">
+          <ion-icon name="medical-outline"></ion-icon>
+          <ion-label>{{ emergency.title }}</ion-label>
+          <ion-icon name="chevron-forward-outline" class="forward-icon"></ion-icon>
+        </ion-chip>
+
+        <!-- No results message -->
+        <div *ngIf="searchSuggestions.length === 0" class="no-results-message">
+          <ion-icon name="search-outline"></ion-icon>
+          <span>No emergencies found for "{{ searchQuery }}"</span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <ion-row>
@@ -71,81 +109,27 @@
       </h3>
     </ion-col>
   </ion-row>
+  
   <div class="emergency-label">
     <h2>Types of Emergencies</h2>
   </div>
 
   <div class="card-container">
-    <!-- Card 1: Respiratory Emergencies -->
-    <div [routerLink]="['/respiratory-emergencies']" class="custom-card-wrapper">
+    <!-- Dynamic Emergency Cards -->
+    <div *ngFor="let emergency of filteredEmergencies" [routerLink]="[emergency.route]" class="custom-card-wrapper">
       <ion-card class="custom-card">
-        <div class="card-background" style="background-image: url('assets/images/Respiratory.png');">
+        <div class="card-background" [style.background-image]="'url(' + emergency.backgroundImage + ')'">
           <div class="card-content">
-            <h3 class="card-title">Respiratory Emergencies</h3>
+            <h3 class="card-title">{{ emergency.title }}</h3>
           </div>
         </div>
-        <img src="assets/images/icon7.png" class="card-icon" alt="Respiratory Icon">
+        <img [src]="emergency.icon" class="card-icon" [alt]="emergency.title + ' Icon'">
       </ion-card>
     </div>
 
-    <!-- Card 2: Traumatic Injuries -->
-    <div [routerLink]="['/traumatic-injuries']" class="custom-card-wrapper">
-      <ion-card class="custom-card">
-        <div class="card-background" style="background-image: url('assets/images/bruises.png');">
-          <div class="card-content">
-            <h3 class="card-title">Traumatic Injuries</h3>
-          </div>
-        </div>
-        <img src="assets/images/icon7.png" class="card-icon" alt="Traumatic Icon">
-      </ion-card>
-    </div>
-
-    <!-- Card 3: Environmental Emergencies -->
-    <div [routerLink]="['/environmental-emergencies']" class="custom-card-wrapper">
-      <ion-card class="custom-card">
-        <div class="card-background" style="background-image: url('assets/images/dehydration.png');">
-          <div class="card-content">
-            <h3 class="card-title">Environmental Emergencies</h3>
-          </div>
-        </div>
-        <img src="assets/images/icon7.png" class="card-icon" alt="Environmental Icon">
-      </ion-card>
-    </div>
-
-    <!-- Card 4: Allergic and Insect Bites -->
-    <div [routerLink]="['/allergic-insect-bites']" class="custom-card-wrapper">
-      <ion-card class="custom-card">
-        <div class="card-background" style="background-image: url('assets/images/allergy.png');">
-          <div class="card-content">
-            <h3 class="card-title">Allergic and Insect Bites</h3>
-          </div>
-        </div>
-        <img src="assets/images/icon7.png" class="card-icon" alt="Allergic Icon">
-      </ion-card>
-    </div>
-
-    <!-- Card 5: Cardiac and Neurological -->
-    <div [routerLink]="['/cardiac-neurological']" class="custom-card-wrapper">
-      <ion-card class="custom-card">
-        <div class="card-background" style="background-image: url('assets/images/neurology.png');">
-          <div class="card-content">
-            <h3 class="card-title">Cardiac and Neurological</h3>
-          </div>
-        </div>
-        <img src="assets/images/icon7.png" class="card-icon" alt="Cardiac Icon">
-      </ion-card>
-    </div>
-
-    <!-- Card 6: Other General Emergencies -->
-    <div [routerLink]="['/other-general-emergencies']" class="custom-card-wrapper">
-      <ion-card class="custom-card">
-        <div class="card-background" style="background-image: url('assets/images/Other.png');">
-          <div class="card-content">
-            <h3 class="card-title">Other General Emergencies</h3>
-          </div>
-        </div>
-        <img src="assets/images/icon7.png" class="card-icon" alt="General Icon">
-      </ion-card>
+    <!-- No Results Message -->
+    <div *ngIf="filteredEmergencies.length === 0 && searchQuery.trim().length > 0" style="width: 100%; text-align: center; padding: 40px 20px;">
+      <p style="color: #999; font-size: 16px;">No emergencies found matching "{{ searchQuery }}"</p>
     </div>
   </div>
 </ion-content>
