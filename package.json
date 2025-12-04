@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "@awesome-cordova-plugins/core": "^8.1.0",
     "@awesome-cordova-plugins/flashlight": "^8.1.0",
     "@capacitor/android": "6.2.0",
     "@capacitor/app": "6.0.2",
@@ -31,6 +32,8 @@
     "@ionic/angular": "^8.0.0",
     "cordova-plugin-flashlight": "^3.2.0",
     "ionicons": "^7.0.0",
+    "lottie-web": "^5.13.0",
+    "ngx-lottie": "^12.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
