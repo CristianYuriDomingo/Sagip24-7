@@ -12,47 +12,59 @@
     <img src="assets/images/Dashboard1.png" alt="Background Image" class="background-image">
     <div class="overlay">
       <h2>We provide care, not judgement</h2>
-      <p>With neutrality, independence, and compassion, we deliver life-saving first aid and support to those in need.</p>
+      <p>With neutrality, independence, and compassion, we deliver life-saving first aid and support to those in need.
+      </p>
     </div>
   </ion-card>
 
   <!-- Search Bar Section -->
   <div class="search-bar-container">
-    <ion-searchbar 
-      placeholder="Search for emergencies..." 
-      mode="ios"
-      class="custom-searchbar">
+    <ion-searchbar placeholder="Search for emergencies..." mode="ios" class="custom-searchbar">
     </ion-searchbar>
   </div>
 
   <ion-row>
-    <ion-col size="3" class="icon-col">
+    <ion-col size="2.4" class="icon-col">
       <ion-card class="icon-container-card" [routerLink]="['/visual-aids']">
         <img src="assets/images/icon2.png" alt="Visual Aids Icon" class="icon-image">
       </ion-card>
-      <!-- Title outside of the card -->
-      <h3 class="icon-title">Visual Aids</h3>
+      <h3 class="icon-title">Visual<br>Aids</h3>
     </ion-col>
-    <ion-col size="3" class="icon-col">
+
+    <ion-col size="2.4" class="icon-col">
       <ion-card class="icon-container-card" [routerLink]="['/myths']">
         <img src="assets/images/icon4.png" alt="Emergency Response Icon" class="icon-image">
       </ion-card>
-      <h3 class="icon-title">Myths vs Facts</h3>
+      <h3 class="icon-title">Myths vs<br>Facts</h3>
     </ion-col>
-    <ion-col size="3" class="icon-col">
+
+    <ion-col size="2.4" class="icon-col">
       <ion-card class="icon-container-card" [routerLink]="['/best-practices']">
         <img src="assets/images/icon5.png" alt="Best Practices Icon" class="icon-image">
       </ion-card>
-      <h3 class="icon-title">Best Practices</h3>
+      <h3 class="icon-title">Best<br>Practices</h3>
     </ion-col>
-   <ion-col size="3" class="icon-col">
-  <ion-card class="icon-container-card" [routerLink]="['/time-tracking']">
-    <img src="assets/images/icon6.png" alt="Time Tracking Icon" class="icon-image">
-  </ion-card>
-  <h3 class="icon-title">Time Tracking</h3>
-</ion-col>
+
+    <ion-col size="2.4" class="icon-col">
+      <ion-card class="icon-container-card" [routerLink]="['/time-tracking']">
+        <img src="assets/images/icon6.png" alt="Time Tracking Icon" class="icon-image">
+      </ion-card>
+      <h3 class="icon-title">Time<br>Tracking</h3>
+    </ion-col>
+
+    <ion-col size="2.4" class="icon-col">
+      <ion-card class="icon-container-card" (click)="toggleFlashlight()">
+        <img [src]="isFlashlightOn ? 'assets/images/icon-flashlight-on.png' : 'assets/images/icon-flashlight-off.png'"
+          alt="Flashlight Icon" class="icon-image">
+      </ion-card>
+      <h3 class="icon-title">
+        <span [class]="'flashlight-status ' + (isFlashlightOn ? 'on' : 'off')">
+          {{ isFlashlightOn ? 'Turn Off' : 'Turn On' }}
+        </span><br>
+        Flashlight
+      </h3>
+    </ion-col>
   </ion-row>
-  
   <div class="emergency-label">
     <h2>Types of Emergencies</h2>
   </div>
