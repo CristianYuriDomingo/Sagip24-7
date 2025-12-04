@@ -1,41 +1,32 @@
+// environmental-emergencies.page.ts
 import { Component, OnInit } from '@angular/core';
+import { FirstAidService } from '../services/first-aid.service';
+import { EmergencyCategory, FirstAidTechnique } from '../models/first-aid-technique.model';
 
 @Component({
   selector: 'app-environmental-emergencies',
   templateUrl: './environmental-emergencies.page.html',
   styleUrls: ['./environmental-emergencies.page.scss'],
 })
-export class EnvironmentalEmergenciesPage {
+export class EnvironmentalEmergenciesPage implements OnInit {
+  category: EmergencyCategory | undefined;
+  selectedTechnique: FirstAidTechnique | null = null;
+  isModalOpen = false;
 
-  isHeatExhaustionModalOpen = false;
-  isMildHypothermiaModalOpen = false;
-  isDehydrationModalOpen = false;
+  constructor(private firstAidService: FirstAidService) {}
 
-  constructor() { }
-
-  openHeatExhaustionModal() {
-    this.isHeatExhaustionModalOpen = true;
+  ngOnInit() {
+    // Load the environmental category data
+    this.category = this.firstAidService.getCategoryById('environmental');
   }
 
-  openMildHypothermiaModal() {
-    this.isMildHypothermiaModalOpen = true;
+  openTechniqueModal(technique: FirstAidTechnique) {
+    this.selectedTechnique = technique;
+    this.isModalOpen = true;
   }
 
-  openDehydrationModal() {
-    this.isDehydrationModalOpen = true;
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedTechnique = null;
   }
-
-  // Methods to close modals
-  closeHeatExhaustionModal() {
-    this.isHeatExhaustionModalOpen = false;
-  }
-
-  closeMildHypothermiaModal() {
-    this.isMildHypothermiaModalOpen = false;
-  }
-
-  closeDehydrationModal() {
-    this.isDehydrationModalOpen = false;
-  }
-
 }

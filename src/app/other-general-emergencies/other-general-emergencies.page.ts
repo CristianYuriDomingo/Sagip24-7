@@ -1,40 +1,31 @@
+// other-general-emergencies.page.ts
 import { Component, OnInit } from '@angular/core';
+import { FirstAidService } from '../services/first-aid.service';
+import { EmergencyCategory, FirstAidTechnique } from '../models/first-aid-technique.model';
 
 @Component({
   selector: 'app-other-general-emergencies',
   templateUrl: './other-general-emergencies.page.html',
   styleUrls: ['./other-general-emergencies.page.scss'],
 })
-export class OtherGeneralEmergenciesPage {
+export class OtherGeneralEmergenciesPage implements OnInit {
+  category: EmergencyCategory | undefined;
+  selectedTechnique: FirstAidTechnique | null = null;
+  isModalOpen = false;
 
-  isNoseBleedModalOpen = false;
-  isEyeInjuryModalOpen = false;
-  isForeignObjectModalOpen = false;
+  constructor(private firstAidService: FirstAidService) {}
 
-  constructor() { }
-
-  openNoseBleedModal() {
-    this.isNoseBleedModalOpen = true;
+  ngOnInit() {
+    this.category = this.firstAidService.getCategoryById('other-general-emergencies');
   }
 
-  openEyeInjuryModal() {
-    this.isEyeInjuryModalOpen = true;
+  openTechniqueModal(technique: FirstAidTechnique) {
+    this.selectedTechnique = technique;
+    this.isModalOpen = true;
   }
 
-  openForeignObjectModal() {
-    this.isForeignObjectModalOpen = true;
-  }
-
-  // Methods to close modals
-  closeNoseBleedModal() {
-    this.isNoseBleedModalOpen = false;
-  }
-
-  closeEyeInjuryModal() {
-    this.isEyeInjuryModalOpen = false;
-  }
-
-  closeForeignObjectModal() {
-    this.isForeignObjectModalOpen = false;
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedTechnique = null;
   }
 }

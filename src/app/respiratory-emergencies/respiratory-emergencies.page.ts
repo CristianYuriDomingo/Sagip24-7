@@ -1,47 +1,31 @@
+// respiratory-emergencies.page.ts
 import { Component, OnInit } from '@angular/core';
+import { FirstAidService } from '../services/first-aid.service';
+import { EmergencyCategory, FirstAidTechnique } from '../models/first-aid-technique.model';
 
 @Component({
   selector: 'app-respiratory-emergencies',
   templateUrl: './respiratory-emergencies.page.html',
   styleUrls: ['./respiratory-emergencies.page.scss'],
 })
-export class RespiratoryEmergenciesPage{
+export class RespiratoryEmergenciesPage implements OnInit {
+  category: EmergencyCategory | undefined;
+  selectedTechnique: FirstAidTechnique | null = null;
+  isModalOpen = false;
 
-  isChokingForAdultModalOpen = false;
-  isChokingForBabiesModalOpen = false;
-  isMildAsthmaModalOpen = false;
-  isHyperventilationModalOpen = false;
+  constructor(private firstAidService: FirstAidService) {}
 
-  constructor() { }
-
-  openChokingForAdultModal() {
-    this.isChokingForAdultModalOpen = true;
+  ngOnInit() {
+    this.category = this.firstAidService.getCategoryById('respiratory-emergencies');
   }
 
-  openChokingForBabiesModal() {
-    this.isChokingForBabiesModalOpen = true;
+  openTechniqueModal(technique: FirstAidTechnique) {
+    this.selectedTechnique = technique;
+    this.isModalOpen = true;
   }
 
-  openMildAsthmaModal() {
-    this.isMildAsthmaModalOpen = true;
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedTechnique = null;
   }
-
-  openHyperventilationModal() {
-    this.isHyperventilationModalOpen = true;
-  }
-
-  closeChokingForAdultModal() {
-    this.isChokingForAdultModalOpen = false;
-  }
-
-  closeChokingForBabiesModal() {
-    this.isChokingForBabiesModalOpen = false;
-  }
-  closeMildAsthmaModal() {
-    this.isMildAsthmaModalOpen = false;
-  }
-  closeHyperventilationModal() {
-    this.isHyperventilationModalOpen = false;
-  }
-
 }

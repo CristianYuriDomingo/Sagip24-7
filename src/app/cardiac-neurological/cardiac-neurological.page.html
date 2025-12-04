@@ -9,10 +9,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" *ngIf="category">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Cardiac and Neurological</ion-title>
+      <ion-title size="large">{{ category.title }}</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -20,272 +20,101 @@
   <div class="custom-container">
     <!-- Image Background -->
     <div class="image-section">
-      <img src="assets/images/Cardiac/neurology1.png" alt="Background Image" />
+      <img [src]="category.headerImage" alt="Background Image" />
     </div>
 
     <!-- Icon Overlay as Image -->
     <div class="overlay-icon">
-      <img src="assets/images/Cardiac/cardiac-logo.png" alt="Icon Image" />
+      <img [src]="category.logoIcon" alt="Icon Image" />
     </div>
 
     <!-- Text Content -->
     <div class="text-section">
-      <h2>Cardiac and Neurological</h2>
+      <h2>{{ category.title }}</h2>
     </div>
   </div>
 
-  <!-- New Label Section -->
+  <!-- Key Takeaways Section -->
   <div class="label-section">
     <h2>Key Takeaways</h2>
   </div>
 
-  <!-- New Card Section -->
+  <!-- About Card -->
   <ion-card class="about-card">
     <ion-item lines="none">
       <!-- Left Icon -->
       <ion-avatar slot="start">
-        <img src="assets/images/reading-book.png" alt="Respiratory Icon" />
+        <img src="assets/images/reading-book.png" alt="Icon" />
       </ion-avatar>
 
       <!-- Title -->
       <ion-label>
-        <h2>Understanding the Basics</h2>
-        <p> Cardiac and neurological emergencies, including fainting and the need for CPR, require immediate attention.
-          Knowing the vital steps in administering CPR and managing fainting can make a life-saving difference in
-          critical situations.</p>
+        <h2>{{ category.keyTakeawayTitle }}</h2>
+        <p>{{ category.keyTakeawayDescription }}</p>
       </ion-label>
     </ion-item>
   </ion-card>
 
-  <!-- Existing Label Section -->
+  <!-- First Aid Techniques Section -->
   <div class="label-section">
     <h2>First Aid Techniques</h2>
   </div>
 
-  <!-- Existing Card Section -->
-  <ion-card class="custom-card" (click)="openFaintingModal()">
+  <!-- Dynamic Technique Cards -->
+  <ion-card 
+    *ngFor="let technique of category.techniques" 
+    class="custom-card" 
+    (click)="openTechniqueModal(technique)">
     <ion-item lines="none">
       <!-- Left Icon -->
       <ion-avatar slot="start">
-        <img src="assets/images/Cardiac/fainting.png" alt="Card Icon" />
+        <img [src]="technique.icon" [alt]="technique.title + ' Icon'" />
       </ion-avatar>
 
       <!-- Title -->
       <ion-label>
-        <h2>Fainting</h2>
+        <h2>{{ technique.title }}</h2>
       </ion-label>
 
       <!-- Next Icon -->
       <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
     </ion-item>
   </ion-card>
-
-  <ion-card class="custom-card" (click)="openCprModal()">
-    <ion-item lines="none">
-      <!-- Left Icon -->
-      <ion-avatar slot="start">
-        <img src="assets/images/Cardiac/cpr.png" alt="Card Icon" />
-      </ion-avatar>
-
-      <!-- Title -->
-      <ion-label>
-        <h2>CPR</h2>
-      </ion-label>
-
-      <!-- Next Icon -->
-      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-  </ion-card>
-
-
-
 </ion-content>
 
-<ion-modal [isOpen]="isFaintingModalOpen" (didDismiss)="closeFaintingModal()">
+<!-- Dynamic Modal -->
+<ion-modal [isOpen]="isModalOpen" (didDismiss)="closeModal()" *ngIf="selectedTechnique">
   <ng-template>
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
-          <ion-button (click)="closeFaintingModal()" style="--color: #dc1212;">Close</ion-button>
+          <ion-button (click)="closeModal()" style="--color: #dc1212;">Close</ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <!-- Moved Description Section Above Sliding Cards -->
+      <!-- Description Section -->
       <section class="description-section">
-        <h3>Fainting: First Aid Steps</h3>
-        <p>
-          Follow these steps to safely assist someone who has fainted, improve their blood circulation, and ensure their
-          recovery. Quick action can help prevent complications and identify if medical attention is necessary.
-        </p>
+        <h3>{{ selectedTechnique.modalTitle }}</h3>
+        <p>{{ selectedTechnique.description }}</p>
       </section>
 
       <hr class="section-divider">
 
+      <!-- Dynamic Sliding Cards -->
       <div class="sliding-cards-container">
-        <!-- Card 1 -->
-        <ion-card class="sliding-card">
+        <ion-card *ngFor="let step of selectedTechnique.steps" class="sliding-card">
           <ion-card-header>
-            <ion-card-title>Step 1: Lay the Person Flat on Their Back</ion-card-title>
+            <ion-card-title>Step {{ step.stepNumber }}: {{ step.title }}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <img src="assets/images/Cardiac/fainting-step1.png" alt="Stop the Bleeding" class="card-image" />
+            <img [src]="step.image" [alt]="step.title" class="card-image" />
             <p>
-              <li>Position the person on a flat surface to promote steady blood flow to the brain. </li>
-              <li>Ensure their head is turned to the side to prevent choking if they vomit.</li>
-
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 2 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 2: Elevate Their Legs</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Cardiac/fainting-step2.png" alt="Clean the Wound" class="card-image" />
-            <p>
-              <li>Raise the legs about 12 inches off the ground to improve blood flow and oxygen delivery to the brain.
-              </li>
-              <li>This simple step often helps the person regain consciousness faster.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 3 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 3: Loosen Tight Clothing and Provide Fresh Air</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Cardiac/fainting-step3.png" alt="Apply a Bandage" class="card-image" />
-            <p>
-              <li>Loosen belts, collars, or tight clothing to ensure unrestricted breathing.</li>
-              <li>Make sure the area is well-ventilated, and fan them gently if needed to keep them comfortable.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 4 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 4: Call for Help If Necessary</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Cardiac/fainting-step4.png" alt="Monitor for Infection" class="card-image" />
-            <p>
-              <li>If they don’t regain consciousness within 1–2 minutes or show other concerning symptoms (e.g.,
-                difficulty breathing, chest pain), seek medical help immediately.</li>
-              <li>Persistent unconsciousness may indicate a more serious condition requiring urgent medical attention.
-              </li>
-
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 5 -->
-      </div>
-
-    </ion-content>
-  </ng-template>
-</ion-modal>
-
-
-<ion-modal [isOpen]="isCprModalOpen" (didDismiss)="closeCprModal()">
-  <ng-template>
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-button (click)="closeCprModal()" style="--color: #dc1212;">Close</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <!-- Moved Description Section Above Sliding Cards -->
-      <section class="description-section">
-        <h3>CPR: Lifesaving Steps for Cardiac Arrest</h3>
-        <p>Follow these steps to provide immediate, lifesaving assistance during cardiac arrest. Performing CPR promptly
-          can double or even triple a person’s chances of survival until professional help arrives.
-        </p>
-      </section>
-
-      <hr class="section-divider">
-
-      <div class="sliding-cards-container">
-        <!-- Card 1 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 1: Check for Responsiveness and Breathing</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Cardiac/cpr-step1.png" alt="Stop the Bleeding" class="card-image" />
-            <p>
-              <li>Tap the person and shout to confirm they are unresponsive. Check if they are breathing normally (gasping or irregular breaths count as abnormal).</li>
-              <li>Quickly identifying cardiac arrest is critical to beginning life-saving measures.</li>
-
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 2 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 2: Call Emergency Services and Retrieve an AED</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Cardiac/cpr-step2.png" alt="Clean the Wound" class="card-image" />
-            <p>
-              <li>Dial emergency services immediately and request an Automated External Defibrillator (AED) if available.</li>
-              <li>o	Alerting professionals ensures timely advanced care while preparing to use an AED can restore the heart’s rhythm.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 3 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 3:	Start Chest Compressions</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Cardiac/cpr-step3.png" alt="Apply a Bandage" class="card-image" />
-            <p>
-              <li>Place your hands in the center of the chest and press down firmly at a depth of about 2 inches, at a rate of 100–120 compressions per minute. Let the chest rise fully between compressions.</li>
-              <li>Compressions maintain blood flow to vital organs until the heart can pump effectively again.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 4 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 4: Provide Rescue Breaths (If Trained)</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Cardiac/cpr-step4.png" alt="Monitor for Infection" class="card-image" />
-            <p>
-              <li>After 30 compressions, give 2 rescue breaths by tilting the head back, pinching the nose, and breathing into their mouth. Ensure the chest rises with each breath.</li>
-              <li>Rescue breaths deliver oxygen to the lungs, complementing chest compressions to sustain life.</li>
-              
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 5 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 5: Continue Until Help Arrives or Recovery.</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Cardiac/cpr-step5.png" alt="Monitor for Infection" class="card-image" />
-            <p>
-              <li>Keep performing compressions and breaths without stopping unless the person regains consciousness, an AED advises you to stop, or professional help takes over.</li>
-              <li>Persistence can make the difference between life and death in these critical moments.</li>
+              <li *ngFor="let desc of step.description">{{ desc }}</li>
             </p>
           </ion-card-content>
         </ion-card>
       </div>
-
     </ion-content>
   </ng-template>
 </ion-modal>

@@ -1,52 +1,31 @@
-import { Component } from '@angular/core';
+// traumatic-injuries.page.ts
+import { Component, OnInit } from '@angular/core';
+import { FirstAidService } from '../services/first-aid.service';
+import { EmergencyCategory, FirstAidTechnique } from '../models/first-aid-technique.model';
 
 @Component({
   selector: 'app-traumatic-injuries',
-  templateUrl: 'traumatic-injuries.page.html',
-  styleUrls: ['traumatic-injuries.page.scss'],
+  templateUrl: './traumatic-injuries.page.html',
+  styleUrls: ['./traumatic-injuries.page.scss'],
 })
-export class TraumaticInjuriesPage {
+export class TraumaticInjuriesPage implements OnInit {
+  category: EmergencyCategory | undefined;
+  selectedTechnique: FirstAidTechnique | null = null;
+  isModalOpen = false;
 
-  // Modal state variables for each injury type
-  isMinorBleedingModalOpen = false;
-  isSprainsModalOpen = false;
-  isBurnsModalOpen = false;
-  isBruiseModalOpen = false;
+  constructor(private firstAidService: FirstAidService) {}
 
-  constructor() {}
-
-  // Methods to open modals
-  openMinorBleedingModal() {
-    this.isMinorBleedingModalOpen = true;
+  ngOnInit() {
+    this.category = this.firstAidService.getCategoryById('traumatic-injuries');
   }
 
-  openSprainsModal() {
-    this.isSprainsModalOpen = true;
+  openTechniqueModal(technique: FirstAidTechnique) {
+    this.selectedTechnique = technique;
+    this.isModalOpen = true;
   }
 
-  openBurnsModal() {
-    this.isBurnsModalOpen = true;
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedTechnique = null;
   }
-
-  openBruiseModal() {
-    this.isBruiseModalOpen = true;
-  }
-
-  // Methods to close modals
-  closeMinorBleedingModal() {
-    this.isMinorBleedingModalOpen = false;
-  }
-
-  closeSprainsModal() {
-    this.isSprainsModalOpen = false;
-  }
-
-  closeBurnsModal() {
-    this.isBurnsModalOpen = false;
-  }
-
-  closeBruiseModal() {
-    this.isBruiseModalOpen = false;
-  }
-
 }

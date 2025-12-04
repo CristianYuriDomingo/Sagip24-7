@@ -9,10 +9,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" *ngIf="category">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Respiratory Emergencies First Aid</ion-title>
+      <ion-title size="large">{{ category.title }}</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -20,332 +20,101 @@
   <div class="custom-container">
     <!-- Image Background -->
     <div class="image-section">
-      <img src="assets/images/Environmental/dehydration1.png" alt="Background Image" />
+      <img [src]="category.headerImage" alt="Background Image" />
     </div>
 
     <!-- Icon Overlay as Image -->
     <div class="overlay-icon">
-      <img src="assets/images/Environmental/environmental-logo.png" alt="Icon Image" />
+      <img [src]="category.logoIcon" alt="Icon Image" />
     </div>
 
     <!-- Text Content -->
     <div class="text-section">
-      <h2>Environmental and Physical Emergencies</h2>
+      <h2>{{ category.title }}</h2>
     </div>
   </div>
 
-  <!-- New Label Section -->
+  <!-- Key Takeaways Section -->
   <div class="label-section">
     <h2>Key Takeaways</h2>
   </div>
 
-  <!-- New Card Section -->
+  <!-- About Card -->
   <ion-card class="about-card">
     <ion-item lines="none">
       <!-- Left Icon -->
       <ion-avatar slot="start">
-        <img src="assets/images/reading-book.png" alt="Respiratory Icon" />
+        <img src="assets/images/reading-book.png" alt="Icon" />
       </ion-avatar>
 
       <!-- Title -->
       <ion-label>
-        <h2>Understanding the Basics</h2>
-        <p>Environmental and physical emergencies, including heat exhaustion, mild hypothermia, and dehydration, demand quick intervention. Understand the critical steps to address these conditions and restore balance to the body in extreme environments.</p>
+        <h2>{{ category.keyTakeawayTitle }}</h2>
+        <p>{{ category.keyTakeawayDescription }}</p>
       </ion-label>
     </ion-item>
   </ion-card>
 
-  <!-- Existing Label Section -->
+  <!-- First Aid Techniques Section -->
   <div class="label-section">
     <h2>First Aid Techniques</h2>
   </div>
 
-  <!-- Existing Card Section -->
-  <ion-card class="custom-card" (click)="openHeatExhaustionModal()">
+  <!-- Dynamic Technique Cards -->
+  <ion-card 
+    *ngFor="let technique of category.techniques" 
+    class="custom-card" 
+    (click)="openTechniqueModal(technique)">
     <ion-item lines="none">
       <!-- Left Icon -->
       <ion-avatar slot="start">
-        <img src="assets/images/Environmental/heat.png" alt="Card Icon" />
+        <img [src]="technique.icon" [alt]="technique.title + ' Icon'" />
       </ion-avatar>
 
       <!-- Title -->
       <ion-label>
-        <h2>Heat Exhaustion</h2>
+        <h2>{{ technique.title }}</h2>
       </ion-label>
 
       <!-- Next Icon -->
       <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
     </ion-item>
   </ion-card>
-
-  <ion-card class="custom-card" (click)="openMildHypothermiaModal()">
-    <ion-item lines="none">
-      <!-- Left Icon -->
-      <ion-avatar slot="start">
-        <img src="assets/images/Environmental/hypotermia.png" alt="Card Icon" />
-      </ion-avatar>
-
-      <!-- Title -->
-      <ion-label>
-        <h2>Mild Hypothermia</h2>
-      </ion-label>
-
-      <!-- Next Icon -->
-      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-  </ion-card>
-
-  <ion-card class="custom-card" (click)="openDehydrationModal()">
-    <ion-item lines="none">
-      <!-- Left Icon -->
-      <ion-avatar slot="start">
-        <img src="assets/images/Environmental/dehydration.png" alt="Card Icon" />
-      </ion-avatar>
-
-      <!-- Title -->
-      <ion-label>
-        <h2>Dehydration</h2>
-      </ion-label>
-
-      <!-- Next Icon -->
-      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    </ion-item>
-  </ion-card>
-  
 </ion-content>
 
-<ion-modal [isOpen]="isHeatExhaustionModalOpen" (didDismiss)="closeHeatExhaustionModal()">
+<!-- Dynamic Modal -->
+<ion-modal [isOpen]="isModalOpen" (didDismiss)="closeModal()" *ngIf="selectedTechnique">
   <ng-template>
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
-          <ion-button (click)="closeHeatExhaustionModal()" style="--color: #dc1212;">Close</ion-button>
+          <ion-button (click)="closeModal()" style="--color: #dc1212;">Close</ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <!-- Moved Description Section Above Sliding Cards -->
+      <!-- Description Section -->
       <section class="description-section">
-        <h3>Heat Exhaustion: First Aid Steps</h3>
-        <p>
-          Follow these steps to help alleviate heat exhaustion, prevent it from progressing to heatstroke, and ensure the person’s safety. Quick action is crucial to regulate body temperature and restore hydration."
-        </p>
+        <h3>{{ selectedTechnique.modalTitle }}</h3>
+        <p>{{ selectedTechnique.description }}</p>
       </section>
 
       <hr class="section-divider">
 
+      <!-- Dynamic Sliding Cards -->
       <div class="sliding-cards-container">
-        <!-- Card 1 -->
-        <ion-card class="sliding-card">
+        <ion-card *ngFor="let step of selectedTechnique.steps" class="sliding-card">
           <ion-card-header>
-            <ion-card-title>Step 1:	Move to a Cooler Area</ion-card-title>
+            <ion-card-title>Step {{ step.stepNumber }}: {{ step.title }}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <img src="assets/images/Environmental/Step1-heat.png" alt="Stop the Bleeding" class="card-image" />
+            <img [src]="step.image" [alt]="step.title" class="card-image" />
             <p>
-              <li>Relocate the person to a cool, shaded, or air-conditioned space. </li>
-              <li>Reducing exposure to heat immediately helps prevent the condition from worsening.</li>
-
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 2 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 2: Hydrate Slowly</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Environmental/Step2-heat.png" alt="Clean the Wound" class="card-image" />
-            <p>
-              <li>Encourage the person to sip water or electrolyte drinks gradually.</li>
-              <li>Hydration restores lost fluids and minerals, which are essential to combat dehydration. Avoid giving very cold drinks as they can cause stomach cramps.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 3 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 3: Cool the Body</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Environmental/Step3-heat.png" alt="Apply a Bandage" class="card-image" />
-            <p>
-              <li>Apply wet cloths, cool water, or use a fan to help lower their body temperature.</li>
-              <li>Focus on areas like the neck, armpits, and wrists, where cooling is most effective.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 4 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 4:	Seek Medical Help If Necessary</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/doctor.png" alt="Monitor for Infection" class="card-image" />
-            <p>
-              <li>If symptoms persist or worsen (e.g., nausea, confusion, or fainting), call for emergency assistance.</li>
-              <li>Prolonged heat exhaustion can lead to heatstroke, a life-threatening condition requiring immediate medical care.</li>
+              <li *ngFor="let desc of step.description">{{ desc }}</li>
             </p>
           </ion-card-content>
         </ion-card>
       </div>
-
     </ion-content>
   </ng-template>
 </ion-modal>
-
-<ion-modal [isOpen]="isMildHypothermiaModalOpen" (didDismiss)="closeMildHypothermiaModal()">
-  <ng-template>
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-button (click)="closeMildHypothermiaModal()" style="--color: #dc1212;">Close</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <!-- Moved Description Section Above Sliding Cards -->
-      <section class="description-section">
-        <h3>Mild Hypothermia: First Aid Steps</h3>
-        <p>
-          Follow these steps to help warm the person safely, stabilize their condition, and prevent further heat loss. Timely intervention is critical to avoid worsening symptoms and potential complications.
-        </p>
-      </section>
-
-      <hr class="section-divider">
-
-      <div class="sliding-cards-container">
-        <!-- Card 1 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 1: Move to a Warm, Dry Place</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Environmental/Step1-hy.png" alt="Stop the Bleeding" class="card-image" />
-            <p>
-              <li>Relocate the person to a sheltered, warm environment.</li>
-              <li>Removing them from the cold source stops further heat loss and creates a safe setting for recovery.</li>
-
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 2 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 2:	Remove Wet Clothing and Cover with Warm Blankets</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Environmental/Step2-hy.png" alt="Clean the Wound" class="card-image" />
-            <p>
-              <li>Wet clothing draws heat away from the body, so replace it with dry layers.</li>
-              <li>Use blankets or warm clothing to insulate and retain body heat effectively.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 3 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 3:	Offer Warm Drinks</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Environmental/Step3-hy.png" alt="Apply a Bandage" class="card-image" />
-            <p>
-              <li>If the person is fully conscious, provide warm (not hot) non-alcoholic and non-caffeinated beverages like water, tea, or broth</li>
-              <li>Warm fluids help raise internal body temperature gently and hydrate them.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 4 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 4: Avoid Direct Heat Sources</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Environmental/Step4-hy.png" alt="Monitor for Infection" class="card-image" />
-            <p>
-              <li>Do not apply hot water bottles, heating pads, or similar devices directly to the skin.</li>
-              <li>Sudden exposure to intense heat can cause shock or burns and may worsen their condition.</li>
-             
-            </p>
-          </ion-card-content>
-        </ion-card>
-      </div>
-
-    </ion-content>
-  </ng-template>
-</ion-modal>
-<ion-modal [isOpen]="isDehydrationModalOpen" (didDismiss)="closeDehydrationModal()">
-  <ng-template>
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-button (click)="closeDehydrationModal()" style="--color: #dc1212;">Close</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <!-- Moved Description Section Above Sliding Cards -->
-      <section class="description-section">
-        <h3>Dehydration: First Aid Steps</h3>
-        <p>
-          Follow these steps to help restore hydration, prevent complications, and support recovery. Early intervention can alleviate symptoms and avoid the risks of severe dehydration.
-        </p>
-      </section>
-
-      <hr class="section-divider">
-
-      <div class="sliding-cards-container">
-        <!-- Card 1 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 1:	Encourage Small Sips of Water or Electrolyte Drinks</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Environmental/Step1-dehy.png" alt="Stop the Bleeding" class="card-image" />
-            <p>
-              <li>Provide water or oral rehydration solutions to replace lost fluids and essential salts.</li>
-              <li>Drinking in small sips helps the body absorb fluids more effectively without causing nausea.</li>
-
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 2 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 2: Avoid Sugary or Caffeinated Beverages</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Environmental/Step2-dehy.png" alt="Clean the Wound" class="card-image" />
-            <p>
-              <li>Do not offer sodas, coffee, or energy drinks as they can worsen dehydration by drawing more water out of the body.</li>
-              <li>Stick to plain water or specially formulated electrolyte drinks for best results.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
-        <!-- Card 3 -->
-        <ion-card class="sliding-card">
-          <ion-card-header>
-            <ion-card-title>Step 3:	Rest and Monitor Symptoms</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="assets/images/Environmental/Step3-dehy.png" alt="Apply a Bandage" class="card-image" />
-            <p>
-              <li>Allow the person to rest in a cool, shaded area to conserve energy and prevent further fluid loss.</li>
-              <li>Keep an eye out for signs of severe dehydration, such as confusion, dizziness, or reduced urine output, and seek medical attention if these occur.</li>
-            </p>
-          </ion-card-content>
-        </ion-card>
-      </div>
-
-    </ion-content>
-  </ng-template>
-</ion-modal>
-
