@@ -1,10 +1,23 @@
+// src/app/tab2/tab2.page.ts
 import { Component, OnInit } from '@angular/core';
 import { Flashlight } from '@awesome-cordova-plugins/flashlight/ngx';
 import { AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'lottie-web';
 import { EmergencyService } from '../services/emergency.service';
 import { Emergency } from '../models/emergency.model';
+import { FirstAidService } from '../services/first-aid.service';
+import { FirstAidTechnique, EmergencyCategory } from '../models/first-aid-technique.model';
 import { Router } from '@angular/router';
+
+// Interface for unified search results
+interface SearchResult {
+  title: string;
+  route: string;
+  type: 'emergency' | 'technique';
+  icon?: string;
+  category?: EmergencyCategory;
+  technique?: FirstAidTechnique; // Add technique reference
+}
 
 @Component({
   selector: 'app-tab2',
@@ -16,7 +29,7 @@ export class Tab2Page implements OnInit {
   emergencies: Emergency[] = [];
   filteredEmergencies: Emergency[] = [];
   searchQuery: string = '';
-  searchSuggestions: Emergency[] = [];
+  searchSuggestions: SearchResult[] = [];
   isSearchFocused: boolean = false;
 
   // Lottie animation options
@@ -32,6 +45,7 @@ export class Tab2Page implements OnInit {
   constructor(
     private flashlight: Flashlight,
     private emergencyService: EmergencyService,
+    private firstAidService: FirstAidService,
     private router: Router
   ) {}
 
@@ -48,12 +62,34 @@ export class Tab2Page implements OnInit {
     this.searchQuery = event.detail.value || '';
     
     if (this.searchQuery.trim().length > 0) {
-      this.searchSuggestions = this.emergencyService.searchEmergencies(this.searchQuery);
+      // Search both emergencies and techniques
+      const emergencyResults = this.emergencyService.searchEmergencies(this.searchQuery);
+      const techniqueResults = this.firstAidService.searchTechniques(this.searchQuery);
+      
+      // Combine results into unified format
+      this.searchSuggestions = [
+        // Add emergency categories
+        ...emergencyResults.map(emergency => ({
+          title: emergency.title,
+          route: emergency.route,
+          type: 'emergency' as const,
+          icon: emergency.icon
+        })),
+        // Add first aid techniques with full data
+        ...techniqueResults.map(result => ({
+          title: result.technique.title,
+          route: result.category.route,
+          type: 'technique' as const,
+          icon: result.technique.icon,
+          category: result.category,
+          technique: result.technique // Pass the full technique object
+        }))
+      ];
     } else {
       this.searchSuggestions = [];
     }
     
-    // Also filter the cards below
+    // Filter the emergency cards below
     this.filteredEmergencies = this.emergencyService.searchEmergencies(this.searchQuery);
   }
 
@@ -68,15 +104,25 @@ export class Tab2Page implements OnInit {
     }, 200);
   }
 
-  selectSuggestion(emergency: Emergency) {
-    // Clear search and navigate
+  selectSuggestion(suggestion: SearchResult) {
+    // Clear search
     this.searchQuery = '';
     this.searchSuggestions = [];
     this.filteredEmergencies = [...this.emergencies];
     this.isSearchFocused = false;
     
-    // Navigate to the emergency page
-    this.router.navigate([emergency.route]);
+    // Navigate to the appropriate page with state data
+    if (suggestion.type === 'technique' && suggestion.technique) {
+      // Navigate with state containing the technique to open
+      this.router.navigate([suggestion.route], {
+        state: {
+          openTechnique: suggestion.technique
+        }
+      });
+    } else {
+      // Regular navigation for emergency categories
+      this.router.navigate([suggestion.route]);
+    }
   }
 
   clearSearch() {

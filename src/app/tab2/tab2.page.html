@@ -50,11 +50,17 @@
       <div class="search-results-wrapper">
         <!-- Show matching results as clickable chips -->
         <ion-chip 
-          *ngFor="let emergency of searchSuggestions"
+          *ngFor="let suggestion of searchSuggestions"
           class="search-result-chip"
-          (click)="selectSuggestion(emergency)">
+          [class.technique-chip]="suggestion.type === 'technique'"
+          (click)="selectSuggestion(suggestion)">
           <ion-icon name="medical-outline"></ion-icon>
-          <ion-label>{{ emergency.title }}</ion-label>
+          <div class="chip-content">
+            <ion-label>{{ suggestion.title }}</ion-label>
+            <span *ngIf="suggestion.type === 'technique'" class="chip-badge">
+              First Aid Technique
+            </span>
+          </div>
           <ion-icon name="chevron-forward-outline" class="forward-icon"></ion-icon>
         </ion-chip>
 

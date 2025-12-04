@@ -962,22 +962,66 @@ export class FirstAidService {
         return category?.techniques.find(tech => tech.id === techniqueId);
     }
 
-    searchTechniques(query: string): FirstAidTechnique[] {
+    // Enhanced method to get all techniques from all categories
+    getAllTechniques(): FirstAidTechnique[] {
+        const allTechniques: FirstAidTechnique[] = [];
+        
+        this.categories.forEach(category => {
+            allTechniques.push(...category.techniques);
+        });
+        
+        return allTechniques;
+    }
+
+    // Enhanced search that returns techniques with their category info
+    searchTechniques(query: string): { technique: FirstAidTechnique, category: EmergencyCategory }[] {
         if (!query.trim()) {
             return [];
         }
 
-        const results: FirstAidTechnique[] = [];
+        const results: { technique: FirstAidTechnique, category: EmergencyCategory }[] = [];
         const lowerQuery = query.toLowerCase();
 
         this.categories.forEach(category => {
             category.techniques.forEach(technique => {
                 if (technique.title.toLowerCase().includes(lowerQuery)) {
-                    results.push(technique);
+                    results.push({
+                        technique,
+                        category
+                    });
                 }
             });
         });
 
         return results;
+    }
+
+    // Method to search techniques within a specific category
+    searchTechniquesInCategory(categoryId: string, query: string): FirstAidTechnique[] {
+        if (!query.trim()) {
+            return [];
+        }
+
+        const category = this.getCategoryById(categoryId);
+        if (!category) {
+            return [];
+        }
+
+        const lowerQuery = query.toLowerCase();
+        return category.techniques.filter(technique => 
+            technique.title.toLowerCase().includes(lowerQuery)
+        );
+    }
+
+    // Method to get techniques by category ID
+    getTechniquesByCategoryId(categoryId: string): FirstAidTechnique[] {
+        const category = this.getCategoryById(categoryId);
+        return category ? category.techniques : [];
+    }
+
+    // Method to get techniques by category route
+    getTechniquesByCategoryRoute(route: string): FirstAidTechnique[] {
+        const category = this.getCategoryByRoute(route);
+        return category ? category.techniques : [];
     }
 }

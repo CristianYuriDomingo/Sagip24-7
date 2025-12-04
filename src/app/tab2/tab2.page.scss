@@ -236,17 +236,42 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   border: 1px solid #f0f0f0;
   margin: 0;
+  min-height: 50px;
+}
+
+/* Special styling for technique chips */
+.search-result-chip.technique-chip {
+  border-left: 3px solid #dc1212;
+  background: linear-gradient(to right, rgba(220, 18, 18, 0.02), white);
+}
+
+/* Chip content container */
+.chip-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Badge for techniques */
+.chip-badge {
+  font-size: 11px;
+  color: #dc1212;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .search-result-chip ion-icon {
   color: #dc1212;
   font-size: 20px;
   margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .search-result-chip ion-label {
-  flex: 1;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .search-result-chip .forward-icon {
@@ -254,12 +279,17 @@
   margin-right: 0;
   color: #999;
   font-size: 18px;
+  flex-shrink: 0;
 }
 
 .search-result-chip:hover {
   --background: #f8f8f8;
   transform: translateX(4px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.search-result-chip.technique-chip:hover {
+  background: linear-gradient(to right, rgba(220, 18, 18, 0.05), #f8f8f8);
 }
 
 .search-result-chip:active {
@@ -320,6 +350,7 @@
 
   .search-result-chip {
     padding: 12px 14px;
+    min-height: 48px;
   }
 
   .search-result-chip ion-icon {
@@ -333,6 +364,10 @@
 
   .search-result-chip .forward-icon {
     font-size: 16px;
+  }
+
+  .chip-badge {
+    font-size: 10px;
   }
 
   .no-results-message {
@@ -369,6 +404,7 @@
 
   .search-result-chip {
     padding: 10px 12px;
+    min-height: 46px;
   }
 
   .search-result-chip ion-icon {
@@ -382,6 +418,10 @@
 
   .search-result-chip .forward-icon {
     font-size: 14px;
+  }
+
+  .chip-badge {
+    font-size: 9px;
   }
 
   .no-results-message {
