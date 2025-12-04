@@ -7,9 +7,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="content">
-  <!-- Image Section -->
+  <!-- Lottie Animation Section -->
   <ion-card class="image-container-card">
-    <img src="assets/images/Dashboard1.png" alt="Background Image" class="background-image">
+    <div class="lottie-container">
+      <ng-lottie 
+        [options]="dashboardAnimationOptions"
+        (animationCreated)="animationCreated($event)"
+        class="lottie-animation">
+      </ng-lottie>
+    </div>
     <div class="overlay">
       <h2>We provide care, not judgement</h2>
       <p>With neutrality, independence, and compassion, we deliver life-saving first aid and support to those in need.

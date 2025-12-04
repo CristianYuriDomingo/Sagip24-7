@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Flashlight } from '@awesome-cordova-plugins/flashlight/ngx';
+import { AnimationOptions } from 'ngx-lottie';
+import { AnimationItem } from 'lottie-web';
 
 @Component({
   selector: 'app-tab2',
@@ -8,6 +10,16 @@ import { Flashlight } from '@awesome-cordova-plugins/flashlight/ngx';
 })
 export class Tab2Page {
   isFlashlightOn = false;
+
+  // Lottie animation options
+  dashboardAnimationOptions: AnimationOptions = {
+    path: 'assets/animations/dashboard-animation.json',
+    loop: true,
+    autoplay: true,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
 
   constructor(private flashlight: Flashlight) {}
 
@@ -31,5 +43,9 @@ export class Tab2Page {
       console.error('Error toggling flashlight:', error);
       alert('Failed to toggle flashlight');
     }
+  }
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log('Dashboard animation loaded successfully!');
   }
 }
