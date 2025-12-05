@@ -1,17 +1,16 @@
-<!-- src/app/tab1/tab1.page.html - COMPLETE CODE -->
+<!-- src/app/tab1/tab1.page.html -->
 <ion-header [translucent]="true">
   <ion-toolbar>
     <div class="header-wrapper">
       <div class="logo-container">
-        <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+        <img src="assets/images/logo4.png" [alt]="translations.HEADER?.LOGO_ALT || 'Sagip 24/7 Logo'" class="logo">
       </div>
       
       <!-- Language Switcher -->
       <div class="language-switcher">
         <ion-button fill="clear" (click)="presentLanguagePopover($event)" class="language-btn">
           <ion-icon name="globe-outline" slot="start"></ion-icon>
-          <!-- Show full name on large screens, abbreviation on mobile -->
-          <span class="lang-full">{{ currentLanguage === 'en' ? 'English' : 'Filipino' }}</span>
+          <span class="lang-full">{{ translations.COMMON?.[currentLanguage === 'en' ? 'ENGLISH' : 'FILIPINO'] || (currentLanguage === 'en' ? 'English' : 'Filipino') }}</span>
           <span class="lang-abbr">{{ currentLanguage === 'en' ? 'EN' : 'FIL' }}</span>
           <ion-icon name="chevron-down-outline" slot="end"></ion-icon>
         </ion-button>
@@ -26,31 +25,30 @@
     <div class="dashboard-header" (click)="dialEmergencyContact()">
       <h2>
         <ion-icon name="call-outline" class="header-icon-left"></ion-icon>
-        Emergency Contact
+        {{ translations.TAB1?.EMERGENCY_CONTACT || 'Emergency Contact' }}
       </h2>
       <div class="description">
-        <p class="phone-number">Philippines</p>
-        <p class="location">#911</p>
+        <p class="phone-number">{{ translations.TAB1?.PHILIPPINES || 'Philippines' }}</p>
+        <p class="location">{{ translations.TAB1?.EMERGENCY_NUMBER || '#911' }}</p>
       </div>
     </div>
 
     <!-- More Informational Content Section -->
     <div class="info-section">
-      <h3>What to Do While Waiting for Emergency Help</h3>
-      <p>In case of a medical emergency, it's crucial to act quickly and provide the necessary first aid while awaiting
-        professional help. </p>
+      <h3>{{ translations.TAB1?.WAITING_TITLE || 'What to Do While Waiting for Emergency Help' }}</h3>
+      <p>{{ translations.TAB1?.WAITING_DESC || 'In case of a medical emergency, it\'s crucial to act quickly and provide the necessary first aid while awaiting professional help.' }}</p>
       <ul>
-        <li><strong>Stay Calm:</strong> Remain composed to think clearly and manage the situation.</li>
-        <li><strong>Assess the Situation:</strong> Check for injuries and signs of distress.</li>
-        <li><strong>Perform First Aid:</strong> Administer basic first aid like CPR or stopping bleeding.</li>
-        <li><strong>Keep the Person Comfortable:</strong> Help them stay calm and comfortable.</li>
-        <li><strong>Communicate with Emergency Services:</strong> Provide clear information to responders.</li>
+        <li><strong>{{ translations.TAB1?.STAY_CALM || 'Stay Calm' }}:</strong> {{ translations.TAB1?.STAY_CALM_DESC || 'Remain composed to think clearly and manage the situation.' }}</li>
+        <li><strong>{{ translations.TAB1?.ASSESS_SITUATION || 'Assess the Situation' }}:</strong> {{ translations.TAB1?.ASSESS_SITUATION_DESC || 'Check for injuries and signs of distress.' }}</li>
+        <li><strong>{{ translations.TAB1?.PERFORM_FIRST_AID || 'Perform First Aid' }}:</strong> {{ translations.TAB1?.PERFORM_FIRST_AID_DESC || 'Administer basic first aid like CPR or stopping bleeding.' }}</li>
+        <li><strong>{{ translations.TAB1?.KEEP_COMFORTABLE || 'Keep the Person Comfortable' }}:</strong> {{ translations.TAB1?.KEEP_COMFORTABLE_DESC || 'Help them stay calm and comfortable.' }}</li>
+        <li><strong>{{ translations.TAB1?.COMMUNICATE || 'Communicate with Emergency Services' }}:</strong> {{ translations.TAB1?.COMMUNICATE_DESC || 'Provide clear information to responders.' }}</li>
       </ul>
     </div>
 
     <!-- Button to Open Modal -->
     <ion-button id="open-modal" expand="block" color="danger">
-      Additional Emergency Services
+      {{ translations.TAB1?.ADDITIONAL_SERVICES || 'Additional Emergency Services' }}
     </ion-button>
 
     <!-- Modal Trigger -->
@@ -58,9 +56,9 @@
       <ng-template>
         <ion-content>
           <ion-toolbar class="modal-header">
-            <ion-title class="modal-title">Emergency Hotlines</ion-title>
+            <ion-title class="modal-title">{{ translations.TAB1?.EMERGENCY_HOTLINES || 'Emergency Hotlines' }}</ion-title>
             <ion-buttons slot="end">
-              <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
+              <ion-button color="light" (click)="modal.dismiss()">{{ translations.TAB1?.CLOSE || 'Close' }}</ion-button>
             </ion-buttons>
           </ion-toolbar>
 
@@ -130,3 +128,4 @@
     </ion-modal>
   </div>
 </ion-content>
+*/

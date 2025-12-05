@@ -1,17 +1,16 @@
-<!-- src/app/tab2/tab2.page.html -->
+<!-- src/app/tab2/tab2.page.html - COMPLETE CODE -->
 <ion-header [translucent]="true">
   <ion-toolbar>
     <div class="header-wrapper">
       <div class="logo-container">
-        <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+        <img src="assets/images/logo4.png" [alt]="translations.HEADER?.LOGO_ALT || 'Sagip 24/7 Logo'" class="logo">
       </div>
       
       <!-- Language Switcher -->
       <div class="language-switcher">
         <ion-button fill="clear" (click)="presentLanguagePopover($event)" class="language-btn">
           <ion-icon name="globe-outline" slot="start"></ion-icon>
-          <!-- Show full name on large screens, abbreviation on mobile -->
-          <span class="lang-full">{{ currentLanguage === 'en' ? 'English' : 'Filipino' }}</span>
+          <span class="lang-full">{{ translations.COMMON?.[currentLanguage === 'en' ? 'ENGLISH' : 'FILIPINO'] || (currentLanguage === 'en' ? 'English' : 'Filipino') }}</span>
           <span class="lang-abbr">{{ currentLanguage === 'en' ? 'EN' : 'FIL' }}</span>
           <ion-icon name="chevron-down-outline" slot="end"></ion-icon>
         </ion-button>
@@ -20,7 +19,6 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- Rest of your content remains the same -->
 <ion-content [fullscreen]="true" class="content">
   <!-- Lottie Animation Section -->
   <ion-card class="image-container-card">
@@ -32,9 +30,8 @@
       </ng-lottie>
     </div>
     <div class="overlay">
-      <h2>We provide care, not judgement</h2>
-      <p>With neutrality, independence, and compassion, we deliver life-saving first aid and support to those in need.
-      </p>
+      <h2>{{ translations.TAB2?.HERO_TITLE || 'We provide care, not judgement' }}</h2>
+      <p>{{ translations.TAB2?.HERO_DESC || 'With neutrality, independence, and compassion, we deliver life-saving first aid and support to those in need.' }}</p>
     </div>
   </ion-card>
 
@@ -42,7 +39,7 @@
   <div class="search-wrapper">
     <div class="search-bar-container">
       <ion-searchbar 
-        placeholder="Search for emergencies..." 
+        [placeholder]="translations.TAB2?.SEARCH_PLACEHOLDER || 'Search for emergencies...'" 
         mode="ios" 
         class="custom-searchbar"
         [(ngModel)]="searchQuery"
@@ -72,7 +69,7 @@
           <div class="chip-content">
             <ion-label>{{ suggestion.title }}</ion-label>
             <span *ngIf="suggestion.type === 'technique'" class="chip-badge">
-              First Aid Technique
+              {{ translations.TAB2?.FIRST_AID_TECHNIQUE || 'First Aid Technique' }}
             </span>
           </div>
           <ion-icon name="chevron-forward-outline" class="forward-icon"></ion-icon>
@@ -81,7 +78,7 @@
         <!-- No results message -->
         <div *ngIf="searchSuggestions.length === 0" class="no-results-message">
           <ion-icon name="search-outline"></ion-icon>
-          <span>No emergencies found for "{{ searchQuery }}"</span>
+          <span>{{ translations.TAB2?.NO_RESULTS || 'No emergencies found matching' }} "{{ searchQuery }}"</span>
         </div>
       </div>
     </div>
@@ -90,28 +87,28 @@
   <ion-row>
     <ion-col size="2.4" class="icon-col">
       <ion-card class="icon-container-card" [routerLink]="['/visual-aids']">
-        <img src="assets/images/icon2.png" alt="Visual Aids Icon" class="icon-image">
+        <img src="assets/images/icon2.png" [alt]="(translations.TAB2?.VISUAL_AIDS || 'Visual Aids') + ' Icon'" class="icon-image">
       </ion-card>
       <h3 class="icon-title">Visual<br>Aids</h3>
     </ion-col>
 
     <ion-col size="2.4" class="icon-col">
       <ion-card class="icon-container-card" [routerLink]="['/myths']">
-        <img src="assets/images/icon4.png" alt="Emergency Response Icon" class="icon-image">
+        <img src="assets/images/icon4.png" alt="Myths vs Facts Icon" class="icon-image">
       </ion-card>
       <h3 class="icon-title">Myths vs<br>Facts</h3>
     </ion-col>
 
     <ion-col size="2.4" class="icon-col">
       <ion-card class="icon-container-card" [routerLink]="['/best-practices']">
-        <img src="assets/images/icon5.png" alt="Best Practices Icon" class="icon-image">
+        <img src="assets/images/icon5.png" [alt]="(translations.TAB2?.BEST_PRACTICES || 'Best Practices') + ' Icon'" class="icon-image">
       </ion-card>
       <h3 class="icon-title">Best<br>Practices</h3>
     </ion-col>
 
     <ion-col size="2.4" class="icon-col">
       <ion-card class="icon-container-card" [routerLink]="['/time-tracking']">
-        <img src="assets/images/icon6.png" alt="Time Tracking Icon" class="icon-image">
+        <img src="assets/images/icon6.png" [alt]="(translations.TAB2?.TIME_TRACKING || 'Time Tracking') + ' Icon'" class="icon-image">
       </ion-card>
       <h3 class="icon-title">Time<br>Tracking</h3>
     </ion-col>
@@ -119,11 +116,11 @@
     <ion-col size="2.4" class="icon-col">
       <ion-card class="icon-container-card" (click)="toggleFlashlight()">
         <img [src]="isFlashlightOn ? 'assets/images/icon-flashlight-on.png' : 'assets/images/icon-flashlight-off.png'"
-          alt="Flashlight Icon" class="icon-image">
+          [alt]="(translations.TAB2?.FLASHLIGHT || 'Flashlight') + ' Icon'" class="icon-image">
       </ion-card>
       <h3 class="icon-title">
         <span [class]="'flashlight-status ' + (isFlashlightOn ? 'on' : 'off')">
-          {{ isFlashlightOn ? 'Turn Off' : 'Turn On' }}
+          {{ isFlashlightOn ? (translations.TAB2?.TURN_OFF || 'Turn Off') : (translations.TAB2?.TURN_ON || 'Turn On') }}
         </span><br>
         Flashlight
       </h3>
@@ -131,7 +128,7 @@
   </ion-row>
   
   <div class="emergency-label">
-    <h2>Types of Emergencies</h2>
+    <h2>{{ translations.TAB2?.TYPES_OF_EMERGENCIES || 'Types of Emergencies' }}</h2>
   </div>
 
   <div class="card-container">
@@ -149,7 +146,7 @@
 
     <!-- No Results Message -->
     <div *ngIf="filteredEmergencies.length === 0 && searchQuery.trim().length > 0" style="width: 100%; text-align: center; padding: 40px 20px;">
-      <p style="color: #999; font-size: 16px;">No emergencies found matching "{{ searchQuery }}"</p>
+      <p style="color: #999; font-size: 16px;">{{ translations.TAB2?.NO_RESULTS || 'No emergencies found matching' }} "{{ searchQuery }}"</p>
     </div>
   </div>
 </ion-content>

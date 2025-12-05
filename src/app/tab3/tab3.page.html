@@ -3,15 +3,14 @@
   <ion-toolbar>
     <div class="header-wrapper">
       <div class="logo-container">
-        <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+        <img src="assets/images/logo4.png" [alt]="translations.HEADER?.LOGO_ALT || 'Sagip 24/7 Logo'" class="logo">
       </div>
       
       <!-- Language Switcher -->
       <div class="language-switcher">
         <ion-button fill="clear" (click)="presentLanguagePopover($event)" class="language-btn">
           <ion-icon name="globe-outline" slot="start"></ion-icon>
-          <!-- Show full name on large screens, abbreviation on mobile -->
-          <span class="lang-full">{{ currentLanguage === 'en' ? 'English' : 'Filipino' }}</span>
+          <span class="lang-full">{{ translations.COMMON?.[currentLanguage === 'en' ? 'ENGLISH' : 'FILIPINO'] || (currentLanguage === 'en' ? 'English' : 'Filipino') }}</span>
           <span class="lang-abbr">{{ currentLanguage === 'en' ? 'EN' : 'FIL' }}</span>
           <ion-icon name="chevron-down-outline" slot="end"></ion-icon>
         </ion-button>
@@ -26,19 +25,16 @@
     <ion-card class="custom-card">
       <!-- Image Section -->
       <div class="header-section">
-        <img alt="Silhouette of mountains" src="../../assets/images/logo3.png" />
+        <img [alt]="translations.TAB3?.APP_TITLE || 'Sagip 24/7'" src="../../assets/images/logo3.png" />
         <ion-card-header>
-          <ion-card-title>Sagip 24/7</ion-card-title>
-          <ion-card-subtitle>Your aid companion</ion-card-subtitle>
+          <ion-card-title>{{ translations.TAB3?.APP_TITLE || 'Sagip 24/7' }}</ion-card-title>
+          <ion-card-subtitle>{{ translations.TAB3?.APP_SUBTITLE || 'Your aid companion' }}</ion-card-subtitle>
         </ion-card-header>
       </div>
 
       <!-- Content Section -->
       <ion-card-content style="text-align: justify" class="cp-content">
-        This app is thoughtfully designed to empower you during emergencies, even in the absence of internet access.
-        With <b>Sagip 24/7</b>, you can stay confident and equipped to respond effectively in critical situations. It
-        ensures that you're always prepared to take action swiftly and efficiently when it matters the most, offering
-        you peace of mind and the tools to protect yourself and others.
+        {{ translations.TAB3?.APP_DESC || 'This app is thoughtfully designed to empower you during emergencies, even in the absence of internet access. With Sagip 24/7, you can stay confident and equipped to respond effectively in critical situations. It ensures that you\'re always prepared to take action swiftly and efficiently when it matters the most, offering you peace of mind and the tools to protect yourself and others.' }}
       </ion-card-content>
     </ion-card>
   </div>
@@ -48,12 +44,11 @@
     <ion-row>
       <ion-col size="12">
         <div class="dp-container">
-          <h2>Our Team</h2>
+          <h2>{{ translations.TAB3?.OUR_TEAM || 'Our Team' }}</h2>
           <ion-card class="about-card aboutus-card">
-            <img class="ion-padding" alt="Silhouette of mountains" src="../../assets/images/Tab3 img src/ico1.png" />
+            <img class="ion-padding" [alt]="translations.TAB3?.OUR_TEAM || 'Our Team'" src="../../assets/images/Tab3 img src/ico1.png" />
             <ion-card-content>
-              Our team is dedicated to creating accessible solutions that save
-              lives.
+              {{ translations.TAB3?.TEAM_DESC || 'Our team is dedicated to creating accessible solutions that save lives.' }}
             </ion-card-content>
 
             <!-- IONIC INLINE MODAL -->
@@ -65,14 +60,14 @@
                 <ion-header>
                   <ion-toolbar>
                     <ion-buttons slot="end">
-                      <ion-button (click)="modal.dismiss()" color="danger">Close</ion-button>
+                      <ion-button (click)="modal.dismiss()" color="danger">{{ translations.TAB1?.CLOSE || 'Close' }}</ion-button>
                     </ion-buttons>
-                    <ion-title>Our Team</ion-title>
+                    <ion-title>{{ translations.TAB3?.OUR_TEAM || 'Our Team' }}</ion-title>
                   </ion-toolbar>
                 </ion-header>
                 <!--MODAL CONTENT -->
                 <ion-content>
-                  <!--ABOUT TEAM IMGE-->
+                  <!--ABOUT TEAM IMAGE-->
                   <div class="profile-container">
                     <!-- Cover Photo -->
                     <ion-img class="cover-photo" src="../../assets/images/Tab3 img src/Virus (1).svg"></ion-img>
@@ -140,7 +135,6 @@
                       </ion-header>
 
                       <ion-list>
-                        <!-- Item 1 -->
                         <ion-item>
                           <ion-thumbnail slot="start">
                             <img alt="Item Image" src="../../assets/images/Tab3 img src/avatar/boy.png" />
@@ -151,7 +145,6 @@
                           </ion-label>
                         </ion-item>
 
-                        <!-- Item 2 -->
                         <ion-item>
                           <ion-thumbnail slot="start">
                             <img alt="Item Image" src="../../assets/images/Tab3 img src/avatar/employee (2).png" />
@@ -162,7 +155,6 @@
                           </ion-label>
                         </ion-item>
 
-                        <!-- Item 3 -->
                         <ion-item>
                           <ion-thumbnail slot="start">
                             <img alt="Item Image" src="../../assets/images/Tab3 img src/avatar/man.png" />
@@ -173,7 +165,6 @@
                           </ion-label>
                         </ion-item>
 
-                        <!-- Item 4 -->
                         <ion-item>
                           <ion-thumbnail slot="start">
                             <img alt="Item Image" src="../../assets/images/Tab3 img src/avatar/office-man.png" />
@@ -184,7 +175,6 @@
                           </ion-label>
                         </ion-item>
 
-                        <!-- Item 5 -->
                         <ion-item>
                           <ion-thumbnail slot="start">
                             <img alt="Item Image" src="../../assets/images/Tab3 img src/avatar/woman.png" />
@@ -195,7 +185,6 @@
                           </ion-label>
                         </ion-item>
 
-                        <!-- Item 6 -->
                         <ion-item>
                           <ion-thumbnail slot="start">
                             <img alt="Item Image" src="../../assets/images/Tab3 img src/avatar/student.png" />
@@ -218,16 +207,14 @@
       <!--VISIT OUR SITE-->
       <ion-col size="12">
         <div class="dp-container">
-          <h2>Visit Our Site</h2>
+          <h2>{{ translations.TAB3?.VISIT_SITE || 'Visit Our Site' }}</h2>
           <ion-card class="about-card aboutus-card">
-            <img class="ion-padding" alt="Silhouette of mountains" src="../../assets/images/Tab3 img src/ico.png" />
+            <img class="ion-padding" [alt]="translations.TAB3?.VISIT_SITE || 'Visit Our Site'" src="../../assets/images/Tab3 img src/ico.png" />
             <ion-card-content>
-              Explore more about us and our mission by visiting our official
-              website.
+              {{ translations.TAB3?.VISIT_SITE_DESC || 'Explore more about us and our mission by visiting our official website.' }}
             </ion-card-content>
 
             <!-- IONIC INLINE MODAL -->
-            <!-- VISIT OUR SITE SECTION -->
             <ion-button id="open-modal-site">
               <img src="../../assets/images/Tab3 img src/share (3).png" alt="view" />
             </ion-button>
@@ -237,16 +224,14 @@
                 <ion-header>
                   <ion-toolbar>
                     <ion-buttons slot="end">
-                      <ion-button (click)="modalSite.dismiss()" color="danger">Close</ion-button>
+                      <ion-button (click)="modalSite.dismiss()" color="danger">{{ translations.TAB1?.CLOSE || 'Close' }}</ion-button>
                     </ion-buttons>
-                    <ion-title>Visit our Site</ion-title>
+                    <ion-title>{{ translations.TAB3?.VISIT_SITE || 'Visit our Site' }}</ion-title>
                   </ion-toolbar>
                 </ion-header>
 
                 <!-- VISIT OUR SITE MODAL CONTENT -->
                 <ion-content>
-
-
                   <!-- First Card: Full Width -->
                   <a href="https://www.facebook.com" target="_blank" class="card-link">
                     <div class="site-header">
@@ -257,7 +242,7 @@
                   <!-- Overview Section -->
                   <div class="overview-section">
                     <div class="overview-header">
-                      <h2>Connect with Us</h2>
+                      <h2>{{ translations.TAB3?.CONNECT_WITH_US || 'Connect with Us' }}</h2>
                     </div>
                     <div class="social-p">
                       <p>
@@ -342,7 +327,7 @@
   <!--   HELP SECTION -->
   <ion-card>
     <ion-card-header>
-      <ion-card-title>About more...</ion-card-title>
+      <ion-card-title>{{ translations.TAB3?.ABOUT_MORE || 'About more...' }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <!-- Parent Accordion Group -->
@@ -350,63 +335,44 @@
         <!-- FAQs Section -->
         <ion-accordion value="faqs">
           <ion-item slot="header">
-            <img src="../../assets/images/Tab3 img src/Help image/question-mark (1).png" alt="FAQs image"
+            <img src="../../assets/images/Tab3 img src/Help image/question-mark (1).png" [alt]="translations.TAB3?.FAQS || 'FAQs'"
               class="sm-img ion-padding" />
-            <ion-label class="acclabel">FAQs</ion-label>
+            <ion-label class="acclabel">{{ translations.TAB3?.FAQS || 'FAQs' }}</ion-label>
           </ion-item>
           <div class="ion-padding" slot="content">
-            <p>Find answers to frequently asked questions here.</p>
+            <p>{{ translations.TAB3?.FAQ_DESC || 'Find answers to frequently asked questions here.' }}</p>
 
             <!-- Nested FAQ Accordion Group -->
             <ion-accordion-group class="nestedacc-header">
               <ion-accordion value="first-aid-faq">
                 <ion-item slot="header">
-                  <ion-label>What should I do if I encounter an emergency?</ion-label>
+                  <ion-label>{{ translations.TAB3?.FAQ_Q1 || 'What should I do if I encounter an emergency?' }}</ion-label>
                 </ion-item>
                 <div class="ion-padding" slot="content">
-                  <p>
-                    If you encounter a medical emergency, follow these steps:
-                  </p>
+                  <p>{{ translations.TAB3?.FAQ_A1 || 'If you encounter a medical emergency, follow these steps:' }}</p>
                   <ul>
-                    <li>
-                      Ensure the area is safe for both you and the injured
-                      person.
-                    </li>
-                    <li>Call emergency services if necessary.</li>
-                    <li>
-                      Use the app to find relevant first aid steps offline based
-                      on the type of emergency.
-                    </li>
+                    <li>{{ translations.TAB3?.FAQ_A1_STEP1 || 'Ensure the area is safe for both you and the injured person.' }}</li>
+                    <li>{{ translations.TAB3?.FAQ_A1_STEP2 || 'Call emergency services if necessary.' }}</li>
+                    <li>{{ translations.TAB3?.FAQ_A1_STEP3 || 'Use the app to find relevant first aid steps offline based on the type of emergency.' }}</li>
                   </ul>
                 </div>
               </ion-accordion>
 
               <ion-accordion value="first-aid-faq-2">
                 <ion-item slot="header">
-                  <ion-label>How can I use the app without an internet
-                    connection?</ion-label>
+                  <ion-label>{{ translations.TAB3?.FAQ_Q2 || 'How can I use the app without an internet connection?' }}</ion-label>
                 </ion-item>
                 <div class="ion-padding" slot="content">
-                  <p>
-                    The SAGIP 24/7 app works offline. It has a local database of
-                    essential first aid instructions that you can access even
-                    without an internet connection. Just open the app, choose
-                    the emergency type, and follow the steps.
-                  </p>
+                  <p>{{ translations.TAB3?.FAQ_A2 || 'The SAGIP 24/7 app works offline. It has a local database of essential first aid instructions that you can access even without an internet connection. Just open the app, choose the emergency type, and follow the steps.' }}</p>
                 </div>
               </ion-accordion>
 
               <ion-accordion value="first-aid-faq-3">
                 <ion-item slot="header">
-                  <ion-label>Can I trust the medical advice in the app?</ion-label>
+                  <ion-label>{{ translations.TAB3?.FAQ_Q3 || 'Can I trust the medical advice in the app?' }}</ion-label>
                 </ion-item>
                 <div class="ion-padding" slot="content">
-                  <p>
-                    Yes, the first aid information in the app is based on
-                    trusted medical guidelines and protocols. However, in severe
-                    cases, always contact medical professionals for immediate
-                    help.
-                  </p>
+                  <p>{{ translations.TAB3?.FAQ_A3 || 'Yes, the first aid information in the app is based on trusted medical guidelines and protocols. However, in severe cases, always contact medical professionals for immediate help.' }}</p>
                 </div>
               </ion-accordion>
             </ion-accordion-group>
@@ -416,23 +382,17 @@
         <!-- Report an Issue Section -->
         <ion-accordion value="report">
           <ion-item slot="header">
-            <img src="../../assets/images/Tab3 img src/Help image/immigration.png" alt="Report an issue image"
+            <img src="../../assets/images/Tab3 img src/Help image/immigration.png" [alt]="translations.TAB3?.REPORT_ISSUE || 'Report an issue'"
               class="sm-img ion-padding" />
-            <ion-label class="acclabel">Report An Issue</ion-label>
+            <ion-label class="acclabel">{{ translations.TAB3?.REPORT_ISSUE || 'Report An Issue' }}</ion-label>
           </ion-item>
           <div class="ion-padding" slot="content">
-            <p>
-              If you encounter any problems or bugs in the app, use this section
-              to report the issue to our support team.
-            </p>
+            <p>{{ translations.TAB3?.REPORT_DESC || 'If you encounter any problems or bugs in the app, use this section to report the issue to our support team.' }}</p>
 
             <!-- Email Link with Icon on New Line -->
-            <p>
-              You can also report issues directly by sending an email to our
-              support team:
-            </p>
+            <p>{{ translations.TAB3?.REPORT_EMAIL || 'You can also report issues directly by sending an email to our support team:' }}</p>
             <div>
-              <a href="mailto:support@example.com">
+              <a href="mailto:sagipsupportteam247@gmail.com">
                 <ion-icon name="mail" class="ion-padding-end"></ion-icon>
                 sagipsupportteam247&#64;gmail.com
               </a>
@@ -443,15 +403,12 @@
         <!-- Must Have First Aid Kit Section -->
         <ion-accordion value="country">
           <ion-item slot="header">
-            <img src="../../assets/images/Tab3 img src/Help image/first-aid-box.png" alt="First aid kit image"
+            <img src="../../assets/images/Tab3 img src/Help image/first-aid-box.png" [alt]="translations.TAB3?.FIRST_AID_KIT || 'First aid kit'"
               class="sm-img ion-padding" />
-            <ion-label class="acclabel">Must Have First Aid Kit</ion-label>
+            <ion-label class="acclabel">{{ translations.TAB3?.FIRST_AID_KIT || 'Must Have First Aid Kit' }}</ion-label>
           </ion-item>
           <div class="ion-padding" slot="content">
-            <p>
-              Ensure you have a well-stocked first aid kit for emergencies.
-              Here's a list of essential items to keep in your kit:
-            </p>
+            <p>{{ translations.TAB3?.FIRST_AID_KIT_DESC || 'Ensure you have a well-stocked first aid kit for emergencies. Here\'s a list of essential items to keep in your kit:' }}</p>
             <ul>
               <li>Bandages (various sizes)</li>
               <li>Antiseptic wipes</li>
@@ -467,16 +424,12 @@
         <!-- Privacy Policy Section -->
         <ion-accordion value="privacy">
           <ion-item slot="header">
-            <img src="../../assets/images/Tab3 img src/Help image/privacy-policy.png" alt="Privacy policy image"
+            <img src="../../assets/images/Tab3 img src/Help image/privacy-policy.png" [alt]="translations.TAB3?.PRIVACY_POLICY || 'Privacy policy'"
               class="sm-img ion-padding" />
-            <ion-label class="acclabel">Privacy Policy</ion-label>
+            <ion-label class="acclabel">{{ translations.TAB3?.PRIVACY_POLICY || 'Privacy Policy' }}</ion-label>
           </ion-item>
           <div class="ion-padding" slot="content">
-            <p>
-              Read our privacy policy to understand how your personal
-              information is collected, stored, and used in accordance with our
-              guidelines.
-            </p>
+            <p>{{ translations.TAB3?.PRIVACY_DESC || 'Read our privacy policy to understand how your personal information is collected, stored, and used in accordance with our guidelines.' }}</p>
           </div>
         </ion-accordion>
       </ion-accordion-group>

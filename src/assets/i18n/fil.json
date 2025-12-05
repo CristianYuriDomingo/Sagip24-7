@@ -1,0 +1,85 @@
+{
+  "HEADER": {
+    "LOGO_ALT": "Sagip 24/7 Logo",
+    "LANGUAGE": "Wika"
+  },
+  "TABS": {
+    "HELPLINE": "Tumawag ngTulong",
+    "HOME": "Pangunahing Bahagi",
+    "ABOUT_US": "Tungkol sa Amin"
+  },
+  "TAB1": {
+    "EMERGENCY_CONTACT": "Emergency Contact",
+    "PHILIPPINES": "Pilipinas",
+    "EMERGENCY_NUMBER": "#911",
+    "WAITING_TITLE": "Ano ang Gagawin Habang Naghihintay ng Tulong",
+    "WAITING_DESC": "Sa medical emergency, mahalaga na kumilos nang mabilis at magbigay ng first aid habang naghihintay ng professional na tulong.",
+    "STAY_CALM": "Manatiling Kalmado",
+    "STAY_CALM_DESC": "Manatiling komposado upang mag-isip nang malinaw at pamahalaan ang sitwasyon.",
+    "ASSESS_SITUATION": "I-assess ang Sitwasyon",
+    "ASSESS_SITUATION_DESC": "I-check kung may mga sugat at palatandaan ng distress.",
+    "PERFORM_FIRST_AID": "Magbigay ng First Aid",
+    "PERFORM_FIRST_AID_DESC": "Magbigay ng basic first aid tulad ng CPR o pagpigil ng pagdurugo.",
+    "KEEP_COMFORTABLE": "Panatilihing Komportable ang Pasyente",
+    "KEEP_COMFORTABLE_DESC": "Tulungan silang manatiling kalmado at komportable.",
+    "COMMUNICATE": "Makipag-ugnayan sa Emergency Services",
+    "COMMUNICATE_DESC": "Magbigay ng malinaw na impormasyon sa mga responder.",
+    "ADDITIONAL_SERVICES": "Karagdagang Emergency Services",
+    "EMERGENCY_HOTLINES": "Emergency Hotlines",
+    "CLOSE": "Isara"
+  },
+  "TAB2": {
+    "HERO_TITLE": "Nagbibigay kami ng pag-aalaga, hindi panghuhusga",
+    "HERO_DESC": "Sa neutralidad, independensya, at pagmamalasakit, kami ay naghahatid ng life-saving first aid at suporta sa mga nangangailangan.",
+    "SEARCH_PLACEHOLDER": "Maghanap ng emergency...",
+    "VISUAL_AIDS": "Visual Aids",
+    "MYTHS_FACTS": "Myths vs Facts",
+    "BEST_PRACTICES": "Best Practices",
+    "TIME_TRACKING": "Time Tracking",
+    "TURN_ON": "I-on",
+    "TURN_OFF": "I-off",
+    "FLASHLIGHT": "Flashlight",
+    "TYPES_OF_EMERGENCIES": "Uri ng mga Emergency",
+    "NO_RESULTS": "Walang nakitang emergency na tumutugma sa",
+    "FIRST_AID_TECHNIQUE": "First Aid Technique"
+  },
+  "TAB3": {
+    "APP_TITLE": "Sagip 24/7",
+    "APP_SUBTITLE": "Ang iyong kaagapay sa emergency",
+    "APP_DESC": "Ang app na ito ay dinisenyo upang bigyan ka ng kapangyarihan sa mga emergency, kahit walang internet access. Sa Sagip 24/7, mananatili kang handa at may kakayahang tumugon nang epektibo sa mga critical na sitwasyon. Tinitiyak nito na lagi kang handa na kumilos nang mabilis at mahusay kapag pinakamahahalaga ito, na nag-aalok sa iyo ng kapayapaan ng isip at mga tool upang protektahan ang iyong sarili at ang iba.",
+    "OUR_TEAM": "Ang Aming Koponan",
+    "TEAM_DESC": "Ang aming koponan ay nakatuon sa paglikha ng mga accessible na solusyon na nakakaligtas ng buhay.",
+    "VISIT_SITE": "Bisitahin ang Aming Site",
+    "VISIT_SITE_DESC": "I-explore ang higit pa tungkol sa amin at sa aming misyon sa pamamagitan ng pagbisita sa aming opisyal na website.",
+    "CONNECT_WITH_US": "Makipag-ugnayan sa Amin",
+    "ABOUT_MORE": "Higit pang impormasyon...",
+    "FAQS": "Mga Frequently Asked Questions",
+    "FAQ_DESC": "Hanapin ang mga sagot sa mga madalas itanong dito.",
+    "FAQ_Q1": "Ano ang dapat kong gawin kung makatagpo ako ng emergency?",
+    "FAQ_A1": "Kung makatagpo ka ng medical emergency, sundin ang mga hakbang na ito:",
+    "FAQ_A1_STEP1": "Siguraduhing ligtas ang lugar para sa iyo at sa injured person.",
+    "FAQ_A1_STEP2": "Tumawag sa emergency services kung kinakailangan.",
+    "FAQ_A1_STEP3": "Gamitin ang app upang makahanap ng relevant na first aid steps offline batay sa uri ng emergency.",
+    "FAQ_Q2": "Paano ko magagamit ang app nang walang internet connection?",
+    "FAQ_A2": "Ang SAGIP 24/7 app ay gumagana offline. Mayroon itong local database ng essential first aid instructions na maa-access mo kahit walang internet connection. I-open lang ang app, piliin ang uri ng emergency, at sundin ang mga hakbang.",
+    "FAQ_Q3": "Mapagkakatiwalaan ko ba ang medical advice sa app?",
+    "FAQ_A3": "Oo, ang first aid information sa app ay batay sa trusted medical guidelines at protocols. Gayunpaman, sa severe cases, laging kontakin ang mga medical professionals para sa agarang tulong.",
+    "REPORT_ISSUE": "Mag-report ng Isyu",
+    "REPORT_DESC": "Kung makatagpo ka ng mga problema o bugs sa app, gamitin ang seksyong ito upang i-report ang isyu sa aming support team.",
+    "REPORT_EMAIL": "Maaari ka ring mag-report ng mga isyu nang direkta sa pamamagitan ng pag-email sa aming support team:",
+    "FIRST_AID_KIT": "Dapat Mayroon sa First Aid Kit",
+    "FIRST_AID_KIT_DESC": "Siguraduhing mayroon kang well-stocked first aid kit para sa mga emergency. Narito ang listahan ng essential items na dapat nasa iyong kit:",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "PRIVACY_DESC": "Basahin ang aming privacy policy upang maunawaan kung paano kinokolekta, ini-store, at ginagamit ang iyong personal na impormasyon ayon sa aming mga alituntunin."
+  },
+  "LANGUAGE_SWITCHER": {
+    "SWITCH_HEADER": "Magpalit ng Wika",
+    "SWITCH_MESSAGE": "Gusto mo bang magpalit sa {{language}}?",
+    "CANCEL": "Kanselahin",
+    "SWITCH": "Magpalit"
+  },
+  "COMMON": {
+    "ENGLISH": "English",
+    "FILIPINO": "Filipino"
+  }
+}

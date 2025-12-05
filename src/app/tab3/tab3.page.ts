@@ -1,8 +1,12 @@
-// src/app/tab3/tab3.page.ts
+// ==========================================
+// src/app/tab3/tab3.page.ts - COMPLETE CODE
+// ==========================================
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PopoverController, AlertController } from '@ionic/angular';
 import { LanguagePopoverComponent } from '../components/language-popover/language-popover.component';
 import { LanguageService } from '../services/language.service';
+import { TranslationService } from '../services/translation.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,27 +16,37 @@ import { Subscription } from 'rxjs';
 })
 export class Tab3Page implements OnInit, OnDestroy {
   currentLanguage: string = 'en';
+  translations: any = {};
   private languageSubscription?: Subscription;
+  private translationSubscription?: Subscription;
 
   constructor(
     private popoverController: PopoverController,
     private alertController: AlertController,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private translationService: TranslationService
   ) {}
 
   ngOnInit() {
-    // Subscribe to language changes
     this.languageSubscription = this.languageService.currentLanguage$.subscribe(
       language => {
         this.currentLanguage = language;
       }
     );
+
+    this.translationSubscription = this.translationService.currentTranslations$.subscribe(
+      translations => {
+        this.translations = translations;
+      }
+    );
   }
 
   ngOnDestroy() {
-    // Clean up subscription
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
+    }
+    if (this.translationSubscription) {
+      this.translationSubscription.unsubscribe();
     }
   }
 
@@ -54,33 +68,23 @@ export class Tab3Page implements OnInit, OnDestroy {
   }
 
   async showLanguageChangeConfirmation(newLanguage: string) {
-    const isFilipino = this.currentLanguage === 'fil';
     const languageName = this.languageService.getLanguageDisplayName(newLanguage);
-    
-    const alertConfig = isFilipino ? {
-      header: 'Magpalit ng Wika',
-      message: `Gusto mo bang magpalit sa ${languageName}?`,
-      cancelText: 'Kanselahin',
-      confirmText: 'Magpalit'
-    } : {
-      header: 'Switch Language',
-      message: `Do you want to switch to ${languageName}?`,
-      cancelText: 'Cancel',
-      confirmText: 'Switch'
-    };
+    const message = this.translationService.translate(
+      'LANGUAGE_SWITCHER.SWITCH_MESSAGE', 
+      { language: languageName }
+    );
     
     const alert = await this.alertController.create({
-      header: alertConfig.header,
-      message: alertConfig.message,
+      header: this.translations.LANGUAGE_SWITCHER?.SWITCH_HEADER || 'Switch Language',
+      message: message,
       buttons: [
         {
-          text: alertConfig.cancelText,
+          text: this.translations.LANGUAGE_SWITCHER?.CANCEL || 'Cancel',
           role: 'cancel'
         },
         {
-          text: alertConfig.confirmText,
+          text: this.translations.LANGUAGE_SWITCHER?.SWITCH || 'Switch',
           handler: () => {
-            // Use the service to switch language (will notify all tabs)
             this.languageService.setLanguage(newLanguage);
           }
         }

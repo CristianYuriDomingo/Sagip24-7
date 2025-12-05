@@ -1,0 +1,85 @@
+{
+  "HEADER": {
+    "LOGO_ALT": "Sagip 24/7 Logo",
+    "LANGUAGE": "Language"
+  },
+  "TABS": {
+    "HELPLINE": "Helpline",
+    "HOME": "Home",
+    "ABOUT_US": "About Us"
+  },
+  "TAB1": {
+    "EMERGENCY_CONTACT": "Emergency Contact",
+    "PHILIPPINES": "Philippines",
+    "EMERGENCY_NUMBER": "#911",
+    "WAITING_TITLE": "What to Do While Waiting for Emergency Help",
+    "WAITING_DESC": "In case of a medical emergency, it's crucial to act quickly and provide the necessary first aid while awaiting professional help.",
+    "STAY_CALM": "Stay Calm",
+    "STAY_CALM_DESC": "Remain composed to think clearly and manage the situation.",
+    "ASSESS_SITUATION": "Assess the Situation",
+    "ASSESS_SITUATION_DESC": "Check for injuries and signs of distress.",
+    "PERFORM_FIRST_AID": "Perform First Aid",
+    "PERFORM_FIRST_AID_DESC": "Administer basic first aid like CPR or stopping bleeding.",
+    "KEEP_COMFORTABLE": "Keep the Person Comfortable",
+    "KEEP_COMFORTABLE_DESC": "Help them stay calm and comfortable.",
+    "COMMUNICATE": "Communicate with Emergency Services",
+    "COMMUNICATE_DESC": "Provide clear information to responders.",
+    "ADDITIONAL_SERVICES": "Additional Emergency Services",
+    "EMERGENCY_HOTLINES": "Emergency Hotlines",
+    "CLOSE": "Close"
+  },
+  "TAB2": {
+    "HERO_TITLE": "We provide care, not judgement",
+    "HERO_DESC": "With neutrality, independence, and compassion, we deliver life-saving first aid and support to those in need.",
+    "SEARCH_PLACEHOLDER": "Search for emergencies...",
+    "VISUAL_AIDS": "Visual Aids",
+    "MYTHS_FACTS": "Myths vs Facts",
+    "BEST_PRACTICES": "Best Practices",
+    "TIME_TRACKING": "Time Tracking",
+    "TURN_ON": "Turn On",
+    "TURN_OFF": "Turn Off",
+    "FLASHLIGHT": "Flashlight",
+    "TYPES_OF_EMERGENCIES": "Types of Emergencies",
+    "NO_RESULTS": "No emergencies found matching",
+    "FIRST_AID_TECHNIQUE": "First Aid Technique"
+  },
+  "TAB3": {
+    "APP_TITLE": "Sagip 24/7",
+    "APP_SUBTITLE": "Your aid companion",
+    "APP_DESC": "This app is thoughtfully designed to empower you during emergencies, even in the absence of internet access. With Sagip 24/7, you can stay confident and equipped to respond effectively in critical situations. It ensures that you're always prepared to take action swiftly and efficiently when it matters the most, offering you peace of mind and the tools to protect yourself and others.",
+    "OUR_TEAM": "Our Team",
+    "TEAM_DESC": "Our team is dedicated to creating accessible solutions that save lives.",
+    "VISIT_SITE": "Visit Our Site",
+    "VISIT_SITE_DESC": "Explore more about us and our mission by visiting our official website.",
+    "CONNECT_WITH_US": "Connect with Us",
+    "ABOUT_MORE": "About more...",
+    "FAQS": "FAQs",
+    "FAQ_DESC": "Find answers to frequently asked questions here.",
+    "FAQ_Q1": "What should I do if I encounter an emergency?",
+    "FAQ_A1": "If you encounter a medical emergency, follow these steps:",
+    "FAQ_A1_STEP1": "Ensure the area is safe for both you and the injured person.",
+    "FAQ_A1_STEP2": "Call emergency services if necessary.",
+    "FAQ_A1_STEP3": "Use the app to find relevant first aid steps offline based on the type of emergency.",
+    "FAQ_Q2": "How can I use the app without an internet connection?",
+    "FAQ_A2": "The SAGIP 24/7 app works offline. It has a local database of essential first aid instructions that you can access even without an internet connection. Just open the app, choose the emergency type, and follow the steps.",
+    "FAQ_Q3": "Can I trust the medical advice in the app?",
+    "FAQ_A3": "Yes, the first aid information in the app is based on trusted medical guidelines and protocols. However, in severe cases, always contact medical professionals for immediate help.",
+    "REPORT_ISSUE": "Report An Issue",
+    "REPORT_DESC": "If you encounter any problems or bugs in the app, use this section to report the issue to our support team.",
+    "REPORT_EMAIL": "You can also report issues directly by sending an email to our support team:",
+    "FIRST_AID_KIT": "Must Have First Aid Kit",
+    "FIRST_AID_KIT_DESC": "Ensure you have a well-stocked first aid kit for emergencies. Here's a list of essential items to keep in your kit:",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "PRIVACY_DESC": "Read our privacy policy to understand how your personal information is collected, stored, and used in accordance with our guidelines."
+  },
+  "LANGUAGE_SWITCHER": {
+    "SWITCH_HEADER": "Switch Language",
+    "SWITCH_MESSAGE": "Do you want to switch to {{language}}?",
+    "CANCEL": "Cancel",
+    "SWITCH": "Switch"
+  },
+  "COMMON": {
+    "ENGLISH": "English",
+    "FILIPINO": "Filipino"
+  }
+}

@@ -1,4 +1,7 @@
-// src/app/tab2/tab2.page.ts
+// ==========================================
+// src/app/tab2/tab2.page.ts - COMPLETE CODE
+// ==========================================
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Flashlight } from '@awesome-cordova-plugins/flashlight/ngx';
 import { AnimationOptions } from 'ngx-lottie';
@@ -11,9 +14,9 @@ import { Router } from '@angular/router';
 import { PopoverController, AlertController } from '@ionic/angular';
 import { LanguagePopoverComponent } from '../components/language-popover/language-popover.component';
 import { LanguageService } from '../services/language.service';
+import { TranslationService } from '../services/translation.service';
 import { Subscription } from 'rxjs';
 
-// Interface for unified search results
 interface SearchResult {
   title: string;
   route: string;
@@ -36,11 +39,11 @@ export class Tab2Page implements OnInit, OnDestroy {
   searchSuggestions: SearchResult[] = [];
   isSearchFocused: boolean = false;
   
-  // Language management
   currentLanguage: string = 'en';
+  translations: any = {};
   private languageSubscription?: Subscription;
+  private translationSubscription?: Subscription;
 
-  // Lottie animation options
   dashboardAnimationOptions: AnimationOptions = {
     path: 'assets/animations/dashboard-animation.json',
     loop: true,
@@ -57,24 +60,32 @@ export class Tab2Page implements OnInit, OnDestroy {
     private router: Router,
     private popoverController: PopoverController,
     private alertController: AlertController,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private translationService: TranslationService
   ) {}
 
   ngOnInit() {
     this.loadEmergencies();
     
-    // Subscribe to language changes
     this.languageSubscription = this.languageService.currentLanguage$.subscribe(
       language => {
         this.currentLanguage = language;
       }
     );
+
+    this.translationSubscription = this.translationService.currentTranslations$.subscribe(
+      translations => {
+        this.translations = translations;
+      }
+    );
   }
 
   ngOnDestroy() {
-    // Clean up subscription
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
+    }
+    if (this.translationSubscription) {
+      this.translationSubscription.unsubscribe();
     }
   }
 
@@ -96,33 +107,23 @@ export class Tab2Page implements OnInit, OnDestroy {
   }
 
   async showLanguageChangeConfirmation(newLanguage: string) {
-    const isFilipino = this.currentLanguage === 'fil';
     const languageName = this.languageService.getLanguageDisplayName(newLanguage);
-    
-    const alertConfig = isFilipino ? {
-      header: 'Magpalit ng Wika',
-      message: `Gusto mo bang magpalit sa ${languageName}?`,
-      cancelText: 'Kanselahin',
-      confirmText: 'Magpalit'
-    } : {
-      header: 'Switch Language',
-      message: `Do you want to switch to ${languageName}?`,
-      cancelText: 'Cancel',
-      confirmText: 'Switch'
-    };
+    const message = this.translationService.translate(
+      'LANGUAGE_SWITCHER.SWITCH_MESSAGE', 
+      { language: languageName }
+    );
     
     const alert = await this.alertController.create({
-      header: alertConfig.header,
-      message: alertConfig.message,
+      header: this.translations.LANGUAGE_SWITCHER?.SWITCH_HEADER || 'Switch Language',
+      message: message,
       buttons: [
         {
-          text: alertConfig.cancelText,
+          text: this.translations.LANGUAGE_SWITCHER?.CANCEL || 'Cancel',
           role: 'cancel'
         },
         {
-          text: alertConfig.confirmText,
+          text: this.translations.LANGUAGE_SWITCHER?.SWITCH || 'Switch',
           handler: () => {
-            // Use the service to switch language (will notify all tabs)
             this.languageService.setLanguage(newLanguage);
           }
         }
@@ -227,3 +228,5 @@ export class Tab2Page implements OnInit, OnDestroy {
     console.log('Dashboard animation loaded successfully!');
   }
 }
+
+
