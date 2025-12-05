@@ -1,20 +1,33 @@
-<ion-header>
-  <ion-toolbar class="header">
-    <div class="logo-container">
-      <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+<!-- src/app/tab1/tab1.page.html - COMPLETE CODE -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="header-wrapper">
+      <div class="logo-container">
+        <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+      </div>
+      
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <ion-button fill="clear" (click)="presentLanguagePopover($event)" class="language-btn">
+          <ion-icon name="globe-outline" slot="start"></ion-icon>
+          <!-- Show full name on large screens, abbreviation on mobile -->
+          <span class="lang-full">{{ currentLanguage === 'en' ? 'English' : 'Filipino' }}</span>
+          <span class="lang-abbr">{{ currentLanguage === 'en' ? 'EN' : 'FIL' }}</span>
+          <ion-icon name="chevron-down-outline" slot="end"></ion-icon>
+        </ion-button>
+      </div>
     </div>
   </ion-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true" class="content">
   <div class="ion-padding">
     <!-- Dashboard Title and Description Section -->
-    <div class="dashboard-header"  (click)="dialEmergencyContact()">
-      <!-- Icon and Text on the Same Line inside h2 -->
+    <div class="dashboard-header" (click)="dialEmergencyContact()">
       <h2>
         <ion-icon name="call-outline" class="header-icon-left"></ion-icon>
         Emergency Contact
       </h2>
-      <!-- Paragraph aligned left, under h2 -->
       <div class="description">
         <p class="phone-number">Philippines</p>
         <p class="location">#911</p>
@@ -52,7 +65,6 @@
           </ion-toolbar>
 
           <ion-list>
-            <!-- PNP Emergency Hotline with Logo -->
             <ion-item>
               <ion-avatar slot="start">
                 <ion-img src="assets/images/EmergencyResponse/redcross.png"></ion-img>
@@ -63,7 +75,6 @@
               </ion-label>
             </ion-item>
 
-            <!-- BFP Emergency Hotline with Logo -->
             <ion-item>
               <ion-avatar slot="start">
                 <ion-img src="assets/images/EmergencyResponse/pcg.png"></ion-img>
@@ -74,7 +85,6 @@
               </ion-label>
             </ion-item>
 
-            <!-- Philippine Coast Guard Emergency Hotline with Logo -->
             <ion-item>
               <ion-avatar slot="start">
                 <ion-img src="assets/images/EmergencyResponse/bfp.png"></ion-img>
@@ -84,6 +94,7 @@
                 <p>(02) 8426 - 0219</p>
               </ion-label>
             </ion-item>
+
             <ion-item>
               <ion-avatar slot="start">
                 <ion-img src="assets/images/EmergencyResponse/dpwh.png"></ion-img>
@@ -93,6 +104,7 @@
                 <p>(02) 8931 - 8101 to 07</p>
               </ion-label>
             </ion-item>
+
             <ion-item>
               <ion-avatar slot="start">
                 <ion-img src="assets/images/EmergencyResponse/pnp.png"></ion-img>
@@ -102,6 +114,7 @@
                 <p>117 or (02) 8722 - 0650</p>
               </ion-label>
             </ion-item>
+
             <ion-item>
               <ion-avatar slot="start">
                 <ion-img src="assets/images/EmergencyResponse/ndrrmc.png"></ion-img>
@@ -117,4 +130,3 @@
     </ion-modal>
   </div>
 </ion-content>
-

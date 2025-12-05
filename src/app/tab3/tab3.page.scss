@@ -1,12 +1,180 @@
+/* src/app/tab3/tab3.page.scss - COMPLETE CODE */
+
+/* ===== HEADER WITH LANGUAGE SWITCHER ===== */
+ion-header {
+  ion-toolbar {
+    --min-height: 56px;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  width: 100%;
+  min-height: 56px;
+  position: relative;
+}
+
+/* Header Logo */
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .logo {
   height: 40px;
+  display: block;
 }
+
+/* Language Switcher */
+.language-switcher {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.language-btn {
+  --color: #dc1212;
+  --background: transparent;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: none;
+  height: 36px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  
+  ion-icon {
+    font-size: 18px;
+    margin: 0 4px;
+  }
+  
+  span {
+    margin: 0 4px;
+    line-height: 1;
+  }
+  
+  .lang-abbr {
+    display: none;
+  }
+  
+  .lang-full {
+    display: inline;
+  }
+}
+
+.language-btn::part(native) {
+  padding: 0 8px;
+}
+
+.language-btn:hover {
+  --background: rgba(220, 18, 18, 0.05);
+}
+
+:host ::ng-deep .language-popover {
+  --width: 180px;
+  --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+}
+
+/* Responsive adjustments for language switcher */
+@media (max-width: 768px) {
+  .language-btn {
+    font-size: 12px;
+    height: 32px;
+    --padding-start: 6px;
+    --padding-end: 6px;
+    
+    ion-icon {
+      font-size: 16px;
+      margin: 0 3px;
+    }
+    
+    span {
+      margin: 0 3px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .language-switcher {
+    right: 5px;
+  }
+  
+  .language-btn {
+    font-size: 11px;
+    height: 30px;
+    --padding-start: 6px;
+    --padding-end: 6px;
+    min-width: 52px;
+    
+    ion-icon:first-of-type {
+      font-size: 18px;
+      margin: 0 4px 0 0;
+    }
+    
+    ion-icon:last-of-type {
+      display: none;
+    }
+    
+    .lang-full {
+      display: none;
+    }
+    
+    .lang-abbr {
+      display: inline;
+      font-size: 11px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+  
+  :host ::ng-deep .language-popover {
+    --width: 150px;
+  }
+}
+
+@media (max-width: 360px) {
+  .language-switcher {
+    right: 2px;
+  }
+  
+  .language-btn {
+    height: 28px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    min-width: 48px;
+    
+    ion-icon:first-of-type {
+      font-size: 16px;
+      margin: 0 3px 0 0;
+    }
+    
+    .lang-abbr {
+      font-size: 10px;
+    }
+  }
+}
+
+/* ===== END HEADER STYLES ===== */
 
 .image-container {
   position: relative;
@@ -41,22 +209,22 @@
 }
 
 .custom-card .header-section {
-  background: url("../../assets/images/Tab3 img src/Shiny1.svg"); /* Light gray for contrast */
-  padding: 16px; /* Add padding around the section */
-  border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+  background: url("../../assets/images/Tab3 img src/Shiny1.svg");
+  padding: 16px;
+  border-radius: 8px 8px 0 0;
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .custom-card img {
-  width: 20%; /* Make the image responsive */
-  border-radius: 8px 8px 0 0; /* Match the border radius */
+  width: 20%;
+  border-radius: 8px 8px 0 0;
 }
 
 .custom-card ion-card-header {
   padding-top: 8px;
-  text-align: center; /* Center align title and subtitle */
+  text-align: center;
 }
 
 @keyframes rotate {
@@ -90,8 +258,8 @@ ion-card {
 /* ABOUT US SECTION */
 
 .dp-container {
-  margin: 0; /* Remove default margin */
-  padding-left: 16px; /* Match ion-card's padding */
+  margin: 0;
+  padding-left: 16px;
   padding-right: 16px;
 }
 
@@ -144,10 +312,10 @@ ion-card {
 /* FIXED ICON SIZE - THIS IS THE KEY FIX */
 .about-card img.ion-padding {
   padding: 10px 0px;
-  width: 50px; /* Fixed width */
-  height: 50px; /* Fixed height */
-  object-fit: contain; /* Maintain aspect ratio */
-  flex-shrink: 0; /* Prevent shrinking */
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* Optional: Slightly larger icons on bigger screens but still controlled */
@@ -177,7 +345,7 @@ ion-item {
 .profile-container {
   position: relative;
   text-align: center;
-  padding-top: 0px; /* Space for profile picture */
+  padding-top: 0px;
 }
 
 .cover-photo {
@@ -188,13 +356,13 @@ ion-item {
 
 .profile-pic-container {
   position: absolute;
-  top: 100px; /* Adjust based on your design */
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   width: 300px;
   height: 100px;
   overflow: hidden;
-  border: 4px solid white; /* Border around profile picture */
+  border: 4px solid white;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -218,11 +386,10 @@ ion-item {
   color: #888;
 }
 .tech-team {
-  --background: #d32f2f; /* Applies to the whole header */
-  --ion-text-color: white; /* Optional: Changes text color */
+  --background: #d32f2f;
+  --ion-text-color: white;
   width: 100%;
   padding: 0;
-  
 }
 
 /*VISIT SITE SECTION*/
@@ -233,16 +400,16 @@ ion-item {
 }
 
 .card-link {
-  text-decoration: none; /* Remove default underline */
+  text-decoration: none;
 }
 
 .card-link ion-card {
-  cursor: pointer; /* Add a pointer cursor for interactivity */
-  transition: transform 0.2s ease-in-out; /* Add a hover effect */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
 .card-link ion-card:hover {
-  transform: scale(1.02); /* Slightly enlarge the card on hover */
+  transform: scale(1.02);
 }
 
 .site-header {
@@ -260,16 +427,16 @@ ion-item {
 /* SIDE WAYS CARD*/
 .sliding-cards-container {
   display: flex;
-  overflow-x: scroll; /* Allow horizontal scrolling */
+  overflow-x: scroll;
   padding: 10px 0;
-  gap: 10px; /* Adjust the gap between cards */
-  scroll-snap-type: x mandatory; /* Ensures that only one card is visible at a time */
+  gap: 10px;
+  scroll-snap-type: x mandatory;
 }
 
 .sliding-card {
   flex-shrink: 0;
-  width: 60%; /* Adjust to the size of a single card */
-  scroll-snap-align: center; /* Align the card at the center when scrolling */
+  width: 60%;
+  scroll-snap-align: center;
   transition: transform 0.3s ease;
   position: relative;
 }
@@ -285,7 +452,7 @@ ion-item {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 24px; /* Adjust size as needed */
+  width: 24px;
   height: 24px;
   border: 2px solid white;
   padding: 2px;
@@ -296,7 +463,7 @@ ion-item {
     to bottom,
     #0652eb,
     #5479c3
-  ); /* Facebook theme colors */
+  );
 }
 
 .sliding-card.instagram {
@@ -305,7 +472,7 @@ ion-item {
     #f58529,
     #dd2a7b,
     #8134af
-  ); /* Instagram theme colors */
+  );
 }
 
 .sliding-card.twitter {
@@ -313,7 +480,7 @@ ion-item {
     to bottom,
     #000000,
     #333333
-  ); /* X (formerly Twitter) theme colors */
+  );
 }
 
 .sliding-card.reddit {
@@ -321,16 +488,16 @@ ion-item {
     to bottom,
     #ff4500,
     #c23400
-  ); /* Reddit theme colors */
+  );
 }
 
 .ion-card-header {
   position: relative;
-  z-index: 2; /* Ensure the content appears above the gradient */
+  z-index: 2;
 }
 
 ion-card-content {
-  z-index: 2; /* Ensure content stays on top of the gradient */
+  z-index: 2;
 }
 
 .sliding-cards-container::-webkit-scrollbar {
@@ -345,10 +512,8 @@ ion-card-content {
 .sliding-cards-container::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 /* Overview Section */
-
-
-
 .overview-header h2 {
   position: relative;
 }
@@ -356,19 +521,18 @@ ion-card-content {
 .overview-header h2::after {
   content: '';
   display: block;
-  height: 2px; /* Thickness of the underline */
+  height: 2px;
   background-color: #dc1212;
-  width: 30vw; /* 30% of the viewport width */
+  width: 30vw;
   margin-top: 8px;
   border-radius: 2px;
 }
 
-
 /* Overview Title */
 .overview-header h2 {
-  margin: 0; /* Remove default margin */
-  font-size: 1.5rem; /* Adjust size as needed */
-  color: #000000; /* Dark color for the text */
+  margin: 0;
+  font-size: 1.5rem;
+  color: #000000;
   padding: 20px;
 }
 
@@ -395,7 +559,7 @@ ion-card-content {
 }
 
 .no-bg-button {
-  --background: transparent; /* Removes the button's default background color */
+  --background: transparent;
 }
 
 /* HELP SECTION */

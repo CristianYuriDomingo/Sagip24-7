@@ -1,5 +1,5 @@
 // src/app/tab2/tab2.page.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Flashlight } from '@awesome-cordova-plugins/flashlight/ngx';
 import { AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'lottie-web';
@@ -10,6 +10,8 @@ import { FirstAidTechnique, EmergencyCategory } from '../models/first-aid-techni
 import { Router } from '@angular/router';
 import { PopoverController, AlertController } from '@ionic/angular';
 import { LanguagePopoverComponent } from '../components/language-popover/language-popover.component';
+import { LanguageService } from '../services/language.service';
+import { Subscription } from 'rxjs';
 
 // Interface for unified search results
 interface SearchResult {
@@ -26,7 +28,7 @@ interface SearchResult {
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page implements OnInit {
+export class Tab2Page implements OnInit, OnDestroy {
   isFlashlightOn = false;
   emergencies: Emergency[] = [];
   filteredEmergencies: Emergency[] = [];
@@ -35,7 +37,8 @@ export class Tab2Page implements OnInit {
   isSearchFocused: boolean = false;
   
   // Language management
-  currentLanguage: string = 'en'; // Default to English
+  currentLanguage: string = 'en';
+  private languageSubscription?: Subscription;
 
   // Lottie animation options
   dashboardAnimationOptions: AnimationOptions = {
@@ -53,19 +56,25 @@ export class Tab2Page implements OnInit {
     private firstAidService: FirstAidService,
     private router: Router,
     private popoverController: PopoverController,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private languageService: LanguageService
   ) {}
 
   ngOnInit() {
     this.loadEmergencies();
-    this.loadSavedLanguage();
+    
+    // Subscribe to language changes
+    this.languageSubscription = this.languageService.currentLanguage$.subscribe(
+      language => {
+        this.currentLanguage = language;
+      }
+    );
   }
 
-  loadSavedLanguage() {
-    // Load saved language preference from localStorage
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    if (savedLanguage) {
-      this.currentLanguage = savedLanguage;
+  ngOnDestroy() {
+    // Clean up subscription
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
     }
   }
 
@@ -82,16 +91,14 @@ export class Tab2Page implements OnInit {
     const { data } = await popover.onDidDismiss();
     
     if (data && data.language && data.language !== this.currentLanguage) {
-      // Show confirmation alert
       this.showLanguageChangeConfirmation(data.language);
     }
   }
 
   async showLanguageChangeConfirmation(newLanguage: string) {
     const isFilipino = this.currentLanguage === 'fil';
-    const languageName = newLanguage === 'en' ? 'English' : 'Filipino';
+    const languageName = this.languageService.getLanguageDisplayName(newLanguage);
     
-    // Bilingual alert messages
     const alertConfig = isFilipino ? {
       header: 'Magpalit ng Wika',
       message: `Gusto mo bang magpalit sa ${languageName}?`,
@@ -115,25 +122,14 @@ export class Tab2Page implements OnInit {
         {
           text: alertConfig.confirmText,
           handler: () => {
-            this.switchLanguage(newLanguage);
+            // Use the service to switch language (will notify all tabs)
+            this.languageService.setLanguage(newLanguage);
           }
         }
       ]
     });
 
     await alert.present();
-  }
-
-  switchLanguage(newLanguage: string) {
-    this.currentLanguage = newLanguage;
-    
-    // Save preference to localStorage
-    localStorage.setItem('preferredLanguage', this.currentLanguage);
-    
-    // TODO: Later we'll integrate with ngx-translate here
-    console.log('Language switched to:', this.currentLanguage);
-    
-    // Optionally reload content or trigger translation update
   }
 
   loadEmergencies() {
@@ -145,20 +141,16 @@ export class Tab2Page implements OnInit {
     this.searchQuery = event.detail.value || '';
     
     if (this.searchQuery.trim().length > 0) {
-      // Search both emergencies and techniques
       const emergencyResults = this.emergencyService.searchEmergencies(this.searchQuery);
       const techniqueResults = this.firstAidService.searchTechniques(this.searchQuery);
       
-      // Combine results into unified format
       this.searchSuggestions = [
-        // Add emergency categories
         ...emergencyResults.map(emergency => ({
           title: emergency.title,
           route: emergency.route,
           type: 'emergency' as const,
           icon: emergency.icon
         })),
-        // Add first aid techniques with full data
         ...techniqueResults.map(result => ({
           title: result.technique.title,
           route: result.category.route,
@@ -172,7 +164,6 @@ export class Tab2Page implements OnInit {
       this.searchSuggestions = [];
     }
     
-    // Filter the emergency cards below
     this.filteredEmergencies = this.emergencyService.searchEmergencies(this.searchQuery);
   }
 
@@ -181,29 +172,24 @@ export class Tab2Page implements OnInit {
   }
 
   onSearchBlur() {
-    // Delay to allow click events on results to fire
     setTimeout(() => {
       this.isSearchFocused = false;
     }, 200);
   }
 
   selectSuggestion(suggestion: SearchResult) {
-    // Clear search
     this.searchQuery = '';
     this.searchSuggestions = [];
     this.filteredEmergencies = [...this.emergencies];
     this.isSearchFocused = false;
     
-    // Navigate to the appropriate page with state data
     if (suggestion.type === 'technique' && suggestion.technique) {
-      // Navigate with state containing the technique to open
       this.router.navigate([suggestion.route], {
         state: {
           openTechnique: suggestion.technique
         }
       });
     } else {
-      // Regular navigation for emergency categories
       this.router.navigate([suggestion.route]);
     }
   }
