@@ -1,12 +1,26 @@
 <!-- src/app/tab2/tab2.page.html -->
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <div class="logo-container">
-      <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+    <div class="header-wrapper">
+      <div class="logo-container">
+        <img src="assets/images/logo4.png" alt="Sagip 24/7 Logo" class="logo">
+      </div>
+      
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <ion-button fill="clear" (click)="presentLanguagePopover($event)" class="language-btn">
+          <ion-icon name="globe-outline" slot="start"></ion-icon>
+          <!-- Show full name on large screens, abbreviation on mobile -->
+          <span class="lang-full">{{ currentLanguage === 'en' ? 'English' : 'Filipino' }}</span>
+          <span class="lang-abbr">{{ currentLanguage === 'en' ? 'EN' : 'FIL' }}</span>
+          <ion-icon name="chevron-down-outline" slot="end"></ion-icon>
+        </ion-button>
+      </div>
     </div>
   </ion-toolbar>
 </ion-header>
 
+<!-- Rest of your content remains the same -->
 <ion-content [fullscreen]="true" class="content">
   <!-- Lottie Animation Section -->
   <ion-card class="image-container-card">

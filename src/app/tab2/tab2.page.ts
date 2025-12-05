@@ -8,6 +8,8 @@ import { Emergency } from '../models/emergency.model';
 import { FirstAidService } from '../services/first-aid.service';
 import { FirstAidTechnique, EmergencyCategory } from '../models/first-aid-technique.model';
 import { Router } from '@angular/router';
+import { PopoverController, AlertController } from '@ionic/angular';
+import { LanguagePopoverComponent } from '../components/language-popover/language-popover.component';
 
 // Interface for unified search results
 interface SearchResult {
@@ -16,7 +18,7 @@ interface SearchResult {
   type: 'emergency' | 'technique';
   icon?: string;
   category?: EmergencyCategory;
-  technique?: FirstAidTechnique; // Add technique reference
+  technique?: FirstAidTechnique;
 }
 
 @Component({
@@ -31,6 +33,9 @@ export class Tab2Page implements OnInit {
   searchQuery: string = '';
   searchSuggestions: SearchResult[] = [];
   isSearchFocused: boolean = false;
+  
+  // Language management
+  currentLanguage: string = 'en'; // Default to English
 
   // Lottie animation options
   dashboardAnimationOptions: AnimationOptions = {
@@ -46,11 +51,89 @@ export class Tab2Page implements OnInit {
     private flashlight: Flashlight,
     private emergencyService: EmergencyService,
     private firstAidService: FirstAidService,
-    private router: Router
+    private router: Router,
+    private popoverController: PopoverController,
+    private alertController: AlertController
   ) {}
 
   ngOnInit() {
     this.loadEmergencies();
+    this.loadSavedLanguage();
+  }
+
+  loadSavedLanguage() {
+    // Load saved language preference from localStorage
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage) {
+      this.currentLanguage = savedLanguage;
+    }
+  }
+
+  async presentLanguagePopover(event: any) {
+    const popover = await this.popoverController.create({
+      component: LanguagePopoverComponent,
+      event: event,
+      translucent: true,
+      cssClass: 'language-popover'
+    });
+
+    await popover.present();
+
+    const { data } = await popover.onDidDismiss();
+    
+    if (data && data.language && data.language !== this.currentLanguage) {
+      // Show confirmation alert
+      this.showLanguageChangeConfirmation(data.language);
+    }
+  }
+
+  async showLanguageChangeConfirmation(newLanguage: string) {
+    const isFilipino = this.currentLanguage === 'fil';
+    const languageName = newLanguage === 'en' ? 'English' : 'Filipino';
+    
+    // Bilingual alert messages
+    const alertConfig = isFilipino ? {
+      header: 'Magpalit ng Wika',
+      message: `Gusto mo bang magpalit sa ${languageName}?`,
+      cancelText: 'Kanselahin',
+      confirmText: 'Magpalit'
+    } : {
+      header: 'Switch Language',
+      message: `Do you want to switch to ${languageName}?`,
+      cancelText: 'Cancel',
+      confirmText: 'Switch'
+    };
+    
+    const alert = await this.alertController.create({
+      header: alertConfig.header,
+      message: alertConfig.message,
+      buttons: [
+        {
+          text: alertConfig.cancelText,
+          role: 'cancel'
+        },
+        {
+          text: alertConfig.confirmText,
+          handler: () => {
+            this.switchLanguage(newLanguage);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  switchLanguage(newLanguage: string) {
+    this.currentLanguage = newLanguage;
+    
+    // Save preference to localStorage
+    localStorage.setItem('preferredLanguage', this.currentLanguage);
+    
+    // TODO: Later we'll integrate with ngx-translate here
+    console.log('Language switched to:', this.currentLanguage);
+    
+    // Optionally reload content or trigger translation update
   }
 
   loadEmergencies() {
@@ -82,7 +165,7 @@ export class Tab2Page implements OnInit {
           type: 'technique' as const,
           icon: result.technique.icon,
           category: result.category,
-          technique: result.technique // Pass the full technique object
+          technique: result.technique
         }))
       ];
     } else {

@@ -1,15 +1,154 @@
 /* src/app/tab2/tab2.page.scss */
 
+/* ===== HEADER WITH LANGUAGE SWITCHER ===== */
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 100%;
+}
+
 /* Header Logo */
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 .logo {
   height: 40px;
 }
+
+/* Language Switcher */
+.language-switcher {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.language-btn {
+  --color: #dc1212;
+  --background: transparent;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: none;
+  height: 36px;
+  
+  ion-icon {
+    font-size: 18px;
+    margin: 0 4px;
+  }
+  
+  span {
+    margin: 0 4px;
+  }
+  
+  .lang-abbr {
+    display: none; /* Hide abbreviation on desktop */
+  }
+  
+  .lang-full {
+    display: inline; /* Show full name on desktop */
+  }
+}
+
+.language-btn:hover {
+  --background: rgba(220, 18, 18, 0.05);
+}
+
+/* Language Popover Custom Styling */
+:host ::ng-deep .language-popover {
+  --width: 180px;
+  --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+}
+
+/* Responsive adjustments for language switcher */
+@media (max-width: 768px) {
+  .language-btn {
+    font-size: 12px;
+    height: 32px;
+    --padding-start: 6px;
+    --padding-end: 6px;
+    
+    ion-icon {
+      font-size: 16px;
+      margin: 0 3px;
+    }
+    
+    span {
+      margin: 0 3px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .language-switcher {
+    right: 5px;
+  }
+  
+  .language-btn {
+    font-size: 11px;
+    height: 30px;
+    --padding-start: 6px;
+    --padding-end: 6px;
+    min-width: 52px;
+    
+    ion-icon:first-of-type {
+      font-size: 18px;
+      margin: 0 4px 0 0;
+    }
+    
+    ion-icon:last-of-type {
+      display: none; /* Hide chevron-down icon */
+    }
+    
+    .lang-full {
+      display: none; /* Hide full language name */
+    }
+    
+    .lang-abbr {
+      display: inline; /* Show abbreviation (EN/FIL) */
+      font-size: 11px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+  
+  :host ::ng-deep .language-popover {
+    --width: 150px;
+  }
+}
+
+/* Extra small screens (iPhone SE, etc.) */
+@media (max-width: 360px) {
+  .language-switcher {
+    right: 2px;
+  }
+  
+  .language-btn {
+    height: 28px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    min-width: 48px;
+    
+    ion-icon:first-of-type {
+      font-size: 16px;
+      margin: 0 3px 0 0;
+    }
+    
+    .lang-abbr {
+      font-size: 10px;
+    }
+  }
+}
+
+/* ===== END HEADER STYLES ===== */
 
 /* Image Container Card */
 .image-container-card {
