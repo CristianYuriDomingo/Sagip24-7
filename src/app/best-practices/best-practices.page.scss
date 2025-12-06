@@ -1,134 +1,166 @@
-
-  .intro-section {
+// INTRO SECTION
+.intro-section {
   position: relative;
-  width: 100%; /* Full width */
-  height: 180px; /* Compact height */
-  color: rgb(0, 0, 0); /* White text for contrast */
-  overflow: hidden; /* Prevent content overflow */
-  padding: 20px 30px; /* Add padding to create space around content */
+  width: 100%;
+  height: 180px;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  padding: 20px 30px;
   display: flex;
-  flex-direction: column; /* Stack title and intro text */
-  justify-content: center; /* Vertically align content */
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Title styling */
 .section-title {
-  font-size: 1.5rem; /* Large title font size */
-  font-weight: bold; /* Bold for emphasis */
-  margin: 0; /* Remove default margin */
-  margin-bottom: 10px; /* Space below the title */
-  text-align: left; /* Align to the left */
-  position: relative; /* Required for the underline pseudo-element */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  position: relative;
 }
 
-/* Red underline (3/4 of the title width) */
 .section-title::after {
   content: '';
   display: block;
-  width: 30%; /* 3/4 the width of the title */
-  height: 3px; /* Thickness of the underline */
-  background-color: red; /* Red color for the underline */
+  width: 30%;
+  height: 3px;
+  background-color: red;
   position: absolute;
   left: 0;
-  bottom: -5px; /* Position it just below the title text */
+  bottom: -5px;
 }
 
-/* Intro text styling */
 .intro-text {
-  font-size: 1.0rem; /* Slightly smaller than the title */
-  font-weight: normal; /* Regular weight */
-  line-height: 1.5; /* Improve readability */
-  max-width: 90%; /* Restrict text width for better appearance */
-  text-align: left; /* Align to the left */
-  margin: 0; /* Remove default margin */
-
+  font-size: 1.0rem;
+  font-weight: normal;
+  line-height: 1.5;
+  max-width: 90%;
+  text-align: left;
+  margin: 0;
 }
 
-
-
-
-
-
-
-/* BEST PRACTICES SECTION */
+// BEST PRACTICES SECTION
 .bestpractices-section {
   margin-top: -35px;
   padding: 20px;
 }
 
-/* Cards */
-/* Cards */
-/* Cards */
-/* Cards */
+// CARDS - Modern Layout
 .bestpractice-cards {
   display: flex;
   flex-direction: column;
+  gap: 16px; // Consistent spacing between cards
   padding: 0;
 }
 
 .bestpractice-cards .card {
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease-in-out;
+  margin: 0; // Remove default margins
+  padding: 0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --ion-card-margin: 0;
-  margin-top: 5px; /* Minimize top margin */
-  margin-bottom: 20px; /* Minimize bottom margin */
-  
+  overflow: hidden; // Ensure rounded corners are respected
+  background: #fff;
 }
 
-/* Hover Effect */
 .bestpractice-cards .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  
-}
-/* Reduce padding and font size for content inside the accordion */
-.best-practices-section .ion-padding {
-  padding: 5px !important; /* Further reduce padding */
-  font-size: 0.8rem !important; /* Make the font size smaller */
-  line-height: 1.2 !important; /* Adjust line height for compactness */
- 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* Ensure list items inside the accordion content are smaller */
-.best-practices-section .ion-padding ul li {
-  padding: 2px 0 !important; /* Minimize padding for list items */
-  font-size: 0.75rem !important; /* Reduce list item font size */
-  
-}
-
-
-
-
-/* Accordion Button Text */
-.card ion-label {
-  text-transform: capitalize;
-  font-weight: bold;
-}
-
-/* Maintain 100% image preview across all dimensions */
-.best-practices-section img {
+// Image Styling
+.bestpractice-cards img {
   width: 100%;
   height: auto;
   object-fit: cover;
   max-height: 200px;
+  display: block;
 }
 
-/* Compact button size with padding tweaks */
-.card ion-item {
-  padding: 8px;
-  font-weight: bold;
-  font-size: 0.85rem;
-  transition: background-color 0.3s ease-in-out;
-  margin-top: 5px;
-  
+// ACCORDION - Modern Dropdown
+.bestpractice-cards ion-accordion-group {
+  border-radius: 0; // Remove default border radius
 }
 
-.card ion-item:hover {
-  background-color: #ebeaea;
-  transition: all 0.3s;
-  border-radius: 10px;
+.bestpractice-cards ion-accordion {
+  border: none;
+  --background: transparent;
 }
 
+// Accordion Header - Clean Modern Style
+.bestpractice-cards ion-item {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --background: #fff;
+  --border-width: 0;
+  --inner-padding-end: 0;
+  --min-height: 56px;
+  margin: 0;
+  transition: background-color 0.2s ease;
+}
 
+.bestpractice-cards ion-item:hover {
+  --background: #f8f9fa;
+}
+
+// Accordion Label
+.bestpractice-cards ion-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin: 0;
+}
+
+// Accordion Content - Smooth Expansion
+.bestpractice-cards .ion-padding {
+  padding: 20px !important;
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  color: #4a5568;
+  background: #f8f9fa;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// List Styling Inside Accordion
+.bestpractice-cards .ion-padding ul {
+  margin: 12px 0 0 0;
+  padding-left: 20px;
+}
+
+.bestpractice-cards .ion-padding ul li {
+  padding: 6px 0 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+  color: #4a5568;
+}
+
+.bestpractice-cards .ion-padding ul li b {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+// Remove default card content padding for better control
+.bestpractice-cards ion-card-content {
+  padding: 0;
+}
+
+// Smooth accordion icon transition
+ion-accordion::part(toggle-icon) {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

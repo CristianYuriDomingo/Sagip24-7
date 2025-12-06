@@ -1,39 +1,37 @@
-/* Style for the entire content */
+// CONTENT BACKGROUND
 ion-content {
-    --background: #ffffff; /* Light gray background for contrast */
-    padding: 15px;
-  }
-  
-  /* Dashboard Section */
-  /* Section styling */
-  .dashboard {
-    position: relative;
-    padding: 10px 20px; /* Reduce padding to minimize internal spacing */
-    height: 200px; /* Adjust this value to make the section smaller */
-    color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden;
-    text-align: left;
-  }
-  
-
-/* Title styling */
-.section-title {
-  font-size: 1.0rem;
-  font-weight: bold;
-  margin: 0;
-  position: relative;
-  margin-bottom: 10px;
+  --background: #ffffff;
+  padding: 15px;
 }
 
-/* Red underline effect (3/4 length) */
+// DASHBOARD SECTION
+.dashboard {
+  position: relative;
+  padding: 20px 30px;
+  height: 180px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  text-align: left;
+}
+
+// TITLE STYLING
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+// Red underline effect
 .section-title::after {
   content: '';
   display: block;
-  width: 75%; /* 3/4 the title width */
+  width: 30%;
   height: 3px;
   background-color: red;
   position: absolute;
@@ -41,27 +39,25 @@ ion-content {
   bottom: -5px;
 }
 
-/* Intro text styling */
+// INTRO TEXT
 .intro-text {
   font-size: 1.0rem;
-  max-width: 90%;
+  font-weight: normal;
   line-height: 1.5;
+  max-width: 90%;
+  text-align: left;
   margin: 0;
 }
 
-/* Responsive adjustments */
+// RESPONSIVE
 @media (max-width: 768px) {
   .dashboard {
-    height: 200px;
-    padding: 15px;
+    height: 180px;
+    padding: 20px 30px;
   }
   
   .section-title {
     font-size: 1.5rem;
-  }
-
-  .section-title::after {
-    width: 60%;
   }
 
   .intro-text {
@@ -69,62 +65,98 @@ ion-content {
   }
 }
 
-  
-  /* Style for each myth card */
-  ion-card {
-    margin: 0 30px 15px; /* Larger left and right margins, smaller bottom margin */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden;
-    background: white;
+// MYTHS LIST
+ion-list {
+  background: transparent;
+  padding: 0;
+  margin-top: -20px;
+}
+
+// CARD STYLING - Modern & Clean
+ion-card {
+  margin: 0 30px 15px; // Larger left and right margins, smaller bottom margin
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ion-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+// ITEM STYLING - Clean Header
+ion-item {
+  --background: transparent;
+  --border-width: 0;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --min-height: 56px;
+  --inner-padding-end: 0;
+  --ripple-color: rgba(220, 18, 18, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+ion-item:hover {
+  --background: #f8f9fa;
+}
+
+// LABEL STYLING
+ion-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin: 0;
+}
+
+// CHEVRON ICON - Single, Smooth Animation
+.down-icon {
+  color: #dc1212;
+  font-size: 20px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 8px;
+}
+
+// Rotate icon when card is expanded
+ion-card.expanded .down-icon {
+  transform: rotate(180deg);
+}
+
+// FACT CONTENT - Smooth Expansion
+ion-card-content {
+  padding: 20px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #4a5568;
+  background: #f8f9fa;
+  border-top: 1px solid #e2e8f0;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
   }
-  
-  /* Hover effect for myth item */
-  ion-item {
-    --background: transparent;
-    --ripple-color: lightgray;
-    transition: all 0.2s ease;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  ion-item:hover {
-    transform: scale(1.02); /* Slight zoom effect on hover */
-  }
-  
-  /* Text style for myths */
-  ion-label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #dc1212; /* Primary theme color */
-  }
-  
-  /* Style for fact content */
-  ion-card-content {
-    padding: 15px;
-    font-size: 14px;
-    color: #333;
-    background: #fff5f5; /* Light red background */
-    border-left: 4px solid #dc1212; /* Accent line */
-  }
-  
-  /* Down icon styling */
-  .down-icon {
-    transition: transform 0.3s ease-in-out;
-    color: #dc1212;
-  }
-  
-  ion-item:active .down-icon {
-    transform: rotate(180deg); /* Rotate when active */
-  }
-  
-  /* Header bar */
-  
-  
-  /* Search bar customization */
-  ion-searchbar {
-    --background: white;
-    --color: #dc1212;
-    --placeholder-color: #999;
-    --icon-color: #dc1212;
-    margin-bottom: 15px;
-  }
-  
+}
+
+// SEARCH BAR (if used)
+ion-searchbar {
+  --background: white;
+  --color: #1a1a1a;
+  --placeholder-color: #999;
+  --icon-color: #dc1212;
+  --border-radius: 12px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+  padding: 0;
+}
