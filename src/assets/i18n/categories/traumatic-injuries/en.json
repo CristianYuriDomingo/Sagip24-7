@@ -1,0 +1,167 @@
+{
+  "CATEGORIES": {
+    "TRAUMATIC": {
+      "TITLE": "Traumatic Injuries",
+      "KEY_TAKEAWAY_TITLE": "Understanding the Basics",
+      "KEY_TAKEAWAY_DESC": "Traumatic injuries, such as minor bleeding, sprains, mild burns, and bruises, require timely and proper care. Learn the essential steps to manage these injuries effectively and prevent further harm.",
+      "TECHNIQUES": {
+        "MINOR_BLEEDING": {
+          "TITLE": "Minor Bleeding or Cuts",
+          "MODAL_TITLE": "First Aid for Minor Cuts and Wounds",
+          "DESCRIPTION": "Follow these simple and effective steps to properly care for minor cuts or wounds, ensuring cleanliness, safety, and faster healing. By taking these precautions, you can minimize the risk of infection, promote proper recovery, and protect the injured area for optimal healing outcomes.",
+          "STEPS": [
+            {
+              "title": "Prepare Yourself",
+              "image": "assets/images/Traumatic/step1.png",
+              "description": [
+                "Wash your hands thoroughly with soap and water.",
+                "If available, wear disposable gloves to prevent contamination."
+              ]
+            },
+            {
+              "title": "Stop the Bleeding",
+              "image": "assets/images/Traumatic/step2.png",
+              "description": [
+                "Gently apply firm pressure to the wound using a clean cloth or gauze.",
+                "Hold the pressure until the bleeding stops (usually within a few minutes)."
+              ]
+            },
+            {
+              "title": "Clean the Wound",
+              "image": "assets/images/Traumatic/step3.png",
+              "description": [
+                "Rinse the wound gently under clean, running water to remove dirt or debris.",
+                "Avoid using hydrogen peroxide or alcohol directly on the wound, as these can delay healing."
+              ]
+            },
+            {
+              "title": "Apply Antiseptic and Cover",
+              "image": "assets/images/Traumatic/step4.png",
+              "description": [
+                "Dab the wound dry with a clean cloth.",
+                "Apply an antiseptic or antibiotic ointment.",
+                "Cover the wound with a sterile bandage or dressing to keep it protected."
+              ]
+            },
+            {
+              "title": "Monitor for Infection",
+              "image": "assets/images/Traumatic/step5.png",
+              "description": [
+                "Watch the wound over the next few days for signs of infection, such as redness, swelling, pus, or increased pain.",
+                "If symptoms worsen, seek medical advice promptly."
+              ]
+            }
+          ]
+        },
+        "SPRAINS": {
+          "TITLE": "Sprains and Minor Fractures",
+          "MODAL_TITLE": "Sprains and Minor Fractures: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to safely manage sprains and minor fractures while minimizing pain, reducing swelling, and preventing further injury. These measures will help stabilize the affected area and provide initial relief until professional medical care is available if needed.",
+          "STEPS": [
+            {
+              "title": "Immobilize the Area",
+              "image": "assets/images/Traumatic/sprain-step1.png",
+              "description": [
+                "Keep the injured part as still as possible.",
+                "Use a splint or any sturdy support to stabilize the affected area."
+              ]
+            },
+            {
+              "title": "Apply Cold Therapy",
+              "image": "assets/images/Traumatic/sprain-step2.png",
+              "description": [
+                "Place an ice pack wrapped in a cloth or towel on the injury.",
+                "Apply for 15 to 20 minutes at a time to reduce pain and swelling.",
+                "Avoid placing ice directly on the skin to prevent frostbite."
+              ]
+            },
+            {
+              "title": "Elevate the Limb",
+              "image": "assets/images/Traumatic/sprain-step3.png",
+              "description": [
+                "If feasible, raise the injured limb above heart level.",
+                "This helps decrease swelling and promotes blood flow."
+              ]
+            },
+            {
+              "title": "Avoid Strain and Seek Professional Help",
+              "image": "assets/images/Traumatic/sprain-step4.png",
+              "description": [
+                "Do not put any weight or pressure on the injured area.",
+                "If severe pain, deformity, or inability to move the limb persists, seek immediate medical attention."
+              ]
+            }
+          ]
+        },
+        "BURNS": {
+          "TITLE": "Mild Burns",
+          "MODAL_TITLE": "Mild Burns: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to safely treat mild burns, ensuring immediate pain relief, protecting the affected area, and promoting faster healing. Acting promptly can prevent further skin damage and reduce the risk of infection.",
+          "STEPS": [
+            {
+              "title": "Cool the Burn",
+              "image": "assets/images/Traumatic/burns-step1.png",
+              "description": [
+                "Place the affected area under cool, running water for 10–15 minutes.",
+                "Avoid using icy water, as it can cause further tissue damage."
+              ]
+            },
+            {
+              "title": "Protect the Skin",
+              "image": "assets/images/Traumatic/burns-step2.png",
+              "description": [
+                "Do not break any blisters, as they act as a natural barrier against infection."
+              ]
+            },
+            {
+              "title": "Cover the Burn",
+              "image": "assets/images/Traumatic/burns-step3.png",
+              "description": [
+                "Use a non-stick sterile bandage or clean cloth to lightly cover the burn.",
+                "Avoid using fluffy cotton or materials that might stick to the wound."
+              ]
+            },
+            {
+              "title": "Seek Medical Attention If Necessary",
+              "image": "assets/images/Traumatic/step5.png",
+              "description": [
+                "If the burn is larger than the size of a palm, or if it occurs in a sensitive area like the face, hands, or joints, consult a healthcare professional promptly."
+              ]
+            }
+          ]
+        },
+        "BRUISES": {
+          "TITLE": "Bruises",
+          "MODAL_TITLE": "Bruises: First Aid Steps",
+          "DESCRIPTION": "Follow these simple steps to help reduce swelling, ease discomfort, and promote healing for bruises. Timely care can minimize the severity of the bruise, promote faster recovery, and prevent complications such as prolonged pain or increased swelling.",
+          "STEPS": [
+            {
+              "title": "Apply Cold Compress",
+              "image": "assets/images/Traumatic/bruises-step1.png",
+              "description": [
+                "Place a cold compress or ice pack wrapped in a cloth on the bruised area to reduce swelling.",
+                "Apply for 15–20 minutes at a time, taking breaks to prevent skin damage."
+              ]
+            },
+            {
+              "title": "Elevate the Area",
+              "image": "assets/images/Traumatic/bruises-step2.png",
+              "description": [
+                "If possible, raise the bruised area above heart level to minimize swelling and encourage proper blood flow."
+              ]
+            },
+            {
+              "title": "Rest and Monitor",
+              "image": "assets/images/Traumatic/step5.png",
+              "description": [
+                "Avoid putting pressure or strain on the injured area.",
+                "Rest and keep an eye on the bruise for any changes, such as increased pain or discoloration.",
+                "If symptoms worsen, seek medical advice."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

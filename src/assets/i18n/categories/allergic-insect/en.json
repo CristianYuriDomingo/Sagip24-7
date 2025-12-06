@@ -1,0 +1,112 @@
+{
+  "CATEGORIES": {
+    "ALLERGIC": {
+      "TITLE": "Allergic Reactions and Insect Bites",
+      "KEY_TAKEAWAY_TITLE": "Understanding the Basics",
+      "KEY_TAKEAWAY_DESC": "Allergic reactions and insect bites, including snake bites, mild allergic responses, and insect stings, require swift action to prevent severe complications. Learn how to identify symptoms and provide immediate care for these potentially life-threatening situations.",
+      "TECHNIQUES": {
+        "SNAKE_BITES": {
+          "TITLE": "Snake bites",
+          "MODAL_TITLE": "Snake Bites: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to manage snake bites safely, slow the spread of venom, and ensure prompt medical treatment. Acting quickly and calmly can make a critical difference in the outcome.",
+          "STEPS": [
+            {
+              "title": "Keep the Person Calm and Still",
+              "image": "assets/images/allergy/snake-step1.png",
+              "description": [
+                "Reassure the individual and encourage minimal movement to reduce the spread of venom through the bloodstream.",
+                "Panic and excessive movement can increase heart rate, speeding up venom circulation."
+              ]
+            },
+            {
+              "title": "Immobilize the Limb and Keep It Below Heart Level",
+              "image": "assets/images/allergy/snake-step2.png",
+              "description": [
+                "Gently immobilize the affected limb using a splint or by keeping it as still as possible.",
+                "Keeping the limb below heart level reduces the speed at which venom travels to vital organs."
+              ]
+            },
+            {
+              "title": "Do Not Apply Ice or Suck Out Venom",
+              "image": "assets/images/allergy/snake-step3.png",
+              "description": [
+                "Avoid using ice or cutting the wound, as these methods can worsen tissue damage.",
+                "Attempting to suck out venom is ineffective and can introduce infections."
+              ]
+            },
+            {
+              "title": "Call Emergency Services Immediately",
+              "image": "assets/images/doctor.png",
+              "description": [
+                "Contact professional medical help as quickly as possible for antivenom and advanced care.",
+                "Provide information about the snake's appearance if known, as this can assist medical staff in selecting the appropriate treatment."
+              ]
+            }
+          ]
+        },
+        "MILD_ALLERGIC": {
+          "TITLE": "Mild allergic reactions",
+          "MODAL_TITLE": "Mild Allergic Reactions: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to address mild allergic reactions promptly, alleviate symptoms, and prevent the reaction from escalating. Quick action can help ensure the person's comfort and safety.",
+          "STEPS": [
+            {
+              "title": "Identify and Remove the Allergen",
+              "image": "assets/images/allergy/step1-all.png",
+              "description": [
+                "Determine the source of the allergy (e.g., food, pollen, or insect sting) and eliminate further exposure if possible.",
+                "Removing the allergen helps stop the reaction from worsening or continuing."
+              ]
+            },
+            {
+              "title": "Administer an Antihistamine",
+              "image": "assets/images/allergy/step2-all.png",
+              "description": [
+                "Provide an over-the-counter antihistamine if available and the person has no known contraindications.",
+                "Antihistamines reduce itching, swelling, and other mild symptoms by blocking the allergic response."
+              ]
+            },
+            {
+              "title": "Monitor for Worsening Symptoms",
+              "image": "assets/images/allergy/step3-all.png",
+              "description": [
+                "Observe the person closely for any signs of the reaction becoming severe, such as difficulty breathing, swelling of the throat, or hives spreading rapidly.",
+                "If symptoms escalate, be prepared to call emergency services immediately."
+              ]
+            }
+          ]
+        },
+        "INSECT_STINGS": {
+          "TITLE": "Insect stings",
+          "MODAL_TITLE": "Insect Stings: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to safely treat insect stings, minimize discomfort, and prevent complications like infections or severe allergic reactions. Prompt care can help reduce pain and swelling effectively.",
+          "STEPS": [
+            {
+              "title": "Remove the Stinger Safely",
+              "image": "assets/images/allergy/ins-step1.png",
+              "description": [
+                "Gently scrape the stinger out using a card or your fingernail, avoiding squeezing the venom sac.",
+                "Proper removal prevents injecting more venom into the skin, reducing the severity of the reaction."
+              ]
+            },
+            {
+              "title": "Clean the Area Thoroughly",
+              "image": "assets/images/allergy/ins-step2.png",
+              "description": [
+                "Wash the sting site with soap and water to remove dirt and bacteria.",
+                "Cleaning minimizes the risk of infection, especially if the skin is broken."
+              ]
+            },
+            {
+              "title": "Apply a Cold Compress",
+              "image": "assets/images/allergy/ins-step3.png",
+              "description": [
+                "Place a cold compress or ice pack (wrapped in cloth) on the sting area to ease pain and reduce swelling.",
+                "Cooling the site helps numb the area and slow down the inflammatory response."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

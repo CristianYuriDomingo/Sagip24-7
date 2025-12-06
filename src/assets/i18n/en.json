@@ -72,6 +72,14 @@
     "PRIVACY_POLICY": "Privacy Policy",
     "PRIVACY_DESC": "Read our privacy policy to understand how your personal information is collected, stored, and used in accordance with our guidelines."
   },
+  "CATEGORIES": {
+    "RESPIRATORY_EMERGENCIES": "Respiratory Emergencies",
+    "TRAUMATIC_INJURIES": "Traumatic Injuries",
+    "ENVIRONMENTAL_EMERGENCIES": "Environmental Emergencies",
+    "ALLERGIC_INSECT_BITES": "Allergic and Insect Bites",
+    "CARDIAC_NEUROLOGICAL": "Cardiac and Neurological",
+    "OTHER_GENERAL_EMERGENCIES": "Other General Emergencies"
+  },
   "LANGUAGE_SWITCHER": {
     "SWITCH_HEADER": "Switch Language",
     "SWITCH_MESSAGE": "Do you want to switch to {{language}}?",

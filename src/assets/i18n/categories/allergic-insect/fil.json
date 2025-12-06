@@ -1,0 +1,112 @@
+{
+  "CATEGORIES": {
+    "ALLERGIC": {
+      "TITLE": "Allergy at Kagat ng Insekto",
+      "KEY_TAKEAWAY_TITLE": "Pag-unawa sa mga Pangunahing Kaalaman",
+      "KEY_TAKEAWAY_DESC": "Ang mga allergic reactions at kagat ng insekto, kasama ang kagat ng ahas, banayad na allergic responses, at tuka ng insekto, ay nangangailangan ng mabilis na aksyon upang maiwasan ang matinding komplikasyon. Alamin kung paano kilalanin ang mga sintomas at magbigay ng agarang pag-aalaga para sa mga potensyal na mapanganib sa buhay na sitwasyon.",
+      "TECHNIQUES": {
+        "SNAKE_BITES": {
+          "TITLE": "Kagat ng Ahas",
+          "MODAL_TITLE": "Kagat ng Ahas: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang ligtas na pamahalaan ang kagat ng ahas, pabagalin ang pagkalat ng lason, at tiyaking mabilis na medikal na paggamot. Ang mabilis at kalmadong pagkilos ay maaaring gumawa ng kritikal na pagkakaiba sa resulta.",
+          "STEPS": [
+            {
+              "title": "Panatilihing Kalmado at Hindi Gumagalaw ang Tao",
+              "image": "assets/images/allergy/snake-step1.png",
+              "description": [
+                "Pakalmahin ang indibidwal at hikayatin ang minimal na paggalaw upang mabawasan ang pagkalat ng lason sa pamamagitan ng bloodstream.",
+                "Ang panic at labis na paggalaw ay maaaring tumaas ang heart rate, na nagpapabilis sa sirkulasyon ng lason."
+              ]
+            },
+            {
+              "title": "I-immobilize ang Extremity at Panatilihing sa Ibaba ng Antas ng Puso",
+              "image": "assets/images/allergy/snake-step2.png",
+              "description": [
+                "Marahan na i-immobilize ang apektadong extremity gamit ang splint o sa pamamagitan ng pagpapanatili nito na hindi gumagalaw hangga't maaari.",
+                "Ang pagpapanatili ng extremity sa ibaba ng antas ng puso ay binabawasan ang bilis kung saan naglalakbay ang lason sa mga vital organs."
+              ]
+            },
+            {
+              "title": "Huwag Mag-apply ng Yelo o Sumupsop ng Lason",
+              "image": "assets/images/allergy/snake-step3.png",
+              "description": [
+                "Iwasan ang paggamit ng yelo o pag-hiwa ng sugat, dahil ang mga pamamaraang ito ay maaaring magpasama ng pinsala sa tissue.",
+                "Ang pagtatangka na sumupsop ng lason ay hindi epektibo at maaaring magdulot ng mga impeksyon."
+              ]
+            },
+            {
+              "title": "Tumawag Agad sa Emergency Services",
+              "image": "assets/images/doctor.png",
+              "description": [
+                "Makipag-ugnayan sa propesyonal na medikal na tulong nang mabilis hangga't maaari para sa antivenom at advanced care.",
+                "Magbigay ng impormasyon tungkol sa hitsura ng ahas kung alam, dahil maaari itong tumulong sa medikal na staff na pumili ng angkop na paggamot."
+              ]
+            }
+          ]
+        },
+        "MILD_ALLERGIC": {
+          "TITLE": "Banayad na allergic reactions",
+          "MODAL_TITLE": "Banayad na Allergic Reactions: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang tugunan agad ang banayad na allergic reactions, paginhawain ang mga sintomas, at maiwasan na ang reaksyon ay lumala. Ang mabilis na aksyon ay maaaring makatulong na tiyaking komportable at ligtas ang tao.",
+          "STEPS": [
+            {
+              "title": "Kilalanin at Alisin ang Allergen",
+              "image": "assets/images/allergy/step1-all.png",
+              "description": [
+                "Tukuyin ang pinagmulan ng allergy (hal., pagkain, pollen, o tuka ng insekto) at alisin ang karagdagang exposure kung posible.",
+                "Ang pag-alis ng allergen ay tumutulong na itigil ang reaksyon na lumala o magpatuloy."
+              ]
+            },
+            {
+              "title": "Magbigay ng Antihistamine",
+              "image": "assets/images/allergy/step2-all.png",
+              "description": [
+                "Magbigay ng over-the-counter antihistamine kung available at ang tao ay walang kilalang contraindications.",
+                "Ang mga antihistamine ay binabawasan ang pangangati, pamamaga, at iba pang banayad na sintomas sa pamamagitan ng pag-block sa allergic response."
+              ]
+            },
+            {
+              "title": "Bantayan para sa Lumalaking Sintomas",
+              "image": "assets/images/allergy/step3-all.png",
+              "description": [
+                "Obserbahan nang mabuti ang tao para sa anumang palatandaan ng reaksyon na nagiging matindi, tulad ng kahirapan sa paghinga, pamamaga ng lalamunan, o mga hives na mabilis na kumakalat.",
+                "Kung lumala ang mga sintomas, maging handa na tumawag agad sa emergency services."
+              ]
+            }
+          ]
+        },
+        "INSECT_STINGS": {
+          "TITLE": "Tuka ng Insekto",
+          "MODAL_TITLE": "Tuka ng Insekto: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang ligtas na gamutin ang tuka ng insekto, bawasan ang kakulangan sa ginhawa, at maiwasan ang mga komplikasyon tulad ng mga impeksyon o matinding allergic reactions. Ang mabilis na pag-aalaga ay maaaring makatulong na mabawasan ang sakit at pamamaga nang epektibo.",
+          "STEPS": [
+            {
+              "title": "Alisin nang Ligtas ang Stinger",
+              "image": "assets/images/allergy/ins-step1.png",
+              "description": [
+                "Marahan na i-scrape ang stinger gamit ang card o ang iyong kuko, iwasan ang pag-squeeze ng venom sac.",
+                "Ang wastong pag-alis ay pumipigil sa pag-inject ng mas maraming lason sa balat, binabawasan ang kalubhaan ng reaksyon."
+              ]
+            },
+            {
+              "title": "Linisin nang Mabuti ang Lugar",
+              "image": "assets/images/allergy/ins-step2.png",
+              "description": [
+                "Hugasan ang tuka site gamit ang sabon at tubig upang alisin ang dumi at bakterya.",
+                "Ang paglilinis ay binabawasan ang panganib ng impeksyon, lalo na kung ang balat ay nasira."
+              ]
+            },
+            {
+              "title": "Mag-apply ng Cold Compress",
+              "image": "assets/images/allergy/ins-step3.png",
+              "description": [
+                "Ilagay ang cold compress o ice pack (nakabalot sa tela) sa lugar ng tuka upang paginhawain ang sakit at mabawasan ang pamamaga.",
+                "Ang pagpapalamig sa site ay tumutulong na maging manhid ang lugar at pabagalin ang inflammatory response."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

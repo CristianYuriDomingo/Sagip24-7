@@ -1,0 +1,97 @@
+{
+  "CATEGORIES": {
+    "CARDIAC": {
+      "TITLE": "Cardiac and Neurological",
+      "KEY_TAKEAWAY_TITLE": "Understanding the Basics",
+      "KEY_TAKEAWAY_DESC": "Cardiac and neurological emergencies, including fainting and the need for CPR, require immediate attention. Knowing the vital steps in administering CPR and managing fainting can make a life-saving difference in critical situations.",
+      "TECHNIQUES": {
+        "FAINTING": {
+          "TITLE": "Fainting",
+          "MODAL_TITLE": "Fainting: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to safely assist someone who has fainted, improve their blood circulation, and ensure their recovery. Quick action can help prevent complications and identify if medical attention is necessary.",
+          "STEPS": [
+            {
+              "title": "Lay the Person Flat on Their Back",
+              "image": "assets/images/Cardiac/fainting-step1.png",
+              "description": [
+                "Position the person on a flat surface to promote steady blood flow to the brain.",
+                "Ensure their head is turned to the side to prevent choking if they vomit."
+              ]
+            },
+            {
+              "title": "Elevate Their Legs",
+              "image": "assets/images/Cardiac/fainting-step2.png",
+              "description": [
+                "Raise the legs about 12 inches off the ground to improve blood flow and oxygen delivery to the brain.",
+                "This simple step often helps the person regain consciousness faster."
+              ]
+            },
+            {
+              "title": "Loosen Tight Clothing and Provide Fresh Air",
+              "image": "assets/images/Cardiac/fainting-step3.png",
+              "description": [
+                "Loosen belts, collars, or tight clothing to ensure unrestricted breathing.",
+                "Make sure the area is well-ventilated, and fan them gently if needed to keep them comfortable."
+              ]
+            },
+            {
+              "title": "Call for Help If Necessary",
+              "image": "assets/images/Cardiac/fainting-step4.png",
+              "description": [
+                "If they don't regain consciousness within 1–2 minutes or show other concerning symptoms (e.g., difficulty breathing, chest pain), seek medical help immediately.",
+                "Persistent unconsciousness may indicate a more serious condition requiring urgent medical attention."
+              ]
+            }
+          ]
+        },
+        "CPR": {
+          "TITLE": "CPR",
+          "MODAL_TITLE": "CPR: Lifesaving Steps for Cardiac Arrest",
+          "DESCRIPTION": "Follow these steps to provide immediate, lifesaving assistance during cardiac arrest. Performing CPR promptly can double or even triple a person's chances of survival until professional help arrives.",
+          "STEPS": [
+            {
+              "title": "Check for Responsiveness and Breathing",
+              "image": "assets/images/Cardiac/cpr-step1.png",
+              "description": [
+                "Tap the person and shout to confirm they are unresponsive. Check if they are breathing normally (gasping or irregular breaths count as abnormal).",
+                "Quickly identifying cardiac arrest is critical to beginning life-saving measures."
+              ]
+            },
+            {
+              "title": "Call Emergency Services and Retrieve an AED",
+              "image": "assets/images/Cardiac/cpr-step2.png",
+              "description": [
+                "Dial emergency services immediately and request an Automated External Defibrillator (AED) if available.",
+                "Alerting professionals ensures timely advanced care while preparing to use an AED can restore the heart's rhythm."
+              ]
+            },
+            {
+              "title": "Start Chest Compressions",
+              "image": "assets/images/Cardiac/cpr-step3.png",
+              "description": [
+                "Place your hands in the center of the chest and press down firmly at a depth of about 2 inches, at a rate of 100–120 compressions per minute. Let the chest rise fully between compressions.",
+                "Compressions maintain blood flow to vital organs until the heart can pump effectively again."
+              ]
+            },
+            {
+              "title": "Provide Rescue Breaths (If Trained)",
+              "image": "assets/images/Cardiac/cpr-step4.png",
+              "description": [
+                "After 30 compressions, give 2 rescue breaths by tilting the head back, pinching the nose, and breathing into their mouth. Ensure the chest rises with each breath.",
+                "Rescue breaths deliver oxygen to the lungs, complementing chest compressions to sustain life."
+              ]
+            },
+            {
+              "title": "Continue Until Help Arrives or Recovery",
+              "image": "assets/images/Cardiac/cpr-step5.png",
+              "description": [
+                "Keep performing compressions and breaths without stopping unless the person regains consciousness, an AED advises you to stop, or professional help takes over.",
+                "Persistence can make the difference between life and death in these critical moments."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

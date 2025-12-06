@@ -1,0 +1,112 @@
+{
+  "CATEGORIES": {
+    "OTHER": {
+      "TITLE": "Iba Pang Mga Emergency",
+      "KEY_TAKEAWAY_TITLE": "Pag-unawa sa mga Pangunahing Kaalaman",
+      "KEY_TAKEAWAY_DESC": "Ang mga general emergencies tulad ng pagdurugo ng ilong at sugat sa mata ay maaaring mangyari nang hindi inaasahan. Ang agarang aksyon ay mahalaga upang maiwasan ang karagdagang pinsala at tiyaking wastong pag-aalaga. Alamin kung paano epektibong pamahalaan ang mga karaniwang ngunit agarang sitwasyon.",
+      "TECHNIQUES": {
+        "NOSEBLEEDS": {
+          "TITLE": "Pagdurugo ng Ilong",
+          "MODAL_TITLE": "Pagdurugo ng Ilong: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang ligtas na pamahalaan ang pagdurugo ng ilong, bawasan ang kakulangan sa ginhawa, at maiwasan ang mga komplikasyon. Ang mabilis at wastong pag-aalaga ay maaaring makatulong na kontrolin ang pagdurugo nang epektibo.",
+          "STEPS": [
+            {
+              "title": "Pisilin ang Ilong sa Ibaba ng Tulay",
+              "image": "assets/images/Other-Emergency/Nosebleed-step1.png",
+              "description": [
+                "Gamitin ang iyong hinlalaki at hintuturo upang pisilin ang malambot na bahagi ng ilong sa ilalim lamang ng tulay.",
+                "Ang matatag na presyon ay tumutulong na i-compress ang mga ugat ng dugo, pabagalin at itigil ang pagdurugo."
+              ]
+            },
+            {
+              "title": "Yumuko Paharap, Hindi Palikod",
+              "image": "assets/images/Other-Emergency/Nosebleed-step2.png",
+              "description": [
+                "Paupuin ang tao nang tuwid at yumuko nang bahagya paharap upang maiwasan ang paglunok ng dugo, na maaaring magdulot ng pagduduwal o pagsusuka.",
+                "Iwasan ang pag-ikiling ng ulo pabalik, dahil ito ay nagtuturo ng dugo sa lalamunan at tiyan."
+              ]
+            },
+            {
+              "title": "Panatilihin ang Presyon sa Loob ng 5–10 Minuto",
+              "image": "assets/images/Other-Emergency/Nosebleed-step3.png",
+              "description": [
+                "Panatilihing matatag ang hawak sa ilong sa loob ng hindi bababa sa 5–10 minuto nang hindi binabitawan upang suriin.",
+                "Ang tuluy-tuloy na presyon ay mahalaga para sa pagbuo ng clot at pagpigil sa pagdurugo."
+              ]
+            },
+            {
+              "title": "Humingi ng Medikal na Atensyon Kung Kinakailangan",
+              "image": "assets/images/doctor.png",
+              "description": [
+                "Kung patuloy ang pagdurugo pagkatapos ng 15 minuto o mabigat ito, humingi ng propesyonal na tulong.",
+                "Ang paulit-ulit o matinding pagdurugo ng ilong ay maaaring magpahiwatig ng pinagbabatayan ng kondisyon ng kalusugan na nangangailangan ng medikal na pagsusuri."
+              ]
+            }
+          ]
+        },
+        "EYE_INJURY": {
+          "TITLE": "Sugat sa Mata",
+          "MODAL_TITLE": "First Aid para sa Mga Sugat sa Mata",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang ligtas na tugunan ang mga sugat sa mata at protektahan ang paningin. Ang mabilis at malumanay na pag-aalaga ay maaaring makatulong na maiwasan ang karagdagang pinsala habang tinitiyak ang mabilis na medikal na atensyon kapag kinakailangan.",
+          "STEPS": [
+            {
+              "title": "Banlawan nang Marahan ang Mata gamit ang Malinis na Tubig",
+              "image": "assets/images/Other-Emergency/EyeInjury-step1.png",
+              "description": [
+                "Gamitin ang maligamgam na tubig upang tuluy-tuloy na banlawan ang mata sa loob ng 15–20 minuto.",
+                "Tumutulong ito na alisin ang maliliit na debris, mga irritants, o kemikal na maaaring pumasok sa mata."
+              ]
+            },
+            {
+              "title": "Iwasan ang Pagkuskos o Pag-apply ng Presyon",
+              "image": "assets/images/Other-Emergency/EyeInjury-step2.png",
+              "description": [
+                "Huwag kuskusin o pindutin ang nasugatang mata, dahil maaari nitong palalaing sugat o itulak ang debris nang mas malalim sa mata.",
+                "Ang pagpapanatiling hindi hinihipo ang mata ay tumutulong na bawasan ang pangangati at karagdagang pinsala."
+              ]
+            },
+            {
+              "title": "Takpan ang Mata at Humingi ng Medikal na Tulong",
+              "image": "assets/images/doctor.png",
+              "description": [
+                "Kung ang bagay ay nananatili o ang sugat ay tila matindi, takpan nang marahan ang mata gamit ang malinis na tela o sterile gauze.",
+                "Humingi agad ng medikal na atensyon upang tiyaking wastong pag-alis ng mga dayuhang bagay at upang maiwasan ang mga komplikasyon."
+              ]
+            }
+          ]
+        },
+        "FOREIGN_OBJECT": {
+          "TITLE": "Maliit na Dayuhang Bagay",
+          "MODAL_TITLE": "First Aid para sa Maliliit na Dayuhang Bagay",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang ligtas na alisin ang maliliit na dayuhang bagay, bawasan ang panganib ng impeksyon, at itaguyod ang paggaling. Ang agarang at maingat na aksyon ay maaaring makatulong na maiwasan ang karagdagang pinsala.",
+          "STEPS": [
+            {
+              "title": "Ingat na Alisin ang Bagay gamit ang Malinis na Tweezers o Cotton Swab",
+              "image": "assets/images/Other-Emergency/eye-step1.png",
+              "description": [
+                "Kung ang dayuhang bagay ay nakikita at madaling maabot, gamitin ang malinis at sterilized na tweezers upang marahan na hawakan at alisin ito.",
+                "Mag-ingat na huwag itulak ang bagay nang mas malalim sa balat o tissue."
+              ]
+            },
+            {
+              "title": "Iwasan ang Pagtusok o Pagtulak ng Bagay nang Mas Malalim",
+              "image": "assets/images/Other-Emergency/eye-step2.png",
+              "description": [
+                "Kung ang bagay ay malalim na nakabaon o mahirap maabot, huwag subukang alisin ito gamit ang tweezers, dahil maaari itong magdulot ng karagdagang pinsala.",
+                "Sa halip, humingi ng propesyonal na medikal na tulong upang ligtas na alisin ito."
+              ]
+            },
+            {
+              "title": "Linisin ang Lugar at Mag-apply ng Bandage Kung Kinakailangan",
+              "image": "assets/images/Other-Emergency/eye-step3.png",
+              "description": [
+                "Pagkatapos alisin ang dayuhang bagay, linisin ang lugar gamit ang sabon at tubig upang maiwasan ang impeksyon.",
+                "Mag-apply ng sterile bandage kung kinakailangan upang protektahan ang sugat at tulungan itong gumaling."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

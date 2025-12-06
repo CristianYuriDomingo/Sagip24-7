@@ -1,0 +1,167 @@
+{
+  "CATEGORIES": {
+    "TRAUMATIC": {
+      "TITLE": "Mga Malulubhang Sugat",
+      "KEY_TAKEAWAY_TITLE": "Pag-unawa sa mga Pangunahing Kaalaman",
+      "KEY_TAKEAWAY_DESC": "Ang mga traumatic injuries, tulad ng banayad na pagdurugo, pilay, banayad na paso, at pasa, ay nangangailangan ng napapanahon at wastong pag-aalaga. Alamin ang mga mahalagang hakbang upang pamahalaan ang mga sugat na ito nang epektibo at maiwasan ang karagdagang pinsala.",
+      "TECHNIQUES": {
+        "MINOR_BLEEDING": {
+          "TITLE": "Banayad na Pagdurugo o Hiwa",
+          "MODAL_TITLE": "First Aid para sa mga Banayad na Hiwa at Sugat",
+          "DESCRIPTION": "Sundin ang mga simpleng at epektibong hakbang na ito upang wastong alagaan ang mga banayad na hiwa o sugat, tiyaking malinis, ligtas, at mas mabilis na paggaling. Sa pamamagitan ng pagsunod sa mga pag-iingat na ito, maaari mong mabawasan ang panganib ng impeksyon, itaguyod ang wastong paggaling, at protektahan ang nasugatang lugar para sa pinakamahusay na resulta ng paggaling.",
+          "STEPS": [
+            {
+              "title": "Maghanda ng Sarili",
+              "image": "assets/images/Traumatic/step1.png",
+              "description": [
+                "Hugasan nang mabuti ang iyong mga kamay gamit ang sabon at tubig.",
+                "Kung available, magsuot ng disposable gloves upang maiwasan ang kontaminasyon."
+              ]
+            },
+            {
+              "title": "Pigilin ang Pagdurugo",
+              "image": "assets/images/Traumatic/step2.png",
+              "description": [
+                "Marahan na mag-apply ng matatag na presyon sa sugat gamit ang malinis na tela o gauze.",
+                "Hawakan ang presyon hanggang tumigil ang pagdurugo (karaniwan sa loob ng ilang minuto)."
+              ]
+            },
+            {
+              "title": "Linisin ang Sugat",
+              "image": "assets/images/Traumatic/step3.png",
+              "description": [
+                "Banlawan nang marahan ang sugat sa ilalim ng malinis at umaagos na tubig upang alisin ang dumi o debris.",
+                "Iwasan ang paggamit ng hydrogen peroxide o alkohol nang direkta sa sugat, dahil maaari nitong antalahin ang paggaling."
+              ]
+            },
+            {
+              "title": "Mag-apply ng Antiseptic at Takpan",
+              "image": "assets/images/Traumatic/step4.png",
+              "description": [
+                "Patuyuin ang sugat gamit ang malinis na tela.",
+                "Mag-apply ng antiseptic o antibiotic ointment.",
+                "Takpan ang sugat ng sterile bandage o dressing upang mapanatiling protektado."
+              ]
+            },
+            {
+              "title": "Bantayan para sa Impeksyon",
+              "image": "assets/images/Traumatic/step5.png",
+              "description": [
+                "Bantayan ang sugat sa susunod na ilang araw para sa mga palatandaan ng impeksyon, tulad ng pamumula, pamamaga, nana, o lumalalang sakit.",
+                "Kung lumala ang mga sintomas, humingi agad ng medikal na payo."
+              ]
+            }
+          ]
+        },
+        "SPRAINS": {
+          "TITLE": "Pilay at Banayad na Bali",
+          "MODAL_TITLE": "Pilay at Banayad na Bali: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang ligtas na pamahalaan ang pilay at banayad na bali habang binabawasan ang sakit, binabawasan ang pamamaga, at pinipigilan ang karagdagang pinsala. Tutulong ang mga hakbang na ito na stabilisahin ang apektadong lugar at magbigay ng paunang ginhawa hanggang sa available ang propesyonal na medikal na pag-aalaga kung kinakailangan.",
+          "STEPS": [
+            {
+              "title": "I-immobilize ang Lugar",
+              "image": "assets/images/Traumatic/sprain-step1.png",
+              "description": [
+                "Panatilihing hindi gumagalaw ang nasugatang bahagi hangga't maaari.",
+                "Gumamit ng splint o anumang matigas na suporta upang stabilisahin ang apektadong lugar."
+              ]
+            },
+            {
+              "title": "Mag-apply ng Cold Therapy",
+              "image": "assets/images/Traumatic/sprain-step2.png",
+              "description": [
+                "Ilagay ang ice pack na nakabalot sa tela o tuwalya sa sugat.",
+                "Mag-apply ng 15 hanggang 20 minuto sa isang pagkakataon upang mabawasan ang sakit at pamamaga.",
+                "Iwasan ang pag-iilagay ng yelo nang direkta sa balat upang maiwasan ang frostbite."
+              ]
+            },
+            {
+              "title": "Itaas ang Extremity",
+              "image": "assets/images/Traumatic/sprain-step3.png",
+              "description": [
+                "Kung posible, itaas ang nasugatang extremity sa itaas ng antas ng puso.",
+                "Tumutulong ito na mabawasan ang pamamaga at itaguyod ang daloy ng dugo."
+              ]
+            },
+            {
+              "title": "Iwasan ang Strain at Humingi ng Propesyonal na Tulong",
+              "image": "assets/images/Traumatic/sprain-step4.png",
+              "description": [
+                "Huwag maglagay ng anumang timbang o presyon sa nasugatang lugar.",
+                "Kung patuloy ang matinding sakit, deformity, o kawalan ng kakayahang gumalaw ng extremity, humingi agad ng medikal na atensyon."
+              ]
+            }
+          ]
+        },
+        "BURNS": {
+          "TITLE": "Banayad na Paso",
+          "MODAL_TITLE": "Banayad na Paso: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang ligtas na gamutin ang banayad na paso, tinitiyak ang agarang ginhawa mula sa sakit, pinoprotektahan ang apektadong lugar, at itinataguyod ang mas mabilis na paggaling. Ang mabilis na pagkilos ay maaaring makaiwas sa karagdagang pinsala sa balat at mabawasan ang panganib ng impeksyon.",
+          "STEPS": [
+            {
+              "title": "Palamigin ang Paso",
+              "image": "assets/images/Traumatic/burns-step1.png",
+              "description": [
+                "Ilagay ang apektadong lugar sa malamig at umaagos na tubig sa loob ng 10–15 minuto.",
+                "Iwasan ang paggamit ng malamig na yelo, dahil maaari nitong magdulot ng karagdagang pinsala sa tissue."
+              ]
+            },
+            {
+              "title": "Protektahan ang Balat",
+              "image": "assets/images/Traumatic/burns-step2.png",
+              "description": [
+                "Huwag basagin ang anumang paltos, dahil kumikilos sila bilang natural na hadlang laban sa impeksyon."
+              ]
+            },
+            {
+              "title": "Takpan ang Paso",
+              "image": "assets/images/Traumatic/burns-step3.png",
+              "description": [
+                "Gumamit ng non-stick sterile bandage o malinis na tela upang bahagyang takpan ang paso.",
+                "Iwasan ang paggamit ng buhaghag na bulak o mga materyales na maaaring dumikit sa sugat."
+              ]
+            },
+            {
+              "title": "Humingi ng Medikal na Atensyon Kung Kinakailangan",
+              "image": "assets/images/Traumatic/step5.png",
+              "description": [
+                "Kung ang paso ay mas malaki kaysa sa laki ng palad, o kung ito ay nangyari sa sensitibong lugar tulad ng mukha, kamay, o mga kasukasuan, kumunsulta agad sa isang healthcare professional."
+              ]
+            }
+          ]
+        },
+        "BRUISES": {
+          "TITLE": "Mga Pasa",
+          "MODAL_TITLE": "Mga Pasa: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga simpleng hakbang na ito upang makatulong na mabawasan ang pamamaga, paginhawain ang kakulangan sa ginhawa, at itaguyod ang paggaling para sa mga pasa. Ang napapanahong pag-aalaga ay maaaring mabawasan ang kalubhaan ng pasa, itaguyod ang mas mabilis na paggaling, at maiwasan ang mga komplikasyon tulad ng matagal na sakit o lumalalang pamamaga.",
+          "STEPS": [
+            {
+              "title": "Mag-apply ng Cold Compress",
+              "image": "assets/images/Traumatic/bruises-step1.png",
+              "description": [
+                "Ilagay ang cold compress o ice pack na nakabalot sa tela sa lugar ng pasa upang mabawasan ang pamamaga.",
+                "Mag-apply ng 15–20 minuto sa isang pagkakataon, kumukuha ng mga break upang maiwasan ang pinsala sa balat."
+              ]
+            },
+            {
+              "title": "Itaas ang Lugar",
+              "image": "assets/images/Traumatic/bruises-step2.png",
+              "description": [
+                "Kung posible, itaas ang lugar ng pasa sa itaas ng antas ng puso upang mabawasan ang pamamaga at hikayatin ang wastong daloy ng dugo."
+              ]
+            },
+            {
+              "title": "Magpahinga at Bantayan",
+              "image": "assets/images/Traumatic/step5.png",
+              "description": [
+                "Iwasan ang paglagay ng presyon o strain sa nasugatang lugar.",
+                "Magpahinga at bantayan ang pasa para sa anumang pagbabago, tulad ng lumalalang sakit o pagbabago ng kulay.",
+                "Kung lumala ang mga sintomas, humingi ng medikal na payo."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

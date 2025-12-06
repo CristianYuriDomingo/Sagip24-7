@@ -1,0 +1,201 @@
+{
+  "CATEGORIES": {
+    "RESPIRATORY": {
+      "TITLE": "Mga Problema sa Paghinga",
+      "KEY_TAKEAWAY_TITLE": "Pag-unawa sa mga Pangunahing Kaalaman",
+      "KEY_TAKEAWAY_DESC": "Ang mga emergency sa paghinga, tulad ng asthma attack o pagkabulunan, ay nangangailangan ng mabilis na aksyon. Alamin ang mga mahalagang hakbang upang harapin ang mga sitwasyong ito at makaligtas ng buhay.",
+      "TECHNIQUES": {
+        "CHOKING_ADULTS": {
+          "TITLE": "Pagkabulunan para sa Matatanda",
+          "MODAL_TITLE": "First aid para sa Pagkabulunan ng Matatanda",
+          "DESCRIPTION": "Sundin ang mga simpleng at epektibong hakbang na ito upang tumugon sa pagkabulunan ng matatanda, tinitiyak ang kaligtasan at napapanahong aksyon. Sa pamamagitan ng paggamit ng mga pamamaraang ito, maaari mong dagdagan ang pagkakataong matagumpay na maalis ang pagbara at maiwasan ang karagdagang komplikasyon.",
+          "STEPS": [
+            {
+              "title": "Suriin kung Nakakaubo, Nakakapagsalita, o Nakakapaghinga ang Tao",
+              "image": "assets/images/Respiratory/step1-adult.png",
+              "description": [
+                "Kung hindi makaubo, makapagsalita, o makapaghinga ang tao, magpatuloy sa Heimlich maneuver. Kung kaya niya ang alinman sa mga ito, hikayatin siyang umubo upang malinis ang daluyan ng hangin."
+              ]
+            },
+            {
+              "title": "Tumayo sa Likod ng Tao at Ibalot ang Iyong mga Braso sa Kanyang Baywang",
+              "image": "assets/images/Respiratory/step2-adult.png",
+              "description": [
+                "Tumayo sa likod ng nabulunang tao at ibalot ang iyong mga braso sa kanyang baywang para sa suporta."
+              ]
+            },
+            {
+              "title": "Gumawa ng Kamao at Ilagay ito sa Itaas ng Puson",
+              "image": "assets/images/Respiratory/step3-adult.png",
+              "description": [
+                "Gumawa ng kamao gamit ang isang kamay at ilagay ito sa itaas ng puson ng tao, sa gitna ng kanyang tiyan."
+              ]
+            },
+            {
+              "title": "Hawakan ang Kamao ng Isa Pang Kamay at Magsagawa ng Mabilis na Pataas na mga Tulak",
+              "image": "assets/images/Respiratory/step4-adult.png",
+              "description": [
+                "Hawakan ang iyong kamao gamit ang isa pang kamay at magbigay ng mabilis na pataas na mga tulak. Ang galaw ay dapat matalas at malakas upang mailabas ang bagay na bumabara sa daluyan ng hangin."
+              ]
+            },
+            {
+              "title": "Palitan ng 5 Malakas na Palo sa Likod Kung Nabigo ang Heimlich Maneuver",
+              "image": "assets/images/Respiratory/step5-adult.png",
+              "description": [
+                "Kung hindi matagumpay ang Heimlich maneuver, palitan ng 5 malakas na palo sa pagitan ng mga balikat ng tao gamit ang sakong ng iyong kamay."
+              ]
+            },
+            {
+              "title": "Ulitin Hanggang Mailabas ang Bagay o Mawalan ng Malay ang Tao",
+              "image": "assets/images/Respiratory/step6-adult.png",
+              "description": [
+                "Magpatuloy sa pag-alternate sa pagitan ng abdominal thrusts at back blows hanggang mailabas ang bagay o mawalan ng malay ang tao."
+              ]
+            },
+            {
+              "title": "Kung Walang Tugon, Magsimula ng CPR at Tumawag sa Emergency Services",
+              "image": "assets/images/Respiratory/step7-adult.png",
+              "description": [
+                "Kung mawalan ng malay ang tao, agarang magsimula ng CPR at tumawag sa emergency services."
+              ]
+            }
+          ]
+        },
+        "CHOKING_BABIES": {
+          "TITLE": "Pagkabulunan Para sa mga Sanggol",
+          "MODAL_TITLE": "First aid para sa Pagkabulunan ng mga Sanggol",
+          "DESCRIPTION": "Sundin ang mga simpleng at epektibong hakbang na ito upang tumugon sa pagkabulunan ng mga sanggol, tinitiyak ang kanilang kaligtasan at kaginhawahan. Sa pamamagitan ng paggamit ng malumanay at angkop na mga pamamaraan, makakatulong kang alisin ang pagbara at ibalik ang normal na paghinga.",
+          "STEPS": [
+            {
+              "title": "Suriin kung Nakakaubo, Nakakaiyak, o Nakakapaghinga ang Sanggol",
+              "image": "assets/images/Respiratory/step1-choke.png",
+              "description": [
+                "Kung hindi makalikha ng tunog o makapaghinga ang sanggol, magpatuloy agad sa mga hakbang ng first aid."
+              ]
+            },
+            {
+              "title": "Iposisyon ang Sanggol na Nakadapa sa Iyong Braso",
+              "image": "assets/images/Respiratory/step2-choke.png",
+              "description": [
+                "Ilagay ang sanggol na nakadapa sa iyong braso, na ang ulo ay mas mababa kaysa sa dibdib, sinusuportahan ang kanilang ulo at leeg."
+              ]
+            },
+            {
+              "title": "Magbigay ng 5 Palo sa Likod",
+              "image": "assets/images/Respiratory/step3-choke.png",
+              "description": [
+                "Gamit ang sakong ng iyong kamay, magbigay ng 5 malakas na palo sa pagitan ng mga balikat ng sanggol."
+              ]
+            },
+            {
+              "title": "Kung Hindi Matagumpay, Iharap ang Sanggol",
+              "image": "assets/images/Respiratory/step4-choke.png",
+              "description": [
+                "Kung hindi mailabas ng mga palo sa likod ang bagay, iharap ang sanggol, sinusuportahan ang kanilang ulo at leeg."
+              ]
+            },
+            {
+              "title": "Magsagawa ng 5 Chest Thrusts",
+              "image": "assets/images/Respiratory/step5-choke.png",
+              "description": [
+                "Ilagay ang dalawang daliri sa gitna ng dibdib ng sanggol (sa ilalim ng linya ng utong) at magsagawa ng 5 mabilis na chest thrusts."
+              ]
+            },
+            {
+              "title": "Ulitin Hanggang Mailabas ang Bagay o Mawalan ng Malay ang Sanggol",
+              "image": "assets/images/Respiratory/step6-choke.png",
+              "description": [
+                "Mag-alternate sa pagitan ng back blows at chest thrusts hanggang mailabas ang bagay o mawalan ng malay ang sanggol."
+              ]
+            },
+            {
+              "title": "Kung Walang Tugon, Magsimula ng Infant CPR at Tumawag sa Emergency Services",
+              "image": "assets/images/Respiratory/step7-choke.png",
+              "description": [
+                "Kung mawalan ng malay ang sanggol, magsimula ng infant CPR at tumawag agad sa emergency services."
+              ]
+            }
+          ]
+        },
+        "MILD_ASTHMA": {
+          "TITLE": "Banayad na Asthma Attack",
+          "MODAL_TITLE": "Banayad na Asthma Attack: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang makatulong sa pagpapahinga ng banayad na asthma attack, paginhawain ang kahirapan sa paghinga, at maiwasan ang karagdagang komplikasyon. Ang agarang aksyon ay maaaring magpabuti ng kaginhawahan at maiwasan ang paglala ng mga sintomas.",
+          "STEPS": [
+            {
+              "title": "Tulungan ang Tao na Umupo sa Komportableng Posisyon",
+              "image": "assets/images/Respiratory/step1-ast.png",
+              "description": [
+                "Paupuin ang tao nang tuwid sa isang posisyon na nagpapahintulot ng mas madaling paghinga.",
+                "Hikayatin silang manatiling kalmado, dahil ang stress o panic ay maaaring magpasama ng atake."
+              ]
+            },
+            {
+              "title": "Tumulong sa Paggamit ng Rescue Inhaler",
+              "image": "assets/images/Respiratory/step2-ast.png",
+              "description": [
+                "Kung mayroon ang taong may rescue inhaler, tulungan siyang gamitin ito nang tama. Karaniwang kailangan nila ng 2 puffs para sa ginhawa.",
+                "Siguraduhing huminga sila nang mabagal at malalim pagkatapos ng bawat puff upang matiyak na ang gamot ay umaabot sa mga baga."
+              ]
+            },
+            {
+              "title": "Hikayatin ang Mabagal at Malalim na Paghinga",
+              "image": "assets/images/Respiratory/step3-ast.png",
+              "description": [
+                "Gabayan ang tao na kumuha ng mabagal at malalim na hininga upang makatulong na mabuksan ang mga daluyan ng hangin at pakalmahin ang kanilang paghinga.",
+                "Maaari nitong mabawasan ang pakiramdam ng kulang sa paghinga at maiwasan ang mabilis na paghinga na maaaring palakasin ang atake."
+              ]
+            },
+            {
+              "title": "Bantayan ang Pagpapabuti",
+              "image": "assets/images/Respiratory/step4-ast.png",
+              "description": [
+                "Pagkatapos gamitin ang inhaler, bantayan ang kondisyon ng tao. Kung bumuti ang kanilang paghinga at mas mabuti ang pakiramdam nila, patuloy na obserbahan sila.",
+                "Kung walang ginhawa pagkatapos ng 5 minuto, o kung lumala ang mga sintomas, tumawag agad sa emergency services para sa karagdagang tulong."
+              ]
+            }
+          ]
+        },
+        "HYPERVENTILATION": {
+          "TITLE": "Hyperventilation",
+          "MODAL_TITLE": "Hyperventilation: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang makatulong sa pag-manage ng hyperventilation, bawasan ang pagkabalisa, at ibalik ang normal na pattern ng paghinga. Ang mabilis na aksyon ay maaaring makatulong sa tao na makontrol muli at maiwasan ang komplikasyon.",
+          "STEPS": [
+            {
+              "title": "Hikayatin ang Tao na Umupo at Magrelaks",
+              "image": "assets/images/Respiratory/step1-hy.png",
+              "description": [
+                "Paupuin ang tao sa isang komportableng posisyon upang maiwasan ang pagkahilo o paglala ng mga sintomas.",
+                "Hikayatin silang magrelaks at tumuon sa kanilang paghinga."
+              ]
+            },
+            {
+              "title": "Gabayan Silang Huminga nang Mabagal at Kalmado",
+              "image": "assets/images/Respiratory/step2-hy.png",
+              "description": [
+                "Turuan ang tao na huminga nang mabagal sa pamamagitan ng kanilang ilong at huminga nang marahan sa pamamagitan ng nakapikit na labi, tulad ng paghihip sa pamamagitan ng straw.",
+                "Tumutulong ang pamamaraang ito na pagbagalin ang mabilis na paghinga at ibalik ang normal na antas ng oxygen."
+              ]
+            },
+            {
+              "title": "Magbigay ng Kapayapaan at Manatiling Kalmado",
+              "image": "assets/images/Respiratory/step3-hy.png",
+              "description": [
+                "Mag-alok ng kapayapaan at manatiling kalmado upang makatulong na bawasan ang pagkabalisa.",
+                "Ang pagkabalisa ay maaaring magpasama ng hyperventilation, kaya ang pagpapanatili ng kalmadong kapaligiran ay napakahalaga."
+              ]
+            },
+            {
+              "title": "Humingi ng Medikal na Payo Kung Patuloy ang mga Sintomas",
+              "image": "assets/images/doctor.png",
+              "description": [
+                "Kung patuloy na nag-hyperventilate ang tao o nagpapakita ng mga palatandaan ng pagkabalisa (hal., pagkahilo, kalituhan), humingi ng propesyonal na medikal na tulong.",
+                "Ang patuloy na hyperventilation ay maaaring mangailangan ng karagdagang pagsusuri at paggamot."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

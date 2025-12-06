@@ -1,0 +1,97 @@
+{
+  "CATEGORIES": {
+    "CARDIAC": {
+      "TITLE": "Mga Emergency sa Puso at Nerbiyos",
+      "KEY_TAKEAWAY_TITLE": "Pag-unawa sa mga Pangunahing Kaalaman",
+      "KEY_TAKEAWAY_DESC": "Ang mga cardiac at neurological emergencies, kasama ang pagkahilo at pangangailangan para sa CPR, ay nangangailangan ng agarang atensyon. Ang pag-alam sa mga vital steps sa pagbibigay ng CPR at pag-manage ng pagkahilo ay maaaring gumawa ng life-saving na pagkakaiba sa mga kritikal na sitwasyon.",
+      "TECHNIQUES": {
+        "FAINTING": {
+          "TITLE": "Pagkahilo",
+          "MODAL_TITLE": "Pagkahilo: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang ligtas na tulungan ang isang taong nahilo, pagbutihin ang kanilang sirkulasyon ng dugo, at tiyaking mabuti ang kanilang paggaling. Ang mabilis na aksyon ay maaaring makatulong na maiwasan ang mga komplikasyon at matukoy kung kinakailangan ang medikal na atensyon.",
+          "STEPS": [
+            {
+              "title": "Ihiga ang Tao nang Patihaya sa Kanilang Likod",
+              "image": "assets/images/Cardiac/fainting-step1.png",
+              "description": [
+                "Iposisyon ang tao sa isang patag na ibabaw upang itaguyod ang matatag na daloy ng dugo sa utak.",
+                "Tiyaking ang kanilang ulo ay nakaharap sa gilid upang maiwasan ang pagkabulunan kung sila ay susuka."
+              ]
+            },
+            {
+              "title": "Itaas ang Kanilang mga Binti",
+              "image": "assets/images/Cardiac/fainting-step2.png",
+              "description": [
+                "Itaas ang mga binti ng mga 12 pulgada mula sa lupa upang pagbutihin ang daloy ng dugo at paghahatid ng oxygen sa utak.",
+                "Ang simpleng hakbang na ito ay kadalasang tumutulong sa tao na mabilis na mabawi ang kamalayan."
+              ]
+            },
+            {
+              "title": "Kaluwagan ang Masikip na Damit at Magbigay ng Sariwang Hangin",
+              "image": "assets/images/Cardiac/fainting-step3.png",
+              "description": [
+                "Kaluwagan ang mga sinturon, kuwelyo, o masikip na damit upang tiyaking walang hadlang ang paghinga.",
+                "Tiyaking ang lugar ay mabuti ang bentilasyon, at paypayan sila nang marahan kung kinakailangan upang panatilihing komportable."
+              ]
+            },
+            {
+              "title": "Tumawag para sa Tulong Kung Kinakailangan",
+              "image": "assets/images/Cardiac/fainting-step4.png",
+              "description": [
+                "Kung hindi sila nakakabawi ng kamalayan sa loob ng 1–2 minuto o nagpapakita ng iba pang nakakaalagang sintomas (hal., kahirapan sa paghinga, sakit sa dibdib), humingi agad ng medikal na tulong.",
+                "Ang patuloy na kawalan ng kamalayan ay maaaring magpahiwatig ng mas seryosong kondisyon na nangangailangan ng agarang medikal na atensyon."
+              ]
+            }
+          ]
+        },
+        "CPR": {
+          "TITLE": "CPR",
+          "MODAL_TITLE": "CPR: Mga Life-saving Steps para sa Cardiac Arrest",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang magbigay ng agarang, life-saving na tulong sa panahon ng cardiac arrest. Ang pagsasagawa ng CPR nang mabilis ay maaaring doblehin o kahit triple ang pagkakataon ng tao na mabuhay hanggang dumating ang propesyonal na tulong.",
+          "STEPS": [
+            {
+              "title": "Suriin para sa Responsiveness at Paghinga",
+              "image": "assets/images/Cardiac/cpr-step1.png",
+              "description": [
+                "Tapikin ang tao at sumigaw upang kumpirmahin na sila ay walang tugon. Suriin kung sila ay normal na humihinga (ang pagsinghaot o hindi regular na paghinga ay itinuturing na abnormal).",
+                "Ang mabilis na pagtukoy ng cardiac arrest ay kritikal sa pagsisimula ng life-saving measures."
+              ]
+            },
+            {
+              "title": "Tumawag sa Emergency Services at Kumuha ng AED",
+              "image": "assets/images/Cardiac/cpr-step2.png",
+              "description": [
+                "Tumawag agad sa emergency services at humiling ng Automated External Defibrillator (AED) kung available.",
+                "Ang pagpapaalerto sa mga propesyonal ay tinitiyak ang napapanahong advanced care habang ang paghahanda sa paggamit ng AED ay maaaring ibalik ang ritmo ng puso."
+              ]
+            },
+            {
+              "title": "Magsimula ng Chest Compressions",
+              "image": "assets/images/Cardiac/cpr-step3.png",
+              "description": [
+                "Ilagay ang iyong mga kamay sa gitna ng dibdib at pindutin nang malakas sa lalim na mga 2 pulgada, sa rate na 100–120 compressions bawat minuto. Hayaan ang dibdib na tumaas nang buo sa pagitan ng mga compressions.",
+                "Ang mga compression ay nagpapanatili ng daloy ng dugo sa mga vital organs hanggang ang puso ay maaaring epektibong pumompa muli."
+              ]
+            },
+            {
+              "title": "Magbigay ng Rescue Breaths (Kung Trained)",
+              "image": "assets/images/Cardiac/cpr-step4.png",
+              "description": [
+                "Pagkatapos ng 30 compressions, magbigay ng 2 rescue breaths sa pamamagitan ng pag-tilt ng ulo pabalik, pag-pinch ng ilong, at paghinga sa kanilang bibig. Tiyaking ang dibdib ay tumaas sa bawat hininga.",
+                "Ang rescue breaths ay naghahatid ng oxygen sa mga baga, na sumusuporta sa chest compressions upang mapanatili ang buhay."
+              ]
+            },
+            {
+              "title": "Magpatuloy Hanggang Dumating ang Tulong o May Paggaling",
+              "image": "assets/images/Cardiac/cpr-step5.png",
+              "description": [
+                "Patuloy na magsagawa ng compressions at breaths nang hindi tumitigil maliban kung ang tao ay nakabawi ng kamalayan, ang AED ay nagsasabi sa iyo na tumigil, o ang propesyonal na tulong ay tumatagkbo na.",
+                "Ang pagpupumilit ay maaaring gumawa ng pagkakaiba sa pagitan ng buhay at kamatayan sa mga kritikal na sandaling ito."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

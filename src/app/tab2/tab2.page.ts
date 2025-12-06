@@ -65,17 +65,24 @@ export class Tab2Page implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    // Load initial emergencies
     this.loadEmergencies();
     
+    // Subscribe to language changes
     this.languageSubscription = this.languageService.currentLanguage$.subscribe(
       language => {
         this.currentLanguage = language;
+        // Reload emergencies when language changes to get translated titles
+        this.loadEmergencies();
       }
     );
 
+    // Subscribe to translation changes
     this.translationSubscription = this.translationService.currentTranslations$.subscribe(
       translations => {
         this.translations = translations;
+        // Reload emergencies when translations change
+        this.loadEmergencies();
       }
     );
   }
@@ -134,6 +141,7 @@ export class Tab2Page implements OnInit, OnDestroy {
   }
 
   loadEmergencies() {
+    // Get emergencies with translated titles
     this.emergencies = this.emergencyService.getEmergencies();
     this.filteredEmergencies = [...this.emergencies];
   }
@@ -142,6 +150,7 @@ export class Tab2Page implements OnInit, OnDestroy {
     this.searchQuery = event.detail.value || '';
     
     if (this.searchQuery.trim().length > 0) {
+      // Search emergencies (already returns translated results)
       const emergencyResults = this.emergencyService.searchEmergencies(this.searchQuery);
       const techniqueResults = this.firstAidService.searchTechniques(this.searchQuery);
       
@@ -165,6 +174,7 @@ export class Tab2Page implements OnInit, OnDestroy {
       this.searchSuggestions = [];
     }
     
+    // Update filtered emergencies (already translated)
     this.filteredEmergencies = this.emergencyService.searchEmergencies(this.searchQuery);
   }
 
@@ -228,5 +238,3 @@ export class Tab2Page implements OnInit, OnDestroy {
     console.log('Dashboard animation loaded successfully!');
   }
 }
-
-

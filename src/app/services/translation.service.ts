@@ -1,16 +1,53 @@
-// src/app/services/translation.service.ts
+// src/app/services/translation.service.ts - Updated
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+
+// Main translations
 import enTranslations from '../../assets/i18n/en.json';
 import filTranslations from '../../assets/i18n/fil.json';
+
+// Category translations
+import enRespiratory from '../../assets/i18n/categories/respiratory/en.json';
+import filRespiratory from '../../assets/i18n/categories/respiratory/fil.json';
+
+import enTraumatic from '../../assets/i18n/categories/traumatic-injuries/en.json';
+import filTraumatic from '../../assets/i18n/categories/traumatic-injuries/fil.json';
+
+import enEnvironmental from '../../assets/i18n/categories/environmental/en.json';
+import filEnvironmental from '../../assets/i18n/categories/environmental/fil.json';
+
+import enAllergic from '../../assets/i18n/categories/allergic-insect/en.json';
+import filAllergic from '../../assets/i18n/categories/allergic-insect/fil.json';
+
+import enCardiac from '../../assets/i18n/categories/cardiac-neurological/en.json';
+import filCardiac from '../../assets/i18n/categories/cardiac-neurological/fil.json';
+
+import enOther from '../../assets/i18n/categories/other-general/en.json';
+import filOther from '../../assets/i18n/categories/other-general/fil.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TranslationService {
   private translations: any = {
-    en: enTranslations,
-    fil: filTranslations
+    en: this.mergeTranslations(
+      enTranslations,
+      enRespiratory,
+      enTraumatic,
+      enEnvironmental,
+      enAllergic,
+      enCardiac,
+      enOther
+    ),
+    fil: this.mergeTranslations(
+      filTranslations,
+      filRespiratory,
+      filTraumatic,
+      filEnvironmental,
+      filAllergic,
+      filCardiac,
+      filOther
+    )
   };
 
   private currentTranslationsSubject: BehaviorSubject<any>;
@@ -22,6 +59,39 @@ export class TranslationService {
       this.translations[savedLanguage]
     );
     this.currentTranslations$ = this.currentTranslationsSubject.asObservable();
+  }
+
+  /**
+   * Deep merge multiple translation objects
+   */
+  private mergeTranslations(...sources: any[]): any {
+    const target: any = {};
+    
+    for (const source of sources) {
+      this.deepMerge(target, source);
+    }
+    
+    return target;
+  }
+
+  /**
+   * Recursively merge objects
+   */
+  private deepMerge(target: any, source: any): void {
+    if (!source) return;
+    
+    for (const key in source) {
+      if (source.hasOwnProperty(key)) {
+        if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+          if (!target[key]) {
+            target[key] = {};
+          }
+          this.deepMerge(target[key], source[key]);
+        } else {
+          target[key] = source[key];
+        }
+      }
+    }
   }
 
   /**
@@ -41,7 +111,7 @@ export class TranslationService {
   }
 
   /**
-   * Get translation by key path (e.g., 'TAB1.EMERGENCY_CONTACT')
+   * Get translation by key path (e.g., 'CATEGORIES.RESPIRATORY.TITLE')
    */
   get(keyPath: string): string {
     const keys = keyPath.split('.');

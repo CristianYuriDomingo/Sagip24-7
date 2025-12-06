@@ -1,0 +1,112 @@
+{
+  "CATEGORIES": {
+    "OTHER": {
+      "TITLE": "Other General Emergencies",
+      "KEY_TAKEAWAY_TITLE": "Understanding the Basics",
+      "KEY_TAKEAWAY_DESC": "General emergencies such as nosebleeds and eye injuries can occur unexpectedly. Immediate action is essential to prevent further harm and ensure proper care. Learn how to manage these common yet urgent situations effectively.",
+      "TECHNIQUES": {
+        "NOSEBLEEDS": {
+          "TITLE": "Nosebleeds",
+          "MODAL_TITLE": "Nosebleeds: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to safely manage a nosebleed, minimize discomfort, and prevent complications. Prompt and proper care can help control the bleeding effectively.",
+          "STEPS": [
+            {
+              "title": "Pinch the Nose Below the Bridge",
+              "image": "assets/images/Other-Emergency/Nosebleed-step1.png",
+              "description": [
+                "Use your thumb and index finger to pinch the soft part of the nose just below the bridge.",
+                "Firm pressure helps compress the blood vessels, slowing and stopping the bleeding."
+              ]
+            },
+            {
+              "title": "Lean Forward, Not Backward",
+              "image": "assets/images/Other-Emergency/Nosebleed-step2.png",
+              "description": [
+                "Have the person sit up straight and lean slightly forward to prevent swallowing blood, which can cause nausea or vomiting.",
+                "Avoid tilting the head back, as this directs blood into the throat and stomach."
+              ]
+            },
+            {
+              "title": "Maintain Pressure for 5–10 Minutes",
+              "image": "assets/images/Other-Emergency/Nosebleed-step3.png",
+              "description": [
+                "Keep a firm grip on the nose for at least 5–10 minutes without releasing to check.",
+                "Consistent pressure is essential for clot formation and stopping the bleeding."
+              ]
+            },
+            {
+              "title": "Seek Medical Attention If Necessary",
+              "image": "assets/images/doctor.png",
+              "description": [
+                "If bleeding continues after 15 minutes or is heavy, seek professional help.",
+                "Recurrent or severe nosebleeds may indicate an underlying health condition that requires medical evaluation."
+              ]
+            }
+          ]
+        },
+        "EYE_INJURY": {
+          "TITLE": "Eye Injury",
+          "MODAL_TITLE": "First Aid for Eye Injuries",
+          "DESCRIPTION": "Follow these steps to address eye injuries safely and protect vision. Quick, gentle care can help prevent further damage while ensuring prompt medical attention when needed.",
+          "STEPS": [
+            {
+              "title": "Flush the Eye Gently with Clean Water",
+              "image": "assets/images/Other-Emergency/EyeInjury-step1.png",
+              "description": [
+                "Use lukewarm water to rinse the eye continuously for 15–20 minutes.",
+                "This helps remove small debris, irritants, or chemicals that may have entered the eye."
+              ]
+            },
+            {
+              "title": "Avoid Rubbing or Applying Pressure",
+              "image": "assets/images/Other-Emergency/EyeInjury-step2.png",
+              "description": [
+                "Do not rub or press on the injured eye, as this can worsen the injury or push debris further into the eye.",
+                "Keeping the eye untouched helps minimize irritation and additional harm."
+              ]
+            },
+            {
+              "title": "Cover the Eye and Seek Medical Assistance",
+              "image": "assets/images/doctor.png",
+              "description": [
+                "If the object remains or the injury seems severe, cover the eye lightly with a clean cloth or sterile gauze.",
+                "Seek immediate medical attention to ensure proper removal of foreign objects and to prevent complications."
+              ]
+            }
+          ]
+        },
+        "FOREIGN_OBJECT": {
+          "TITLE": "Small Foreign Object",
+          "MODAL_TITLE": "First Aid for Small Foreign Objects",
+          "DESCRIPTION": "Follow these steps to safely remove small foreign objects, reduce the risk of infection, and promote healing. Immediate and careful action can help prevent further injury.",
+          "STEPS": [
+            {
+              "title": "Carefully Remove the Object with Clean Tweezers or Cotton Swab",
+              "image": "assets/images/Other-Emergency/eye-step1.png",
+              "description": [
+                "If the foreign object is visible and easily reachable, use clean, sterilized tweezers to gently grasp and remove it.",
+                "Be cautious not to push the object further into the skin or tissue."
+              ]
+            },
+            {
+              "title": "Avoid Poking or Pushing the Object Deeper",
+              "image": "assets/images/Other-Emergency/eye-step2.png",
+              "description": [
+                "If the object is deeply embedded or hard to reach, do not attempt to remove it with tweezers, as this can cause additional injury.",
+                "Instead, seek professional medical help to safely remove it."
+              ]
+            },
+            {
+              "title": "Clean the Area and Apply a Bandage if Necessary",
+              "image": "assets/images/Other-Emergency/eye-step3.png",
+              "description": [
+                "After removing the foreign object, clean the area with soap and water to prevent infection.",
+                "Apply a sterile bandage if needed to protect the wound and help it heal."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "CATEGORIES": {
+    "ENVIRONMENTAL": {
+      "TITLE": "Mga Insidenteng Dulot ng Kapaligiran",
+      "KEY_TAKEAWAY_TITLE": "Pag-unawa sa mga Pangunahing Kaalaman",
+      "KEY_TAKEAWAY_DESC": "Ang mga emergency sa kapaligiran at pisikal, kasama ang heat exhaustion, banayad na hypothermia, at dehydration, ay nangangailangan ng mabilis na interbensyon. Unawain ang mga kritikal na hakbang upang tugunan ang mga kondisyong ito at ibalik ang balanse sa katawan sa matinding kapaligiran.",
+      "TECHNIQUES": {
+        "HEAT_EXHAUSTION": {
+          "TITLE": "Pagkapagod Dahil sa Init",
+          "MODAL_TITLE": "Pagkapagod Dahil sa Init: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang makatulong na mapaginhawa ang pagkapagod dahil sa init, maiwasan na ito ay lumala patungo sa heatstroke, at tiyaking ligtas ang tao. Ang mabilis na aksyon ay mahalaga upang ayusin ang temperatura ng katawan at ibalik ang hydration.",
+          "STEPS": [
+            {
+              "title": "Lumipat sa Mas Malamig na Lugar",
+              "image": "assets/images/Environmental/Step1-heat.png",
+              "description": [
+                "Ilipat ang tao sa malamig, lilim, o air-conditioned na espasyo.",
+                "Ang pagbabawas ng exposure sa init ay agad na tumutulong na maiwasan ang paglala ng kondisyon."
+              ]
+            },
+            {
+              "title": "Mag-hydrate nang Marahan",
+              "image": "assets/images/Environmental/Step2-heat.png",
+              "description": [
+                "Hikayatin ang tao na uminom nang marahan ng tubig o electrolyte drinks.",
+                "Ang hydration ay nagbabalik ng nawala na fluids at minerals, na mahalaga upang labanan ang dehydration. Iwasan ang pagbibigay ng napakalalamig na inumin dahil maaari itong magdulot ng pamamanhid sa tiyan."
+              ]
+            },
+            {
+              "title": "Palamigin ang Katawan",
+              "image": "assets/images/Environmental/Step3-heat.png",
+              "description": [
+                "Mag-apply ng basang tela, malamig na tubig, o gumamit ng bentilador upang makatulong na mabawasan ang kanilang temperatura ng katawan.",
+                "Tumuon sa mga lugar tulad ng leeg, kilikili, at pulso, kung saan ang pagpapalamig ay pinaka-epektibo."
+              ]
+            },
+            {
+              "title": "Humingi ng Medikal na Tulong Kung Kinakailangan",
+              "image": "assets/images/doctor.png",
+              "description": [
+                "Kung patuloy o lumala ang mga sintomas (hal., pagduduwal, kalituhan, o pagkahilo), tumawag para sa emergency assistance.",
+                "Ang matagal na heat exhaustion ay maaaring humantong sa heatstroke, isang mapanganib sa buhay na kondisyon na nangangailangan ng agarang medikal na pag-aalaga."
+              ]
+            }
+          ]
+        },
+        "MILD_HYPOTHERMIA": {
+          "TITLE": "Banayad na Hypothermia",
+          "MODAL_TITLE": "Banayad na Hypothermia: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang makatulong na ligtas na mainitan ang tao, stabilisahin ang kanilang kondisyon, at maiwasan ang karagdagang pagkawala ng init. Ang napapanahong interbensyon ay kritikal upang maiwasan ang paglala ng mga sintomas at potensyal na komplikasyon.",
+          "STEPS": [
+            {
+              "title": "Lumipat sa Mainit at Tuyong Lugar",
+              "image": "assets/images/Environmental/Step1-hy.png",
+              "description": [
+                "Ilipat ang tao sa kanlungan at mainit na kapaligiran.",
+                "Ang pag-alis sa kanila mula sa mapanigang pinagmulan ay humihinto sa karagdagang pagkawala ng init at lumilikha ng ligtas na setting para sa paggaling."
+              ]
+            },
+            {
+              "title": "Alisin ang Basang Damit at Takpan ng Mainit na Kumot",
+              "image": "assets/images/Environmental/Step2-hy.png",
+              "description": [
+                "Ang basang damit ay kumukuha ng init mula sa katawan, kaya palitan ito ng tuyong layers.",
+                "Gumamit ng kumot o mainit na damit upang mag-insulate at mapanatili nang epektibo ang init ng katawan."
+              ]
+            },
+            {
+              "title": "Mag-alok ng Mainit na Inumin",
+              "image": "assets/images/Environmental/Step3-hy.png",
+              "description": [
+                "Kung ang tao ay ganap na nakakaisip, magbigay ng mainit (hindi sobrang init) na walang alkohol at walang caffeine na inumin tulad ng tubig, tsaa, o sabaw",
+                "Ang mainit na likido ay tumutulong na marahan na itaas ang temperatura ng loob ng katawan at mag-hydrate sa kanila."
+              ]
+            },
+            {
+              "title": "Iwasan ang Direktang Mapainit na Pinagmulan",
+              "image": "assets/images/Environmental/Step4-hy.png",
+              "description": [
+                "Huwag mag-apply ng mainit na bote ng tubig, heating pads, o katulad na mga device nang direkta sa balat.",
+                "Ang biglaang exposure sa matinding init ay maaaring magdulot ng shock o paso at maaaring magpasama ng kanilang kondisyon."
+              ]
+            }
+          ]
+        },
+        "DEHYDRATION": {
+          "TITLE": "Dehydration",
+          "MODAL_TITLE": "Dehydration: Mga Hakbang sa First Aid",
+          "DESCRIPTION": "Sundin ang mga hakbang na ito upang makatulong na ibalik ang hydration, maiwasan ang mga komplikasyon, at suportahan ang paggaling. Ang maagang interbensyon ay maaaring mapaginhawa ang mga sintomas at maiwasan ang mga panganib ng matinding dehydration.",
+          "STEPS": [
+            {
+              "title": "Hikayatin ang Maliliit na Higop ng Tubig o Electrolyte Drinks",
+              "image": "assets/images/Environmental/Step1-dehy.png",
+              "description": [
+                "Magbigay ng tubig o oral rehydration solutions upang palitan ang nawala na fluids at mahahalagang asin.",
+                "Ang pag-inom ng maliliit na higop ay tumutulong sa katawan na mas epektibong sumipsip ng fluids nang hindi nagiging sanhi ng pagduduwal."
+              ]
+            },
+            {
+              "title": "Iwasan ang Matamis o May Caffeine na Inumin",
+              "image": "assets/images/Environmental/Step2-dehy.png",
+              "description": [
+                "Huwag mag-alok ng mga soda, kape, o energy drinks dahil maaari nitong palalaing dehydration sa pamamagitan ng pag-drawing ng mas maraming tubig mula sa katawan.",
+                "Manatili sa plain water o specially formulated na electrolyte drinks para sa pinakamahusay na resulta."
+              ]
+            },
+            {
+              "title": "Magpahinga at Bantayan ang mga Sintomas",
+              "image": "assets/images/Environmental/Step3-dehy.png",
+              "description": [
+                "Hayaan ang tao na magpahinga sa malamig at lilim na lugar upang mag-conserve ng enerhiya at maiwasan ang karagdagang pagkawala ng fluid.",
+                "Bantayan ang mga palatandaan ng matinding dehydration, tulad ng kalituhan, pagkahilo, o pagbaba ng urine output, at humingi ng medikal na atensyon kung ito ay mangyari."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

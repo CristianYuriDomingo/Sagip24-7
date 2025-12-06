@@ -1,0 +1,120 @@
+{
+  "CATEGORIES": {
+    "ENVIRONMENTAL": {
+      "TITLE": "Environmental and Physical Emergencies",
+      "KEY_TAKEAWAY_TITLE": "Understanding the Basics",
+      "KEY_TAKEAWAY_DESC": "Environmental and physical emergencies, including heat exhaustion, mild hypothermia, and dehydration, demand quick intervention. Understand the critical steps to address these conditions and restore balance to the body in extreme environments.",
+      "TECHNIQUES": {
+        "HEAT_EXHAUSTION": {
+          "TITLE": "Heat Exhaustion",
+          "MODAL_TITLE": "Heat Exhaustion: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to help alleviate heat exhaustion, prevent it from progressing to heatstroke, and ensure the person's safety. Quick action is crucial to regulate body temperature and restore hydration.",
+          "STEPS": [
+            {
+              "title": "Move to a Cooler Area",
+              "image": "assets/images/Environmental/Step1-heat.png",
+              "description": [
+                "Relocate the person to a cool, shaded, or air-conditioned space.",
+                "Reducing exposure to heat immediately helps prevent the condition from worsening."
+              ]
+            },
+            {
+              "title": "Hydrate Slowly",
+              "image": "assets/images/Environmental/Step2-heat.png",
+              "description": [
+                "Encourage the person to sip water or electrolyte drinks gradually.",
+                "Hydration restores lost fluids and minerals, which are essential to combat dehydration. Avoid giving very cold drinks as they can cause stomach cramps."
+              ]
+            },
+            {
+              "title": "Cool the Body",
+              "image": "assets/images/Environmental/Step3-heat.png",
+              "description": [
+                "Apply wet cloths, cool water, or use a fan to help lower their body temperature.",
+                "Focus on areas like the neck, armpits, and wrists, where cooling is most effective."
+              ]
+            },
+            {
+              "title": "Seek Medical Help If Necessary",
+              "image": "assets/images/doctor.png",
+              "description": [
+                "If symptoms persist or worsen (e.g., nausea, confusion, or fainting), call for emergency assistance.",
+                "Prolonged heat exhaustion can lead to heatstroke, a life-threatening condition requiring immediate medical care."
+              ]
+            }
+          ]
+        },
+        "MILD_HYPOTHERMIA": {
+          "TITLE": "Mild Hypothermia",
+          "MODAL_TITLE": "Mild Hypothermia: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to help warm the person safely, stabilize their condition, and prevent further heat loss. Timely intervention is critical to avoid worsening symptoms and potential complications.",
+          "STEPS": [
+            {
+              "title": "Move to a Warm, Dry Place",
+              "image": "assets/images/Environmental/Step1-hy.png",
+              "description": [
+                "Relocate the person to a sheltered, warm environment.",
+                "Removing them from the cold source stops further heat loss and creates a safe setting for recovery."
+              ]
+            },
+            {
+              "title": "Remove Wet Clothing and Cover with Warm Blankets",
+              "image": "assets/images/Environmental/Step2-hy.png",
+              "description": [
+                "Wet clothing draws heat away from the body, so replace it with dry layers.",
+                "Use blankets or warm clothing to insulate and retain body heat effectively."
+              ]
+            },
+            {
+              "title": "Offer Warm Drinks",
+              "image": "assets/images/Environmental/Step3-hy.png",
+              "description": [
+                "If the person is fully conscious, provide warm (not hot) non-alcoholic and non-caffeinated beverages like water, tea, or broth",
+                "Warm fluids help raise internal body temperature gently and hydrate them."
+              ]
+            },
+            {
+              "title": "Avoid Direct Heat Sources",
+              "image": "assets/images/Environmental/Step4-hy.png",
+              "description": [
+                "Do not apply hot water bottles, heating pads, or similar devices directly to the skin.",
+                "Sudden exposure to intense heat can cause shock or burns and may worsen their condition."
+              ]
+            }
+          ]
+        },
+        "DEHYDRATION": {
+          "TITLE": "Dehydration",
+          "MODAL_TITLE": "Dehydration: First Aid Steps",
+          "DESCRIPTION": "Follow these steps to help restore hydration, prevent complications, and support recovery. Early intervention can alleviate symptoms and avoid the risks of severe dehydration.",
+          "STEPS": [
+            {
+              "title": "Encourage Small Sips of Water or Electrolyte Drinks",
+              "image": "assets/images/Environmental/Step1-dehy.png",
+              "description": [
+                "Provide water or oral rehydration solutions to replace lost fluids and essential salts.",
+                "Drinking in small sips helps the body absorb fluids more effectively without causing nausea."
+              ]
+            },
+            {
+              "title": "Avoid Sugary or Caffeinated Beverages",
+              "image": "assets/images/Environmental/Step2-dehy.png",
+              "description": [
+                "Do not offer sodas, coffee, or energy drinks as they can worsen dehydration by drawing more water out of the body.",
+                "Stick to plain water or specially formulated electrolyte drinks for best results."
+              ]
+            },
+            {
+              "title": "Rest and Monitor Symptoms",
+              "image": "assets/images/Environmental/Step3-dehy.png",
+              "description": [
+                "Allow the person to rest in a cool, shaded area to conserve energy and prevent further fluid loss.",
+                "Keep an eye out for signs of severe dehydration, such as confusion, dizziness, or reduced urine output, and seek medical attention if these occur."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

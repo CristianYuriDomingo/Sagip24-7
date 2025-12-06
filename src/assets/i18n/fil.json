@@ -4,7 +4,7 @@
     "LANGUAGE": "Wika"
   },
   "TABS": {
-    "HELPLINE": "Tumawag ngTulong",
+    "HELPLINE": "Tumawag ng Tulong",
     "HOME": "Pangunahing Bahagi",
     "ABOUT_US": "Tungkol sa Amin"
   },
@@ -71,6 +71,14 @@
     "FIRST_AID_KIT_DESC": "Siguraduhing mayroon kang well-stocked first aid kit para sa mga emergency. Narito ang listahan ng essential items na dapat nasa iyong kit:",
     "PRIVACY_POLICY": "Privacy Policy",
     "PRIVACY_DESC": "Basahin ang aming privacy policy upang maunawaan kung paano kinokolekta, ini-store, at ginagamit ang iyong personal na impormasyon ayon sa aming mga alituntunin."
+  },
+  "CATEGORIES": {
+    "RESPIRATORY_EMERGENCIES": "Mga Problema sa Paghinga",
+    "TRAUMATIC_INJURIES": "Mga Malulubhang Sugat",
+    "ENVIRONMENTAL_EMERGENCIES": "Mga Insidenteng Dulot ng Kapaligiran",
+    "ALLERGIC_INSECT_BITES": "Allergy at Kagat ng Insekto",
+    "CARDIAC_NEUROLOGICAL": "Mga Emergency sa Puso at Nerbiyos",
+    "OTHER_GENERAL_EMERGENCIES": "Iba Pang Mga Emergency"
   },
   "LANGUAGE_SWITCHER": {
     "SWITCH_HEADER": "Magpalit ng Wika",
